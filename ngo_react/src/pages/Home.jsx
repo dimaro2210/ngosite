@@ -137,7 +137,7 @@ export default function Home() {
   return (
     <>
       {/* ========== HERO SECTION ========== */}
-      <section className="hero" style={{ background: 'linear-gradient(135deg, #0F172A 0%, #1E1B4B 50%, #4C1D95 100%)' }}>
+      <section className="hero" style={{ background: 'linear-gradient(135deg, #18181D 0%, #3B063F 50%, #580A5E 100%)' }}>
         <div className="hero-glow-blob"></div>
 
         <div className="container" style={{ position: 'relative', zIndex: 10 }}>

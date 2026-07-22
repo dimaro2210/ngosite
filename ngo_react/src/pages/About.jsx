@@ -44,7 +44,7 @@ export default function About() {
   return (
     <>
       {/* ========== HERO SECTION (About Page) ========== */}
-      <section className="hero" style={{ background: 'linear-gradient(135deg, #1E1B4B 0%, #4C1D95 100%)' }}>
+      <section className="hero" style={{ background: 'linear-gradient(135deg, #18181D 0%, #3B063F 50%, #580A5E 100%)' }}>
         <div className="hero-glow-blob"></div>
 
         <div className="container" style={{ position: 'relative', zIndex: 10 }}>
