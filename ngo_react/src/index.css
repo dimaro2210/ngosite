@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
 
 :root {
   --topbar-bg: #18181D;
@@ -21,6 +21,7 @@
   --border-color: #E8D8F8;
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Poppins', sans-serif;
+  --font-number: 'Arimo', sans-serif;
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 30px;
@@ -39,6 +40,7 @@ a { text-decoration: none; color: inherit; transition: var(--transition); }
 ul { list-style: none; }
 img { max-width: 100%; height: auto; display: block; }
 h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 700; }
+.stat-item h3, .metric-detail-item h4, .hero-metric-panel h3, .cause-numbers, .stat-card h3, .event-date-badge h4 { font-family: var(--font-number) !important; font-weight: 700; }
 
 /* ══════════════════════════════════════════════════
    KEYFRAME ANIMATIONS

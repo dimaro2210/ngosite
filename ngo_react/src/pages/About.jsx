@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import TeamStack from '../components/TeamStack'
+import CountUp from '../components/CountUp'
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -150,10 +151,10 @@ export default function About() {
               <p>Through evidence-informed programming, advocacy, and strategic partnerships, we work to prevent violence, promote health wellbeing, and foster inclusive governance across Sokoto State.</p>
 
               <div className="stats-row">
-                <div className="stat-item"><h3 style={{ color: '#6C2BD9' }}>500+</h3><p>Adolescents Reached</p></div>
-                <div className="stat-item"><h3 style={{ color: '#6C2BD9' }}>50</h3><p>First Responders</p></div>
-                <div className="stat-item"><h3 style={{ color: '#6C2BD9' }}>5</h3><p>Sokoto LGAs Covered</p></div>
-                <div className="stat-item"><h3 style={{ color: '#6C2BD9' }}>6</h3><p>Operational Pillars</p></div>
+                <div className="stat-item"><h3 style={{ color: '#6C2BD9', fontFamily: "'Arimo', sans-serif" }}><CountUp end={500} suffix="+" /></h3><p>Adolescents Reached</p></div>
+                <div className="stat-item"><h3 style={{ color: '#6C2BD9', fontFamily: "'Arimo', sans-serif" }}><CountUp end={50} /></h3><p>First Responders</p></div>
+                <div className="stat-item"><h3 style={{ color: '#6C2BD9', fontFamily: "'Arimo', sans-serif" }}><CountUp end={5} /></h3><p>Sokoto LGAs Covered</p></div>
+                <div className="stat-item"><h3 style={{ color: '#6C2BD9', fontFamily: "'Arimo', sans-serif" }}><CountUp end={6} /></h3><p>Operational Pillars</p></div>
               </div>
             </div>
           </div>

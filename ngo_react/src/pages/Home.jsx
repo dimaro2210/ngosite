@@ -5,6 +5,7 @@ import NewsCarousel from '../components/NewsCarousel';
 import TeamStack from '../components/TeamStack';
 import HopeSection from '../components/HopeSection';
 import CTAReveal from '../components/CTAReveal';
+import CountUp from '../components/CountUp';
 
 export default function Home() {
   const causes = [
@@ -177,7 +178,7 @@ export default function Home() {
                     <i className="fas fa-shield-alt" style={{ fontSize: '1.25rem', color: '#fff' }}></i>
                   </div>
                   <div>
-                    <h3 style={{ color: '#fff' }}>5 LGAs</h3>
+                    <h3 style={{ color: '#fff', fontFamily: "'Arimo', sans-serif" }}><CountUp end={5} suffix=" LGAs" /></h3>
                     <p style={{ color: 'rgba(255,255,255,.8)' }}>Dange Shuni, Gada, Sokoto N/S, Wamakko</p>
                   </div>
                 </div>
@@ -194,17 +195,17 @@ export default function Home() {
 
                 <div className="metric-details-grid">
                   <div className="metric-detail-item">
-                    <h4 style={{ color: '#fff' }}>500+</h4>
+                    <h4 style={{ color: '#fff', fontFamily: "'Arimo', sans-serif" }}><CountUp end={500} suffix="+" /></h4>
                     <span style={{ color: 'rgba(255,255,255,.7)' }}>STUDENTS</span>
                   </div>
                   <div className="metric-divider"></div>
                   <div className="metric-detail-item">
-                    <h4 style={{ color: '#fff' }}>50+</h4>
+                    <h4 style={{ color: '#fff', fontFamily: "'Arimo', sans-serif" }}><CountUp end={50} suffix="+" /></h4>
                     <span style={{ color: 'rgba(255,255,255,.7)' }}>RESPONDERS</span>
                   </div>
                   <div className="metric-divider"></div>
                   <div className="metric-detail-item">
-                    <h4 style={{ color: '#fff' }}>6</h4>
+                    <h4 style={{ color: '#fff', fontFamily: "'Arimo', sans-serif" }}><CountUp end={6} /></h4>
                     <span style={{ color: 'rgba(255,255,255,.7)' }}>PILLARS</span>
                   </div>
                 </div>
