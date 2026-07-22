@@ -339,7 +339,7 @@ function FallbackGallery({ images }) {
     [images]
   );
   return (
-    <div style={{ display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', height:'100%', background:'#1B2B26', padding:'2rem' }}>
+    <div style={{ display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', height:'100%', background:'#1E1B4B', padding:'2rem' }}>
       <p style={{ color:'rgba(255,255,255,.6)', marginBottom:'1rem' }}>WebGL not supported. Showing images:</p>
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(120px,1fr))', gap:'1rem', width:'100%', maxHeight:'360px', overflowY:'auto' }}>
         {normalized.map((img, i) => (
