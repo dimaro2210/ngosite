@@ -10,26 +10,17 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="container nav-container">
           <Link to="/" className="logo" onClick={close} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}>
-            <div style={{
-              width: '38px',
-              height: '38px',
-              borderRadius: '10px',
-              background: 'linear-gradient(135deg, #6C2BD9 0%, #4C1D95 100%)',
-              color: '#fff',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '1.2rem',
-              boxShadow: '0 4px 12px rgba(108, 43, 217, 0.3)'
-            }}>
-              <i className="fas fa-home"></i>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}images/logo.jpg`}
+              alt="Saferplace Initiative Logo"
+              style={{ width: '44px', height: '44px', borderRadius: '10px', objectFit: 'contain', background: '#fff', padding: '2px' }}
+            />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <span style={{ fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-0.02em', color: '#1E293B', lineHeight: 1.1 }}>
                 Saferplace <span style={{ color: '#6C2BD9' }}>Initiative</span>
               </span>
               <span style={{ fontSize: '0.65rem', color: '#64748B', fontWeight: 500, letterSpacing: '0.01em' }}>
-                ...for Women & Child Health & Good Governance
+                ...for Women &amp; Child Health &amp; Good Governance
               </span>
             </div>
           </Link>
@@ -68,7 +59,11 @@ export default function Navbar() {
       <aside className={`mobile-drawer${open ? ' open' : ''}`} aria-label="Mobile navigation">
         <div className="mobile-drawer-header">
           <Link to="/" className="logo" onClick={close} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <i className="fas fa-home" style={{ color: '#6C2BD9' }}></i>
+            <img
+              src={`${import.meta.env.BASE_URL}images/logo.jpg`}
+              alt="Saferplace Initiative Logo"
+              style={{ width: '36px', height: '36px', borderRadius: '8px', objectFit: 'contain', background: '#fff', padding: '2px' }}
+            />
             <span style={{ fontWeight: 800, fontSize: '1.1rem' }}>Saferplace Initiative</span>
           </Link>
           <button className="drawer-close-btn" onClick={close} aria-label="Close menu">
