@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import InfiniteGallery from '../components/InfiniteGallery';
 
 const mediaList = [
-  { id: 1,  category: 'Branding',     src: `${import.meta.env.BASE_URL}images/saferplace_banner.jpg`, alt: 'Saferplace Initiative Official Roll-up Banner' },
+  { id: 1,  category: 'Accreditation', src: `${import.meta.env.BASE_URL}images/registration_letter.jpg`, alt: 'Official Ministry of Budget & Economic Planning Registration Letter' },
   { id: 2,  category: 'Child Welfare', src: `${import.meta.env.BASE_URL}images/four_children.jpg`, alt: 'Community children outreach' },
   { id: 3,  category: 'Infant Health', src: `${import.meta.env.BASE_URL}images/toddler_baby.jpg`, alt: 'Maternal and toddler health beneficiary' },
   { id: 4,  category: 'Youth',         src: `${import.meta.env.BASE_URL}images/sparkly_dress_girl.jpg`, alt: 'Youth empowerment and child protection' },

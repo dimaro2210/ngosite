@@ -6,7 +6,7 @@ const programs = [
   {
     id: 1,
     icon: 'fas fa-tree',
-    image: `${BASE}images/saferplace_banner.jpg`,
+    image: `${BASE}images/toddler_baby.jpg`,
     category: 'Climate Resilience',
     title: 'Green Sokoto Initiative 2026',
     desc: 'Planting 500 drought-resistant indigenous trees (Neem, Baobab, Moringa, Bagaruwa) across 10 sites in Sokoto Metropolis for World Tree Planting Day (June 6, 2026).',

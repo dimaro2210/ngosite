@@ -37,7 +37,7 @@ export default function Home() {
   const events = [
     {
       id: 1,
-      image: `${import.meta.env.BASE_URL}images/saferplace_banner.jpg`,
+      image: `${import.meta.env.BASE_URL}images/four_children.jpg`,
       day: '06',
       month: 'Jun',
       time: '09:00 AM - 2:00 PM',
@@ -101,7 +101,7 @@ export default function Home() {
   const news = [
     {
       id: 1,
-      image: `${import.meta.env.BASE_URL}images/saferplace_banner.jpg`,
+      image: `${import.meta.env.BASE_URL}images/registration_letter.jpg`,
       category: 'Climate & Environment',
       title: 'Green Sokoto Initiative 2026: Planting 500 Trees For World Tree Planting Day',
       desc: 'Targeting 10 strategic sites across Sokoto Metropolis to mitigate extreme heat stress and desertification.',
@@ -346,7 +346,7 @@ export default function Home() {
       {/* ========== PHOTO ROW ========== */}
       <section className="gallery-row">
         <div className="gallery-cell">
-          <img src={`${import.meta.env.BASE_URL}images/saferplace_banner.jpg`} alt="Saferplace Roll-up Banner" />
+          <img src={`${import.meta.env.BASE_URL}images/four_children.jpg`} alt="Community children outreach" />
           <div className="gallery-overlay"><i className="fas fa-expand"></i></div>
         </div>
         <div className="gallery-cell">
