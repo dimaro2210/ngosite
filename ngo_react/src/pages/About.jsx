@@ -172,14 +172,14 @@ export default function About() {
               <i className="fas fa-eye" style={{ fontSize: '2.5rem', color: '#6C2BD9', marginBottom: '1.2rem', display: 'block' }}></i>
               <h3 style={{ marginBottom: '1rem', color: '#1E293B' }}>Our Vision</h3>
               <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, fontSize: '1rem' }}>
-                A safer, more equitable society where women, children, and vulnerable populations live free from violence, exclusion, and preventable harm.
+                A Safer more equitable society where women, children, and vulnerable population live free from violence, exclusion and preventable harm.
               </p>
             </div>
             <div className="cause-card" style={{ padding: '2.5rem', borderTop: '4px solid var(--secondary)' }}>
               <i className="fas fa-bullseye" style={{ fontSize: '2.5rem', color: 'var(--secondary)', marginBottom: '1.2rem', display: 'block' }}></i>
               <h3 style={{ marginBottom: '1rem', color: '#1E293B' }}>Our Mission</h3>
               <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, fontSize: '1rem' }}>
-                To prevent violence, strengthen protective systems, empower communities, and deliver responsive support services that uphold dignity, safety, and social justice.
+                To prevent violence, strengthen protective system, empower community and deliver responsive support services that upholds dignity, safety and social justice.
               </p>
             </div>
           </div>
