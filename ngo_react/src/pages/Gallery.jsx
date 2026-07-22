@@ -2,18 +2,14 @@ import React, { useState } from 'react';
 import InfiniteGallery from '../components/InfiniteGallery';
 
 const mediaList = [
-  { id: 1,  category: 'Education', src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=700', alt: 'Education outreach' },
-  { id: 2,  category: 'Water',     src: 'https://images.unsplash.com/photo-1541944743827-e04aa6427c33?q=80&w=700', alt: 'Clean water well' },
-  { id: 3,  category: 'Health',    src: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=700', alt: 'Medical outreach' },
-  { id: 4,  category: 'Food',      src: 'https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=700', alt: 'Food aid delivery' },
-  { id: 5,  category: 'Health',    src: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=700', alt: 'Nurse volunteer' },
-  { id: 6,  category: 'Education', src: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=700', alt: 'Students smiling' },
-  { id: 7,  category: 'Water',     src: 'https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=700', alt: 'Solar borehole installation' },
-  { id: 8,  category: 'Food',      src: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=700', alt: 'Nutritious lunch serving' },
-  { id: 9,  category: 'Education', src: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=700', alt: 'Writing booklets' },
-  { id: 10, category: 'Health',    src: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=700', alt: 'Basic medical test' },
-  { id: 11, category: 'Water',     src: 'https://images.unsplash.com/photo-1541944743827-e04aa6427c33?q=80&w=700', alt: 'Pumping clean water' },
-  { id: 12, category: 'Women',     src: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=700', alt: 'Women sewing workshop' },
+  { id: 1,  category: 'Branding',     src: `${import.meta.env.BASE_URL}images/saferplace_banner.jpg`, alt: 'Saferplace Initiative Official Roll-up Banner' },
+  { id: 2,  category: 'Child Welfare', src: `${import.meta.env.BASE_URL}images/four_children.jpg`, alt: 'Community children outreach' },
+  { id: 3,  category: 'Infant Health', src: `${import.meta.env.BASE_URL}images/toddler_baby.jpg`, alt: 'Maternal and toddler health beneficiary' },
+  { id: 4,  category: 'Youth',         src: `${import.meta.env.BASE_URL}images/sparkly_dress_girl.jpg`, alt: 'Youth empowerment and child protection' },
+  { id: 5,  category: 'Cultural',      src: `${import.meta.env.BASE_URL}images/igbo_attire_boy.jpg`, alt: 'Child dignity and cultural inclusion' },
+  { id: 6,  category: 'Health',        src: `${import.meta.env.BASE_URL}images/glasses_boy.jpg`, alt: 'Child vision care and educational support' },
+  { id: 7,  category: 'Adolescent',    src: `${import.meta.env.BASE_URL}images/kaftan_boy.jpg`, alt: 'Adolescent health and education' },
+  { id: 8,  category: 'Accreditation', src: `${import.meta.env.BASE_URL}images/registration_letter.jpg`, alt: 'Official Ministry of Budget & Economic Planning Registration Letter' },
 ];
 
 // Image URLs passed to the 3-D hero
@@ -23,7 +19,7 @@ export default function Gallery() {
   const [filter, setFilter]       = useState('All');
   const [lightboxSrc, setLightboxSrc] = useState(null);
 
-  const categories    = ['All', 'Education', 'Water', 'Health', 'Food', 'Women'];
+  const categories    = ['All', 'Branding', 'Child Welfare', 'Infant Health', 'Youth', 'Cultural', 'Health', 'Accreditation'];
   const filteredMedia = filter === 'All'
     ? mediaList
     : mediaList.filter(item => item.category === filter);
@@ -46,7 +42,7 @@ export default function Gallery() {
           padding: '1rem',
         }}>
           <span style={{
-            color: 'var(--primary)',
+            color: '#A78BFA',
             fontFamily: 'var(--font-display)',
             fontWeight: 700,
             fontSize: '.85rem',
@@ -54,7 +50,7 @@ export default function Gallery() {
             textTransform: 'uppercase',
             marginBottom: '.8rem',
             display: 'block',
-          }}>Our Work In Pictures</span>
+          }}>Our Field Work In Pictures</span>
           <h1 style={{
             fontFamily: 'var(--font-display)',
             fontWeight: 800,
@@ -63,14 +59,14 @@ export default function Gallery() {
             lineHeight: 1.15,
             marginBottom: '.8rem',
             textShadow: '0 4px 24px rgba(0,0,0,.5)',
-          }}>Impact Gallery</h1>
+          }}>Beneficiary & Impact Gallery</h1>
           <p style={{
-            color: 'rgba(255,255,255,.65)',
+            color: 'rgba(255,255,255,.85)',
             fontSize: '1rem',
-            maxWidth: '480px',
+            maxWidth: '520px',
             textShadow: '0 2px 8px rgba(0,0,0,.5)',
           }}>
-            A visual record of our community outreaches and project completions across Nigeria.
+            Real beneficiary portraits, official accreditation letters, and community outreach photos across Sokoto State.
           </p>
           <p style={{
             marginTop: '1.5rem',
@@ -87,7 +83,7 @@ export default function Gallery() {
         <InfiniteGallery
           images={heroImages}
           speed={0.8}
-          visibleCount={10}
+          visibleCount={8}
           style={{ height: '80vh', minHeight: '520px' }}
           fadeSettings={{
             fadeIn:  { start: 0.05, end: 0.20 },
@@ -112,7 +108,7 @@ export default function Gallery() {
                 key={cat}
                 onClick={() => setFilter(cat)}
                 style={{
-                  background:    filter === cat ? 'var(--secondary)' : '#FFF',
+                  background:    filter === cat ? '#6C2BD9' : '#FFF',
                   color:         filter === cat ? '#FFF' : 'var(--text-dark)',
                   border:        '1px solid var(--border-color)',
                   borderRadius:  '30px',
@@ -140,7 +136,7 @@ export default function Gallery() {
                 tabIndex={0}
                 onKeyDown={e => e.key === 'Enter' && setLightboxSrc(img.src)}
               >
-                <img src={img.src} alt={img.alt} />
+                <img src={img.src} alt={img.alt} style={{ objectFit: 'cover', height: '320px', width: '100%' }} />
                 <div className="gallery-item-overlay">
                   <i className="fas fa-search-plus"></i>
                 </div>
@@ -148,7 +144,7 @@ export default function Gallery() {
                   position:     'absolute',
                   bottom:       '1rem',
                   left:         '1rem',
-                  background:   'rgba(12,124,89,.95)',
+                  background:   'rgba(108, 43, 217, 0.95)',
                   color:        '#FFF',
                   padding:      '0.3rem 0.8rem',
                   borderRadius: '20px',
@@ -189,3 +185,4 @@ export default function Gallery() {
     </>
   );
 }
+

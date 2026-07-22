@@ -2,11 +2,13 @@ import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import TeamStack from '../components/TeamStack'
 
+const BASE = import.meta.env.BASE_URL;
+
 const team = [
-  { name: 'Ejiegbu Chinomso Prince', role: 'Executive Director', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300', bio: 'Directing community protection, governance, and organizational development in Sokoto State.' },
-  { name: 'Mr. Kolawole Abidemi', role: 'Board Member & Strategic Advisor', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300', bio: 'Strategic oversight and community partnerships lead. Phone: 08135441406.' },
-  { name: 'Dr. Fatima Usman', role: 'RMNCAH & Community Health Lead', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300', bio: 'Specialist in maternal, child, and adolescent health outreach.' },
-  { name: 'Ibrahim Abubakar', role: 'Climate & Field Operations Lead', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300', bio: 'Coordinating the Green Sokoto Initiative 2026 and community tree guardians.' },
+  { name: 'Ejiegbu Chinomso Prince', role: 'Executive Director', image: `${BASE}images/kaftan_boy.jpg`, bio: 'Directing community protection, governance, and organizational development in Sokoto State.' },
+  { name: 'Mr. Kolawole Abidemi', role: 'Board Member & Strategic Advisor', image: `${BASE}images/igbo_attire_boy.jpg`, bio: 'Strategic oversight and community partnerships lead. Phone: 08135441406.' },
+  { name: 'Dr. Fatima Usman', role: 'RMNCAH & Community Health Lead', image: `${BASE}images/sparkly_dress_girl.jpg`, bio: 'Specialist in maternal, child, and adolescent health outreach.' },
+  { name: 'Ibrahim Abubakar', role: 'Climate & Field Operations Lead', image: `${BASE}images/glasses_boy.jpg`, bio: 'Coordinating the Green Sokoto Initiative 2026 and community tree guardians.' },
 ]
 
 const milestones = [
@@ -139,7 +141,7 @@ export default function About() {
         <div className="container">
           <div className="about-grid-content">
             <div className="about-img">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800" alt="Saferplace Initiative Team" />
+              <img src={`${BASE}images/four_children.jpg`} alt="Saferplace Initiative Beneficiary Children" />
             </div>
             <div className="about-text">
               <span style={{ color: '#6C2BD9', fontWeight: 700, fontSize: '.85rem', textTransform: 'uppercase', letterSpacing: '.15em', display: 'block', marginBottom: '.6rem' }}>Who We Are</span>

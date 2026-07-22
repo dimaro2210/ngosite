@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
 
+const BASE = import.meta.env.BASE_URL;
+
 const programs = [
   {
     id: 1,
     icon: 'fas fa-tree',
-    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=700',
+    image: `${BASE}images/saferplace_banner.jpg`,
     category: 'Climate Resilience',
     title: 'Green Sokoto Initiative 2026',
     desc: 'Planting 500 drought-resistant indigenous trees (Neem, Baobab, Moringa, Bagaruwa) across 10 sites in Sokoto Metropolis for World Tree Planting Day (June 6, 2026).',
@@ -18,7 +20,7 @@ const programs = [
   {
     id: 2,
     icon: 'fas fa-shield-alt',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=700',
+    image: `${BASE}images/sparkly_dress_girl.jpg`,
     category: 'Protection',
     title: 'Protection & Survivor Support',
     desc: 'Providing safe reporting channels, psychosocial support, legal aid referrals, and emergency shelter resources for survivors of abuse and gender-based violence.',
@@ -32,7 +34,7 @@ const programs = [
   {
     id: 3,
     icon: 'fas fa-heartbeat',
-    image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=700',
+    image: `${BASE}images/toddler_baby.jpg`,
     category: 'Health',
     title: 'RMNCAH & Community Health',
     desc: 'Delivering Reproductive, Maternal, Newborn, Child, and Adolescent Health clinics, vaccines, antenatal toolkits, and nutritional support across rural Sokoto LGAs.',
@@ -46,7 +48,7 @@ const programs = [
   {
     id: 4,
     icon: 'fas fa-user-graduate',
-    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=700',
+    image: `${BASE}images/four_children.jpg`,
     category: 'Education & Prevention',
     title: 'Safe Schools & Social Norm Change',
     desc: 'Conducting interactive workshops on child safety, consent, digital security, and conflict resolution for over 500 adolescents across secondary schools in Sokoto.',
@@ -60,7 +62,7 @@ const programs = [
   {
     id: 5,
     icon: 'fas fa-tint',
-    image: 'https://images.unsplash.com/photo-1541944743827-e04aa6427c33?q=80&w=700',
+    image: `${BASE}images/igbo_attire_boy.jpg`,
     category: 'WASH & Hygiene',
     title: 'WASH & Community Hygiene Drive',
     desc: 'Installing clean solar boreholes, sanitation blocks, and hygiene toolkits to prevent waterborne diseases in underserved communities across Sokoto.',
@@ -74,7 +76,7 @@ const programs = [
   {
     id: 6,
     icon: 'fas fa-balance-scale',
-    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=700',
+    image: `${BASE}images/glasses_boy.jpg`,
     category: 'Governance & Advocacy',
     title: 'Governance & Policy Advocacy',
     desc: 'Training community safety champions, engaging traditional rulers (Mai Angwan), and advocating for government policies that protect human dignity.',

@@ -10,7 +10,7 @@ export default function Home() {
   const causes = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600',
+      image: `${import.meta.env.BASE_URL}images/four_children.jpg`,
       title: 'Green Sokoto Initiative 2026 (500 Trees Drive)',
       percent: '44%',
       raised: '₦350,000',
@@ -18,7 +18,7 @@ export default function Home() {
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600',
+      image: `${import.meta.env.BASE_URL}images/sparkly_dress_girl.jpg`,
       title: 'Protection & Survivor Support Program',
       percent: '65%',
       raised: '₦780,000',
@@ -26,7 +26,7 @@ export default function Home() {
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=600',
+      image: `${import.meta.env.BASE_URL}images/toddler_baby.jpg`,
       title: 'RMNCAH Maternal & Child Health Outreach',
       percent: '61%',
       raised: '₦920,000',
@@ -37,7 +37,7 @@ export default function Home() {
   const events = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600',
+      image: `${import.meta.env.BASE_URL}images/saferplace_banner.jpg`,
       day: '06',
       month: 'Jun',
       time: '09:00 AM - 2:00 PM',
@@ -46,7 +46,7 @@ export default function Home() {
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600',
+      image: `${import.meta.env.BASE_URL}images/igbo_attire_boy.jpg`,
       day: '14',
       month: 'Aug',
       time: '10:00 AM - 1:00 PM',
@@ -55,7 +55,7 @@ export default function Home() {
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=600',
+      image: `${import.meta.env.BASE_URL}images/glasses_boy.jpg`,
       day: '20',
       month: 'Sep',
       time: '08:30 AM - 4:00 PM',
@@ -65,10 +65,10 @@ export default function Home() {
   ];
 
   const volunteers = [
-    { id: 1, name: 'Ejiegbu Chinomso Prince', role: 'Executive Director', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300' },
-    { id: 2, name: 'Mr. Kolawole Abidemi', role: 'Board Member & Strategic Advisor', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300' },
-    { id: 3, name: 'Dr. Fatima Usman', role: 'Health & RMNCAH Lead', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300' },
-    { id: 4, name: 'Ibrahim Abubakar', role: 'Climate & Field Operations Lead', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300' }
+    { id: 1, name: 'Ejiegbu Chinomso Prince', role: 'Executive Director', image: `${import.meta.env.BASE_URL}images/kaftan_boy.jpg` },
+    { id: 2, name: 'Mr. Kolawole Abidemi', role: 'Board Member & Strategic Advisor', image: `${import.meta.env.BASE_URL}images/igbo_attire_boy.jpg` },
+    { id: 3, name: 'Dr. Fatima Usman', role: 'Health & RMNCAH Lead', image: `${import.meta.env.BASE_URL}images/sparkly_dress_girl.jpg` },
+    { id: 4, name: 'Ibrahim Abubakar', role: 'Climate & Field Operations Lead', image: `${import.meta.env.BASE_URL}images/glasses_boy.jpg` }
   ];
 
   const testimonials = [
@@ -77,31 +77,31 @@ export default function Home() {
       quote: "Saferplace Initiative provides vital safe spaces and referral support for vulnerable women and children in Sokoto. Their dedication to dignity and survivor privacy is remarkable.",
       name: 'Hajiya Amina Bello',
       affiliation: 'Community Women Leader, Sokoto',
-      imageSrc: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600',
-      thumbnailSrc: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150'
+      imageSrc: `${import.meta.env.BASE_URL}images/four_children.jpg`,
+      thumbnailSrc: `${import.meta.env.BASE_URL}images/four_children.jpg`
     },
     {
       id: 2,
       quote: "The Green Sokoto Initiative 2026 addresses the harsh heat stress in our city while empowering students as Tree Guardians. A brilliant climate and protection nexus project.",
       name: 'Malam Usmane Garba',
       affiliation: 'School Principal, Sokoto South',
-      imageSrc: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600',
-      thumbnailSrc: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150'
+      imageSrc: `${import.meta.env.BASE_URL}images/kaftan_boy.jpg`,
+      thumbnailSrc: `${import.meta.env.BASE_URL}images/kaftan_boy.jpg`
     },
     {
       id: 3,
       quote: "Their RMNCAH medical outreaches reach rural mothers who have no nearby hospital. This is true grassroots empowerment and healthcare access.",
       name: 'Dr. Aliyu Shehu',
       affiliation: 'Public Health Officer, Sokoto State',
-      imageSrc: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600',
-      thumbnailSrc: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150'
+      imageSrc: `${import.meta.env.BASE_URL}images/toddler_baby.jpg`,
+      thumbnailSrc: `${import.meta.env.BASE_URL}images/toddler_baby.jpg`
     }
   ];
 
   const news = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600',
+      image: `${import.meta.env.BASE_URL}images/saferplace_banner.jpg`,
       category: 'Climate & Environment',
       title: 'Green Sokoto Initiative 2026: Planting 500 Trees For World Tree Planting Day',
       desc: 'Targeting 10 strategic sites across Sokoto Metropolis to mitigate extreme heat stress and desertification.',
@@ -109,7 +109,7 @@ export default function Home() {
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600',
+      image: `${import.meta.env.BASE_URL}images/registration_letter.jpg`,
       category: 'Protection',
       title: 'Operational Registration Submitted To Ministry Of Budget & Economic Planning',
       desc: 'Saferplace Initiative (CAC/IT/NO 7571193) expands formal government partnership in Sokoto State.',
@@ -117,7 +117,7 @@ export default function Home() {
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600',
+      image: `${import.meta.env.BASE_URL}images/four_children.jpg`,
       category: 'Education',
       title: 'Safe Schools Workshop Reaches 500+ Adolescents In Sokoto Secondary Schools',
       desc: 'Training students on personal safety, digital security, consent education, and peer reporting networks.',
@@ -125,13 +125,14 @@ export default function Home() {
     },
     {
       id: 4,
-      image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=600',
+      image: `${import.meta.env.BASE_URL}images/toddler_baby.jpg`,
       category: 'Health',
       title: '50 Community First Responders Trained For Survivor Support & RMNCAH Outreach',
       desc: 'Equipping neighborhood volunteers across 5 LGAs with initial psychosocial and referral tools.',
       date: 'August 18, 2026'
     }
   ];
+
 
   return (
     <>
@@ -345,30 +346,31 @@ export default function Home() {
       {/* ========== PHOTO ROW ========== */}
       <section className="gallery-row">
         <div className="gallery-cell">
-          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=300" alt="Tree planting initiative" />
+          <img src={`${import.meta.env.BASE_URL}images/saferplace_banner.jpg`} alt="Saferplace Roll-up Banner" />
           <div className="gallery-overlay"><i className="fas fa-expand"></i></div>
         </div>
         <div className="gallery-cell">
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=300" alt="Survivor protection" />
+          <img src={`${import.meta.env.BASE_URL}images/four_children.jpg`} alt="Community children outreach" />
           <div className="gallery-overlay"><i className="fas fa-expand"></i></div>
         </div>
         <div className="gallery-cell">
-          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=300" alt="Safe schools workshop" />
+          <img src={`${import.meta.env.BASE_URL}images/toddler_baby.jpg`} alt="Toddler health beneficiary" />
           <div className="gallery-overlay"><i className="fas fa-expand"></i></div>
         </div>
         <div className="gallery-cell">
-          <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?q=80&w=300" alt="Maternal health outreach" />
+          <img src={`${import.meta.env.BASE_URL}images/sparkly_dress_girl.jpg`} alt="Youth empowerment" />
           <div className="gallery-overlay"><i className="fas fa-expand"></i></div>
         </div>
         <div className="gallery-cell">
-          <img src="https://images.unsplash.com/photo-1541944743827-e04aa6427c33?q=80&w=300" alt="WASH hygiene program" />
+          <img src={`${import.meta.env.BASE_URL}images/igbo_attire_boy.jpg`} alt="Child dignity" />
           <div className="gallery-overlay"><i className="fas fa-expand"></i></div>
         </div>
         <div className="gallery-cell">
-          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=300" alt="Governance and advocacy" />
+          <img src={`${import.meta.env.BASE_URL}images/registration_letter.jpg`} alt="Ministry Registration Letter" />
           <div className="gallery-overlay"><i className="fas fa-expand"></i></div>
         </div>
       </section>
+
 
       {/* ========== CTA REVEAL ========== */}
       <CTAReveal />
