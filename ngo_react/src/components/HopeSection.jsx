@@ -1,54 +1,68 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+const BASE = import.meta.env.BASE_URL;
+
 const MEMBERS = [
   { 
     id: '1', 
-    name: 'Amara Osei', 
-    role: 'Founder & Executive Director', 
+    name: 'UNICEF', 
+    role: "United Nations Children's Fund", 
+    category: 'International Partner',
     col: 1,
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300',
-    social: { twitter: '#', linkedin: '#' } 
+    icon: 'fas fa-globe-africa',
+    image: `${BASE}images/unicef_logo.png`,
+    social: { website: 'https://unicef.org' } 
   },
   { 
     id: '2', 
-    name: 'Nathalia Nancie', 
-    role: 'Programs Manager', 
+    name: 'Sokoto State Government', 
+    role: 'Ministry of Budget & Economic Planning', 
+    category: 'State Governance',
     col: 2,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300',
-    social: { twitter: '#', linkedin: '#' } 
+    icon: 'fas fa-landmark',
+    image: `${BASE}images/sokoto_state_logo.png`,
+    social: { website: '#' } 
   },
   { 
     id: '3', 
-    name: 'Diana Prince', 
-    role: 'Health Lead & Nurse', 
+    name: 'EL-MAX', 
+    role: 'Procurement | Logistics | Event Planning', 
+    category: 'Enterprise Partner',
     col: 3,
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300',
-    social: { linkedin: '#', instagram: '#' } 
+    icon: 'fas fa-building',
+    image: `${BASE}images/elmax_logo.png`,
+    social: { website: '#' } 
   },
   { 
     id: '4', 
-    name: 'John Emeka', 
-    role: 'Logistics & Supply Lead', 
+    name: 'Espring', 
+    role: 'Youth & Community Development Partner', 
+    category: 'Community Partner',
     col: 1,
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300',
-    social: { linkedin: '#' } 
+    icon: 'fas fa-leaf',
+    image: `${BASE}images/partner_espring.jpg`,
+    social: { website: '#' } 
   },
   { 
     id: '5', 
-    name: 'Elizabeth Joe', 
-    role: 'Lead Field Coordinator', 
+    name: 'Saferplace Initiative', 
+    role: 'Core Implementing Organization (CAC/IT/NO 7571193)', 
+    category: 'Implementing NGO',
     col: 2,
-    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=300',
-    social: { twitter: '#', linkedin: '#' } 
+    icon: 'fas fa-shield-alt',
+    image: `${BASE}images/logo.jpg`,
+    social: { website: '#' } 
   },
   { 
     id: '6', 
-    name: 'Albert Flores', 
-    role: 'Volunteer Engagement Coordinator', 
+    name: 'Egold Technology', 
+    role: 'Solar, CCTV Installation & Automation', 
+    category: 'Solar & Security Tech',
     col: 3,
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300',
-    social: { twitter: '#', linkedin: '#' } 
+    icon: 'fas fa-solar-panel',
+    image: `${BASE}images/egold_logo.png`,
+    social: { website: '#' } 
   }
 ];
 
@@ -71,19 +85,19 @@ export default function HopeSection() {
       <div className="container relative z-10">
         
         {/* Section Header */}
-        <div className="hope-section-header">
+        <div className="hope-section-header" data-reveal="up">
           <div className="hope-header-left">
             <div className="hope-tag-row">
               <span className="hope-tag-line"></span>
-              <span className="hope-tag-text">MEET OUR FIELD LEADERs</span>
+              <span className="hope-tag-text">STRATEGIC PARTNERS &amp; AFFILIATES</span>
             </div>
             <h2 className="hope-section-title">
-              Six hearts behind <br />
+              Six pillars behind <br />
               <em className="text-gradient">every single impact.</em>
             </h2>
           </div>
           <p className="hope-header-desc">
-            A small, dedicated team working directly across Nigeria's remote villages in water, education, and healthcare operations. Hover a card to meet the leader.
+            Government agencies, international bodies, and technical collaborators driving sustainable community protection and health operations across Sokoto State.
           </p>
         </div>
 
@@ -176,23 +190,11 @@ export default function HopeSection() {
                     <span className="hope-marker"></span>
                     <span className="hope-name">{m.name}</span>
                     
-                    {/* Social links */}
+                    {/* Social/External link */}
                     <div className="hope-row-socials">
-                      {m.social.twitter && (
-                        <a href={m.social.twitter} className="hope-social-icon" aria-label="Twitter" onClick={(e) => e.stopPropagation()}>
-                          <i className="fab fa-twitter"></i>
-                        </a>
-                      )}
-                      {m.social.linkedin && (
-                        <a href={m.social.linkedin} className="hope-social-icon" aria-label="LinkedIn" onClick={(e) => e.stopPropagation()}>
-                          <i className="fab fa-linkedin-in"></i>
-                        </a>
-                      )}
-                      {m.social.instagram && (
-                        <a href={m.social.instagram} className="hope-social-icon" aria-label="Instagram" onClick={(e) => e.stopPropagation()}>
-                          <i className="fab fa-instagram"></i>
-                        </a>
-                      )}
+                      <span className="hope-social-icon" style={{ fontSize: '0.85rem' }}>
+                        <i className={m.icon || 'fas fa-handshake'}></i>
+                      </span>
                     </div>
 
                     <span className="hope-row-index">0{idx + 1} / 06</span>
@@ -210,8 +212,8 @@ export default function HopeSection() {
         {/* Footer detail row */}
         <div className="hope-footer-info">
           <span>Index · 01 — 06</span>
-          <span className="hope-quote-tag">"You're the hope of others."</span>
-          <span>EST. 2019 · LAGOS / FCT ABUJA</span>
+          <span className="hope-quote-tag">"Creating safe spaces for every life, everywhere."</span>
+          <span>SOKOTO STATE · NORTHWEST NIGERIA</span>
         </div>
 
       </div>

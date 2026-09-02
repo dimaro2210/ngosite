@@ -5,31 +5,33 @@ import NewsCarousel from '../components/NewsCarousel';
 import TeamStack from '../components/TeamStack';
 import HopeSection from '../components/HopeSection';
 import CTAReveal from '../components/CTAReveal';
-import CountUp from '../components/CountUp';
+import HeroBackgroundSlider from '../components/HeroBackgroundSlider';
+
+const BASE = import.meta.env.BASE_URL;
 
 export default function Home() {
   const causes = [
     {
       id: 1,
-      image: `${import.meta.env.BASE_URL}images/four_children.jpg`,
-      title: 'Green Sokoto Initiative 2026 (500 Trees Drive)',
-      percent: '44%',
-      raised: '₦350,000',
-      target: '₦800,000'
+      image: `${BASE}images/marathon_campaign.jpg`,
+      title: 'Sokoto 10KM Marathon — Unite to End Open Defecation',
+      percent: '30%',
+      raised: '₦450,000',
+      target: '₦1,500,000'
     },
     {
       id: 2,
-      image: `${import.meta.env.BASE_URL}images/sparkly_dress_girl.jpg`,
-      title: 'Protection & Survivor Support Program',
-      percent: '65%',
-      raised: '₦780,000',
-      target: '₦1,200,000'
+      image: `${BASE}images/child_nutrition.jpg`,
+      title: 'Maternal & Child Nutrition Support Drive',
+      percent: '55%',
+      raised: '₦550,000',
+      target: '₦1,000,000'
     },
     {
       id: 3,
-      image: `${import.meta.env.BASE_URL}images/toddler_baby.jpg`,
+      image: `${BASE}images/child_welfare_care.jpg`,
       title: 'RMNCAH Maternal & Child Health Outreach',
-      percent: '61%',
+      percent: '68%',
       raised: '₦920,000',
       target: '₦1,500,000'
     }
@@ -38,224 +40,128 @@ export default function Home() {
   const events = [
     {
       id: 1,
-      image: `${import.meta.env.BASE_URL}images/four_children.jpg`,
-      day: '06',
-      month: 'Jun',
-      time: '09:00 AM - 2:00 PM',
-      location: 'Sokoto Metropolis, Sokoto',
-      title: 'World Tree Planting Day 2026 — Green Sokoto Flag-Off.'
+      image: `${BASE}images/marathon_campaign.jpg`,
+      day: '15',
+      month: 'Nov',
+      time: '06:30 AM - 12:00 PM',
+      location: 'Sokoto Metropolis',
+      title: 'Sokoto 10KM Marathon — Unite to End Open Defecation'
     },
     {
       id: 2,
-      image: `${import.meta.env.BASE_URL}images/igbo_attire_boy.jpg`,
-      day: '14',
-      month: 'Aug',
-      time: '10:00 AM - 1:00 PM',
-      location: 'Sokoto North LGA',
-      title: 'Safe Schools Child Protection & Consent Education.'
+      image: `${BASE}images/child_nutrition.jpg`,
+      day: '12',
+      month: 'Jul',
+      time: '09:00 AM - 2:00 PM',
+      location: 'Tangaza & Gada LGAs',
+      title: 'Community Nutrition & Child Food Security Outreach.'
     },
     {
       id: 3,
-      image: `${import.meta.env.BASE_URL}images/glasses_boy.jpg`,
-      day: '20',
-      month: 'Sep',
-      time: '08:30 AM - 4:00 PM',
-      location: 'Dange Shuni LGA',
-      title: 'RMNCAH Mobile Antenatal & Child Nutrition Clinic.'
+      image: `${BASE}images/child_welfare_care.jpg`,
+      day: '14',
+      month: 'Aug',
+      time: '10:00 AM - 1:00 PM',
+      location: 'Sokoto North & South LGAs',
+      title: 'Safe Schools Child Protection & Consent Education.'
     }
   ];
 
   const volunteers = [
-    { id: 1, name: 'Ejiegbu Chinomso Prince', role: 'Executive Director', image: `${import.meta.env.BASE_URL}images/kaftan_boy.jpg` },
-    { id: 2, name: 'Mr. Kolawole Abidemi', role: 'Board Member & Strategic Advisor', image: `${import.meta.env.BASE_URL}images/igbo_attire_boy.jpg` },
-    { id: 3, name: 'Dr. Fatima Usman', role: 'Health & RMNCAH Lead', image: `${import.meta.env.BASE_URL}images/sparkly_dress_girl.jpg` },
-    { id: 4, name: 'Ibrahim Abubakar', role: 'Climate & Field Operations Lead', image: `${import.meta.env.BASE_URL}images/glasses_boy.jpg` }
+    { id: 1, name: 'Prince Nicholas', role: 'Founder & Executive Director', image: `${BASE}images/prince_nicholas.jpg` },
+    { id: 2, name: 'Kola Odejobi', role: 'Governance & Policy Advocacy Team Lead', image: `${BASE}images/team_director.jpg` },
+    { id: 3, name: 'Jemima Karatu', role: 'Disaster & Emergency Management Response Team Lead', image: `${BASE}images/team_board.jpg` },
+    { id: 4, name: 'Nefisa Muhammad', role: 'Reproductive Sexual Health & Maternal Newborn Team Lead', image: `${BASE}images/team_health.jpg` },
+    { id: 5, name: 'Victory Meschak', role: 'Gender Equality & Inclusion (GESI) Lead', image: `${BASE}images/victory_meschak.jpg` }
   ];
 
   const testimonials = [
     {
       id: 1,
-      quote: "Saferplace Initiative provides vital safe spaces and referral support for vulnerable women and children in Sokoto. Their dedication to dignity and survivor privacy is remarkable.",
-      name: 'Hajiya Amina Bello',
-      affiliation: 'Community Women Leader, Sokoto',
-      imageSrc: `${import.meta.env.BASE_URL}images/four_children.jpg`,
-      thumbnailSrc: `${import.meta.env.BASE_URL}images/four_children.jpg`
+      quote: "Saferplace Initiative has greatly and tremendously impacted our communities here in Sokoto South Local Government. They have improved the livelihood of women and children of internally displaced persons. They have also impacted the school community in my domain by building toilets and establishing environmental clubs in all the over 50 schools in Sokoto South LGA. Their tree planting campaign has also helped our green life and improved our climatic condition. They are currently embarking on hygiene promotion in the community; this activity has helped greatly in improving environmental and personal hygiene. Solid waste littering has drastically reduced and the rate of sickness such as typhoid, malaria, and cholera has reduced. Our women and children are healthier and our communities are happier for this. Mungode, thank you Saferplace Initiative.",
+      name: 'Alhaji Sani Umar Jabbi',
+      affiliation: 'District Head of GaGi Community · Sarkin Yakin Gagi, Sokoto South LGA',
+      imageSrc: `${BASE}images/alhaji_sani_umar_jabbi.jpg`,
+      thumbnailSrc: `${BASE}images/alhaji_sani_umar_jabbi.jpg`
     },
     {
       id: 2,
-      quote: "The Green Sokoto Initiative 2026 addresses the harsh heat stress in our city while empowering students as Tree Guardians. A brilliant climate and protection nexus project.",
-      name: 'Malam Usmane Garba',
-      affiliation: 'School Principal, Sokoto South',
-      imageSrc: `${import.meta.env.BASE_URL}images/kaftan_boy.jpg`,
-      thumbnailSrc: `${import.meta.env.BASE_URL}images/kaftan_boy.jpg`
+      quote: "Saferplace Initiative provides vital safe spaces and referral support for vulnerable women and children in Sokoto. Their dedication to dignity, child nutrition, and survivor privacy is remarkable.",
+      name: 'Hajiya Amina Bello',
+      affiliation: 'Community Women Leader, Sokoto',
+      imageSrc: `${BASE}images/women_empowerment.jpg`,
+      thumbnailSrc: `${BASE}images/women_empowerment.jpg`
     },
     {
       id: 3,
-      quote: "Their RMNCAH medical outreaches reach rural mothers who have no nearby hospital. This is true grassroots empowerment and healthcare access.",
+      quote: "Their RMNCAH medical outreaches and maternal nutrition packs reach rural mothers who have no nearby hospital. This is true grassroots healthcare access.",
       name: 'Dr. Aliyu Shehu',
       affiliation: 'Public Health Officer, Sokoto State',
-      imageSrc: `${import.meta.env.BASE_URL}images/toddler_baby.jpg`,
-      thumbnailSrc: `${import.meta.env.BASE_URL}images/toddler_baby.jpg`
+      imageSrc: `${BASE}images/child_nutrition.jpg`,
+      thumbnailSrc: `${BASE}images/child_nutrition.jpg`
     }
   ];
 
   const news = [
     {
       id: 1,
-      image: `${import.meta.env.BASE_URL}images/registration_letter.jpg`,
-      category: 'Climate & Environment',
-      title: 'Green Sokoto Initiative 2026: Planting 500 Trees For World Tree Planting Day',
-      desc: 'Targeting 10 strategic sites across Sokoto Metropolis to mitigate extreme heat stress and desertification.',
-      date: 'June 06, 2026'
+      image: `${BASE}images/child_nutrition.jpg`,
+      category: 'Nutrition & Wellbeing',
+      title: 'Maternal & Child Nutrition Drive Expands to Tangaza and Gada LGAs',
+      desc: 'Delivering nutritional assessments, micronutrient supplements, and infant care toolkits to underserved communities.',
+      date: 'June 20, 2026'
     },
     {
       id: 2,
-      image: `${import.meta.env.BASE_URL}images/registration_letter.jpg`,
-      category: 'Protection',
-      title: 'Operational Registration Submitted To Ministry Of Budget & Economic Planning',
-      desc: 'Saferplace Initiative (CAC/IT/NO 7571193) expands formal government partnership in Sokoto State.',
+      image: `${BASE}images/women_empowerment.jpg`,
+      category: 'Gender & Inclusion (GESI)',
+      title: 'Gender Equality & Social Inclusion (GESI) Safe Space Forums Established',
+      desc: 'Saferplace Initiative hosts grassroots dialogues empowering women groups and youth advocates across 6 LGAs.',
       date: 'July 16, 2026'
     },
     {
       id: 3,
-      image: `${import.meta.env.BASE_URL}images/four_children.jpg`,
-      category: 'Education',
-      title: 'Safe Schools Workshop Reaches 500+ Adolescents In Sokoto Secondary Schools',
-      desc: 'Training students on personal safety, digital security, consent education, and peer reporting networks.',
+      image: `${BASE}images/child_welfare_care.jpg`,
+      category: 'Child Protection',
+      title: 'Safe Schools Workshop Reaches 1,500+ Adolescents, Women & Children',
+      desc: 'Equipping school children with safety kits, emergency contact channels, and peer reporting networks.',
       date: 'August 02, 2026'
     },
     {
       id: 4,
-      image: `${import.meta.env.BASE_URL}images/toddler_baby.jpg`,
-      category: 'Health',
-      title: '50 Community First Responders Trained For Survivor Support & RMNCAH Outreach',
-      desc: 'Equipping neighborhood volunteers across 5 LGAs with initial psychosocial and referral tools.',
+      image: `${BASE}images/disaster_relief.jpg`,
+      category: 'Disaster Management',
+      title: 'Emergency Relief & Disaster Response Teams Deployed in Sokoto',
+      desc: 'Providing immediate food, clean water, and emergency medical kits to flood-prone vulnerable communities.',
       date: 'August 18, 2026'
     }
   ];
 
-
   return (
     <>
-      {/* ========== HERO SECTION ========== */}
-      <section className="hero" style={{ background: 'linear-gradient(135deg, #18181D 0%, #3B063F 50%, #580A5E 100%)' }}>
-        <div className="hero-glow-blob"></div>
-
-        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-          <div className="hero-grid">
-            
-            {/* Left Content Column */}
-            <div className="hero-content">
-              <div className="hero-award-tag" style={{ background: 'rgba(255,255,255,.12)', borderColor: 'rgba(255,255,255,.25)' }}>
-                <span style={{ color: '#fff' }}>CAC/IT/NO 7571193 · SOKOTO STATE</span>
-                <i className="fas fa-star" style={{ color: '#A78BFA', fontSize: '.75rem' }}></i>
-              </div>
-              <h1 className="hero-title" style={{ color: '#fff' }}>
-                Creating <br />
-                <span className="text-gradient">Safe Spaces</span> <br />
-                For Every Life
-              </h1>
-              <p className="hero-description" style={{ color: 'rgba(255,255,255,.85)' }}>
-                Saferplace Initiative is a registered non-profit organization in Sokoto State, Nigeria, dedicated to strengthening community safety, protection, health, and climate resilience for women, children, and young people.
-              </p>
-              <div className="hero-cta-buttons">
-                <Link to="/contact" className="hero-btn-white">
-                  Support Our Mission <i className="fas fa-arrow-right" style={{ marginLeft: '.5rem', fontSize: '.85rem' }}></i>
-                </Link>
-                <Link to="/about" className="hero-btn-outline" style={{ color: '#fff', borderColor: 'rgba(255,255,255,.4)' }}>
-                  <i className="fas fa-info-circle" style={{ marginRight: '.6rem', fontSize: '.8rem' }}></i> Our 6 Focus Areas
-                </Link>
-              </div>
-            </div>
-
-            {/* Right Metric Cards Column */}
-            <div className="hero-cards-col">
-              
-              {/* Large Metric Panel */}
-              <div className="hero-metric-panel" style={{ background: 'rgba(255,255,255,.08)', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,.18)' }}>
-                <div className="metric-header-row">
-                  <div className="metric-icon-wrap" style={{ background: '#6C2BD9' }}>
-                    <i className="fas fa-shield-alt" style={{ fontSize: '1.25rem', color: '#fff' }}></i>
-                  </div>
-                  <div>
-                    <h3 style={{ color: '#fff', fontFamily: "'Arimo', sans-serif" }}><CountUp end={5} suffix=" LGAs" /></h3>
-                    <p style={{ color: 'rgba(255,255,255,.8)' }}>Dange Shuni, Gada, Sokoto N/S, Wamakko</p>
-                  </div>
-                </div>
-
-                <div className="metric-progress-wrap">
-                  <div className="progress-label-row">
-                    <span style={{ color: 'rgba(255,255,255,.9)' }}>Program Transparency</span>
-                    <span style={{ color: '#A78BFA' }}>100%</span>
-                  </div>
-                  <div className="metric-progress-bg">
-                    <div className="metric-progress-fill" style={{ width: '100%', background: '#6C2BD9' }}></div>
-                  </div>
-                </div>
-
-                <div className="metric-details-grid">
-                  <div className="metric-detail-item">
-                    <h4 style={{ color: '#fff', fontFamily: "'Arimo', sans-serif" }}><CountUp end={500} suffix="+" /></h4>
-                    <span style={{ color: 'rgba(255,255,255,.7)' }}>STUDENTS</span>
-                  </div>
-                  <div className="metric-divider"></div>
-                  <div className="metric-detail-item">
-                    <h4 style={{ color: '#fff', fontFamily: "'Arimo', sans-serif" }}><CountUp end={50} suffix="+" /></h4>
-                    <span style={{ color: 'rgba(255,255,255,.7)' }}>RESPONDERS</span>
-                  </div>
-                  <div className="metric-divider"></div>
-                  <div className="metric-detail-item">
-                    <h4 style={{ color: '#fff', fontFamily: "'Arimo', sans-serif" }}><CountUp end={6} /></h4>
-                    <span style={{ color: 'rgba(255,255,255,.7)' }}>PILLARS</span>
-                  </div>
-                </div>
-
-                <div className="metric-badges-row">
-                  <span className="metric-badge green">
-                    <span className="badge-dot"></span> CAC REGISTERED
-                  </span>
-                  <span className="metric-badge gold">
-                    <i className="fas fa-crown" style={{ marginRight: '.3rem', fontSize: '.75rem' }}></i> SOKOTO BASED
-                  </span>
-                </div>
-              </div>
-
-              {/* Smaller Partners Panel */}
-              <div className="hero-partners-panel" style={{ background: 'rgba(255,255,255,.05)', border: '1px solid rgba(255,255,255,.1)' }}>
-                <p className="partners-label" style={{ color: 'rgba(255,255,255,.7)' }}>Institutional Stakeholders & Partners</p>
-                <div className="partners-logos" style={{ color: '#fff' }}>
-                  <span><i className="fas fa-university" style={{ marginRight: '.3rem', color: '#A78BFA' }}></i> Ministry of Budget Sokoto</span>
-                  <span><i className="fas fa-leaf" style={{ marginRight: '.3rem', color: '#A78BFA' }}></i> Ministry of Environment</span>
-                  <span><i className="fas fa-graduation-cap" style={{ marginRight: '.3rem', color: '#A78BFA' }}></i> UDUS Forestry</span>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-      </section>
+      {/* ========== HERO SECTION WITH DYNAMIC BACKGROUND SLIDER ========== */}
+      <HeroBackgroundSlider />
 
       {/* ========== HOPE OF OTHERS SECTION ========== */}
       <HopeSection />
 
       {/* ========== STATS SECTION ========== */}
-      <section className="stats-section" style={{ background: 'linear-gradient(135deg, #1E1B4B 0%, #4C1D95 100%)' }}>
+      <section className="stats-section" style={{ background: 'linear-gradient(135deg, #181428 0%, #3B124D 100%)' }}>
         <div className="container">
           <div className="stats-grid">
-            <div className="stat-card">
-              <h3 style={{ color: '#fff' }}>6<span></span></h3>
+            <div className="stat-card" data-reveal="zoom" data-reveal-delay="100">
+              <h3 style={{ color: '#fff' }}>9</h3>
               <p style={{ color: 'rgba(255,255,255,.8)' }}>Core Focus Areas</p>
             </div>
-            <div className="stat-card">
-              <h3 style={{ color: '#fff' }}>5<span></span></h3>
-              <p style={{ color: 'rgba(255,255,255,.8)' }}>Sokoto LGAs</p>
+            <div className="stat-card" data-reveal="zoom" data-reveal-delay="200">
+              <h3 style={{ color: '#fff' }}>6</h3>
+              <p style={{ color: 'rgba(255,255,255,.8)' }}>Operational LGAs (Tangaza added)</p>
             </div>
-            <div className="stat-card">
-              <h3 style={{ color: '#fff' }}>500<span>+</span></h3>
-              <p style={{ color: 'rgba(255,255,255,.8)' }}>Adolescents Reached</p>
+            <div className="stat-card" data-reveal="zoom" data-reveal-delay="300">
+              <h3 style={{ color: '#fff' }}>1,500<span>+</span></h3>
+              <p style={{ color: 'rgba(255,255,255,.8)' }}>Adolescents, Women &amp; Children</p>
             </div>
-            <div className="stat-card">
+            <div className="stat-card" data-reveal="zoom" data-reveal-delay="400">
               <h3 style={{ color: '#fff' }}>500<span>+</span></h3>
               <p style={{ color: 'rgba(255,255,255,.8)' }}>Trees in Green Drive</p>
             </div>
@@ -266,17 +172,17 @@ export default function Home() {
       {/* ========== POPULAR CAUSES ========== */}
       <section className="causes-section section-padding">
         <div className="container">
-          <div className="section-header">
-            <span>Active Initiatives</span>
-            <h2>Support Active Campaigns</h2>
-            <p>Every contribution directly supports survivor protection, maternal-child health, and tree planting drives in Sokoto.</p>
+          <div className="section-header" data-reveal="up">
+            <span className="float-badge">Active Initiatives</span>
+            <h2 className="floating-text-glow">Support Child Welfare &amp; Protection</h2>
+            <p>Every partnership directly supports maternal health, child nutrition, disaster emergency response, and safe learning spaces in Sokoto.</p>
           </div>
 
           <div className="causes-grid">
             {causes.map((cause, idx) => (
-              <div key={cause.id} className="cause-card" data-aos="fade-up" data-delay={String((idx + 1) * 150)}>
+              <div key={cause.id} className="cause-card" data-reveal="up" data-reveal-delay={String((idx + 1) * 150)}>
                 <div className="cause-img">
-                  <img src={cause.image} alt={cause.title} />
+                  <img src={cause.image} alt={cause.title} style={{ height: '220px', width: '100%', objectFit: 'cover' }} />
                 </div>
                 <div className="cause-body">
                   <h3>{cause.title}</h3>
@@ -289,7 +195,9 @@ export default function Home() {
                       <span className="target">Goal: {cause.target}</span>
                     </div>
                   </div>
-                  <Link to="/contact" className="btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#6C2BD9', borderColor: '#6C2BD9' }}>Donate Now</Link>
+                  <Link to="/contact" className="btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#6C2BD9', borderColor: '#6C2BD9' }}>
+                    Partner with us <i className="fas fa-handshake" style={{ marginLeft: '.5rem' }}></i>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -300,18 +208,18 @@ export default function Home() {
       {/* ========== UPCOMING EVENTS ========== */}
       <section className="events-section section-padding" style={{ background: '#F8FAFC' }}>
         <div className="container">
-          <div className="section-header">
-            <span>Community Events</span>
-            <h2>Upcoming Outreaches & Drives</h2>
-            <p>Join our upcoming field activities and tree planting exercises across Sokoto State.</p>
+          <div className="section-header" data-reveal="up">
+            <span className="float-badge">Community Events</span>
+            <h2 className="floating-text-glow">Upcoming Field Outreaches &amp; Clinics</h2>
+            <p>Join our scheduled field programs, nutrition drives, and safe schools workshops across Sokoto State.</p>
           </div>
 
           <div className="events-grid">
             {events.map((event, idx) => (
-              <div key={event.id} className="event-card" data-aos="fade-up" data-delay={String((idx + 1) * 150)}>
+              <div key={event.id} className="event-card" data-reveal="up" data-reveal-delay={String((idx + 1) * 150)}>
                 <div className="event-img-wrap">
-                  <img src={event.image} alt={event.title} />
-                  <div className="event-date-badge" style={{ background: '#6C2BD9' }}>
+                  <img src={event.image} alt={event.title} style={{ height: '200px', width: '100%', objectFit: 'cover' }} />
+                  <div className="event-date-badge float-badge" style={{ background: '#6C2BD9' }}>
                     <h4>{event.day}</h4>
                     <span>{event.month}</span>
                   </div>
@@ -332,52 +240,23 @@ export default function Home() {
       {/* ========== MEET OUR VOLUNTEERS ========== */}
       <section className="volunteers-section section-padding">
         <div className="container">
-          <div className="section-header">
-            <span>Leadership & Team</span>
-            <h2>Meet The Team Behind Saferplace Initiative</h2>
+          <div className="section-header" data-reveal="up">
+            <span className="float-badge">Leadership &amp; Team</span>
+            <h2 className="floating-text-glow">Meet The Team Behind Saferplace Initiative</h2>
             <p>Our dedicated directors, board members, and field leads in Sokoto State.</p>
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }} data-reveal="zoom" data-reveal-delay="200">
             <TeamStack members={volunteers} />
           </div>
         </div>
       </section>
 
-      {/* ========== PHOTO ROW ========== */}
-      <section className="gallery-row">
-        <div className="gallery-cell">
-          <img src={`${import.meta.env.BASE_URL}images/four_children.jpg`} alt="Community children outreach" />
-          <div className="gallery-overlay"><i className="fas fa-expand"></i></div>
-        </div>
-        <div className="gallery-cell">
-          <img src={`${import.meta.env.BASE_URL}images/four_children.jpg`} alt="Community children outreach" />
-          <div className="gallery-overlay"><i className="fas fa-expand"></i></div>
-        </div>
-        <div className="gallery-cell">
-          <img src={`${import.meta.env.BASE_URL}images/toddler_baby.jpg`} alt="Toddler health beneficiary" />
-          <div className="gallery-overlay"><i className="fas fa-expand"></i></div>
-        </div>
-        <div className="gallery-cell">
-          <img src={`${import.meta.env.BASE_URL}images/sparkly_dress_girl.jpg`} alt="Youth empowerment" />
-          <div className="gallery-overlay"><i className="fas fa-expand"></i></div>
-        </div>
-        <div className="gallery-cell">
-          <img src={`${import.meta.env.BASE_URL}images/igbo_attire_boy.jpg`} alt="Child dignity" />
-          <div className="gallery-overlay"><i className="fas fa-expand"></i></div>
-        </div>
-        <div className="gallery-cell">
-          <img src={`${import.meta.env.BASE_URL}images/registration_letter.jpg`} alt="Ministry Registration Letter" />
-          <div className="gallery-overlay"><i className="fas fa-expand"></i></div>
-        </div>
-      </section>
-
-
       {/* ========== CTA REVEAL ========== */}
       <CTAReveal />
 
       {/* ========== TESTIMONIALS ========== */}
-      <section className="testimonials-section section-padding">
+      <section className="testimonials-section section-padding" data-reveal="up">
         <div className="container">
           <div className="section-header">
             <span>Testimonials</span>
@@ -392,10 +271,10 @@ export default function Home() {
       {/* ========== LATEST NEWS & BLOG ========== */}
       <section className="news-section section-padding" style={{ background: '#F8FAFC' }}>
         <div className="container">
-          <div className="section-header">
-            <span>Updates & Articles</span>
-            <h2>Latest News & Project Updates</h2>
-            <p>Read detailed reports of our field outreaches and tree planting progress in Sokoto State.</p>
+          <div className="section-header" data-reveal="up">
+            <span className="float-badge">Updates &amp; Articles</span>
+            <h2 className="floating-text-glow">Latest Field Reports &amp; Program Updates</h2>
+            <p>Read detailed reports of our child welfare outreaches, nutrition distributions, and disaster preparedness in Sokoto State.</p>
           </div>
 
           <NewsCarousel newsItems={news} />
@@ -404,4 +283,5 @@ export default function Home() {
     </>
   );
 }
+
 

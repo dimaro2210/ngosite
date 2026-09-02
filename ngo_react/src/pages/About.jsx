@@ -1,15 +1,16 @@
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
-import TeamStack from '../components/TeamStack'
 import CountUp from '../components/CountUp'
+import TeamStack from '../components/TeamStack'
 
 const BASE = import.meta.env.BASE_URL;
 
 const team = [
-  { name: 'Ejiegbu Chinomso Prince', role: 'Executive Director', image: `${BASE}images/kaftan_boy.jpg`, bio: 'Directing community protection, governance, and organizational development in Sokoto State.' },
-  { name: 'Mr. Kolawole Abidemi', role: 'Board Member & Strategic Advisor', image: `${BASE}images/igbo_attire_boy.jpg`, bio: 'Strategic oversight and community partnerships lead. Phone: 08135441406.' },
-  { name: 'Dr. Fatima Usman', role: 'RMNCAH & Community Health Lead', image: `${BASE}images/sparkly_dress_girl.jpg`, bio: 'Specialist in maternal, child, and adolescent health outreach.' },
-  { name: 'Ibrahim Abubakar', role: 'Climate & Field Operations Lead', image: `${BASE}images/glasses_boy.jpg`, bio: 'Coordinating the Green Sokoto Initiative 2026 and community tree guardians.' },
+  { id: 1, name: 'Prince Nicholas', role: 'Founder & Executive Director', image: `${BASE}images/prince_nicholas.jpg` },
+  { id: 2, name: 'Kola Odejobi', role: 'Governance & Policy Advocacy Team Lead', image: `${BASE}images/team_director.jpg` },
+  { id: 3, name: 'Jemima Karatu', role: 'Disaster & Emergency Management Response Team Lead', image: `${BASE}images/team_board.jpg` },
+  { id: 4, name: 'Nefisa Muhammad', role: 'Reproductive Sexual Health & Maternal Newborn Team Lead', image: `${BASE}images/team_health.jpg` },
+  { id: 5, name: 'Victory Meschak', role: 'Gender Equality & Inclusion (GESI) Lead', image: `${BASE}images/victory_meschak.jpg` },
 ]
 
 const milestones = [
@@ -90,7 +91,7 @@ export default function About() {
                     <i className="fas fa-shield-alt" style={{ fontSize: '1.25rem', color: '#fff' }}></i>
                   </div>
                   <div>
-                    <h3 style={{ color: '#fff' }}>5 LGAs</h3>
+                    <h3 style={{ color: '#fff' }}>6 LGAs</h3>
                     <p style={{ color: 'rgba(255,255,255,.8)' }}>Active Coverage in Sokoto</p>
                   </div>
                 </div>
@@ -153,7 +154,7 @@ export default function About() {
               <div className="stats-row">
                 <div className="stat-item"><h3 style={{ color: '#6C2BD9', fontFamily: "'Arimo', sans-serif" }}><CountUp end={500} suffix="+" /></h3><p>Adolescents Reached</p></div>
                 <div className="stat-item"><h3 style={{ color: '#6C2BD9', fontFamily: "'Arimo', sans-serif" }}><CountUp end={50} /></h3><p>First Responders</p></div>
-                <div className="stat-item"><h3 style={{ color: '#6C2BD9', fontFamily: "'Arimo', sans-serif" }}><CountUp end={5} /></h3><p>Sokoto LGAs Covered</p></div>
+                <div className="stat-item"><h3 style={{ color: '#6C2BD9', fontFamily: "'Arimo', sans-serif" }}><CountUp end={6} /></h3><p>Sokoto LGAs Covered</p></div>
                 <div className="stat-item"><h3 style={{ color: '#6C2BD9', fontFamily: "'Arimo', sans-serif" }}><CountUp end={6} /></h3><p>Operational Pillars</p></div>
               </div>
             </div>
@@ -252,19 +253,21 @@ export default function About() {
         </div>
       </section>
 
-      {/* Leadership Team */}
-      <section ref={teamRef} id="team" className="section-padding" style={{ background: 'var(--bg-light)' }}>
+      {/* ========== LEADERSHIP & TEAM ========== */}
+      <section ref={teamRef} id="team" className="volunteers-section section-padding">
         <div className="container">
           <div className="section-header">
-            <span>Leadership</span>
-            <h2>Meet Our Executive Team</h2>
-            <p>Dedicated directors, advisors, and field leads guiding Saferplace Initiative.</p>
+            <span>Leadership &amp; Team</span>
+            <h2>Meet The Team Behind Saferplace Initiative</h2>
+            <p>Our dedicated directors, board members, and field leads in Sokoto State.</p>
           </div>
+
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}>
             <TeamStack members={team} />
           </div>
         </div>
       </section>
+
 
       {/* Partners */}
       <section style={{ background: '#F8FAFC', padding: '4rem 0' }}>

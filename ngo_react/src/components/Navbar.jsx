@@ -35,7 +35,7 @@ export default function Navbar() {
           </ul>
 
           <div className="nav-actions">
-            <Link to="/contact" className="btn-donate-nav" onClick={close} style={{ background: '#6C2BD9', borderColor: '#6C2BD9' }}>Donate Now</Link>
+            <Link to="/contact" className="btn-donate-nav" onClick={close} style={{ background: '#6C2BD9', borderColor: '#6C2BD9' }}>Partner with us</Link>
             <button
               className="mobile-toggle"
               onClick={() => setOpen(o => !o)}
@@ -81,7 +81,7 @@ export default function Navbar() {
 
         <div className="mobile-drawer-footer">
           <Link to="/contact" className="btn-primary" onClick={close} style={{ width: '100%', textAlign: 'center', justifyContent: 'center', background: '#6C2BD9' }}>
-            Donate Now <i className="fas fa-heart" style={{ marginLeft: '.5rem' }}></i>
+            Partner with us <i className="fas fa-handshake" style={{ marginLeft: '.5rem' }}></i>
           </Link>
         </div>
       </aside>

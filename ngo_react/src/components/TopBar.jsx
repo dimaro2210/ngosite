@@ -11,6 +11,7 @@ export default function TopBar() {
           <div className="top-bar-social">
             <a href="https://facebook.com/saferplaceinitiative" target="_blank" rel="noreferrer" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
             <a href="https://instagram.com/saferplaceinitiative" target="_blank" rel="noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com/@saferplaceinitiative" target="_blank" rel="noreferrer" aria-label="TikTok"><i className="fab fa-tiktok"></i></a>
           </div>
         </div>
       </div>

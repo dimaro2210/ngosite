@@ -113,6 +113,17 @@ export default function Contact() {
                     <p>CAC/IT/NO 7571193</p>
                   </div>
                 </div>
+                <div className="info-card">
+                  <i className="fas fa-share-alt" style={{ color: '#6C2BD9' }}></i>
+                  <div>
+                    <h4>Social Media</h4>
+                    <div style={{ display: 'flex', gap: '0.8rem', marginTop: '0.35rem' }}>
+                      <a href="https://facebook.com/saferplaceinitiative" target="_blank" rel="noreferrer" style={{ color: '#6C2BD9', fontSize: '1.1rem' }} aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+                      <a href="https://instagram.com/saferplaceinitiative" target="_blank" rel="noreferrer" style={{ color: '#E1306C', fontSize: '1.1rem' }} aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+                      <a href="https://tiktok.com/@saferplaceinitiative" target="_blank" rel="noreferrer" style={{ color: '#111', fontSize: '1.1rem' }} aria-label="TikTok"><i className="fab fa-tiktok"></i></a>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Direct Bank Account Donation Card */}

@@ -4,9 +4,47 @@ const BASE = import.meta.env.BASE_URL;
 
 const programs = [
   {
+    id: 0,
+    icon: 'fas fa-running',
+    category: 'Active Campaign',
+    title: 'Sokoto 10KM Marathon — Unite to End Open Defecation',
+    desc: 'A state-wide 10KM marathon race to raise awareness, mobilize communities, and advocate for clean sanitation across Sokoto. Runners unite to end open defecation and promote WASH hygiene in every LGA.',
+    raised: '₦450,000',
+    goal: '₦1,500,000',
+    percent: 30,
+    beneficiaries: '50,000+ residents targeted',
+    states: 'Sokoto Metropolis (all 6 LGAs)',
+    tag: '#sokoto10km',
+  },
+  {
     id: 1,
+    icon: 'fas fa-venus-mars',
+    category: 'Gender & Inclusion',
+    title: 'Gender Equality & Social Inclusion (GESI)',
+    desc: "Advancing equal rights, women's socio-economic empowerment, youth leadership, disability inclusion, and community dialogues to eradicate marginalization across Sokoto State.",
+    raised: '₦850,000',
+    goal: '₦1,400,000',
+    percent: 61,
+    beneficiaries: '4,500+ women, youth & persons with disabilities',
+    states: 'Sokoto Metropolis & Rural LGAs',
+    tag: '#gesi',
+  },
+  {
+    id: 2,
+    icon: 'fas fa-first-aid',
+    category: 'Disaster & Relief',
+    title: 'Disaster Management & Emergency Response',
+    desc: 'Deploying rapid disaster preparedness, mobile emergency relief kits, flood mitigation support, and safe shelter assistance for vulnerable families across flood-prone LGAs.',
+    raised: '₦1,200,000',
+    goal: '₦2,000,000',
+    percent: 60,
+    beneficiaries: '6,000+ flood-affected residents',
+    states: 'Dange Shuni, Wamakko, Gada & Tangaza',
+    tag: '#disasterresponse',
+  },
+  {
+    id: 3,
     icon: 'fas fa-tree',
-    image: `${BASE}images/toddler_baby.jpg`,
     category: 'Climate Resilience',
     title: 'Green Sokoto Initiative 2026',
     desc: 'Planting 500 drought-resistant indigenous trees (Neem, Baobab, Moringa, Bagaruwa) across 10 sites in Sokoto Metropolis for World Tree Planting Day (June 6, 2026).',
@@ -18,9 +56,8 @@ const programs = [
     tag: '#greensokoto',
   },
   {
-    id: 2,
+    id: 4,
     icon: 'fas fa-shield-alt',
-    image: `${BASE}images/sparkly_dress_girl.jpg`,
     category: 'Protection',
     title: 'Protection & Survivor Support',
     desc: 'Providing safe reporting channels, psychosocial support, legal aid referrals, and emergency shelter resources for survivors of abuse and gender-based violence.',
@@ -32,9 +69,8 @@ const programs = [
     tag: '#protection',
   },
   {
-    id: 3,
+    id: 5,
     icon: 'fas fa-heartbeat',
-    image: `${BASE}images/toddler_baby.jpg`,
     category: 'Health',
     title: 'RMNCAH & Community Health',
     desc: 'Delivering Reproductive, Maternal, Newborn, Child, and Adolescent Health clinics, vaccines, antenatal toolkits, and nutritional support across rural Sokoto LGAs.',
@@ -42,13 +78,12 @@ const programs = [
     goal: '₦1,500,000',
     percent: 61,
     beneficiaries: '8,500+ mothers & children',
-    states: 'Sokoto State (5 LGAs)',
+    states: 'Sokoto State (6 LGAs)',
     tag: '#rmncah',
   },
   {
-    id: 4,
+    id: 6,
     icon: 'fas fa-user-graduate',
-    image: `${BASE}images/four_children.jpg`,
     category: 'Education & Prevention',
     title: 'Safe Schools & Social Norm Change',
     desc: 'Conducting interactive workshops on child safety, consent, digital security, and conflict resolution for over 500 adolescents across secondary schools in Sokoto.',
@@ -60,9 +95,8 @@ const programs = [
     tag: '#safeschools',
   },
   {
-    id: 5,
+    id: 7,
     icon: 'fas fa-tint',
-    image: `${BASE}images/igbo_attire_boy.jpg`,
     category: 'WASH & Hygiene',
     title: 'WASH & Community Hygiene Drive',
     desc: 'Installing clean solar boreholes, sanitation blocks, and hygiene toolkits to prevent waterborne diseases in underserved communities across Sokoto.',
@@ -74,9 +108,8 @@ const programs = [
     tag: '#wash',
   },
   {
-    id: 6,
+    id: 8,
     icon: 'fas fa-balance-scale',
-    image: `${BASE}images/glasses_boy.jpg`,
     category: 'Governance & Advocacy',
     title: 'Governance & Policy Advocacy',
     desc: 'Training community safety champions, engaging traditional rulers (Mai Angwan), and advocating for government policies that protect human dignity.',
@@ -102,22 +135,22 @@ export default function Programs() {
       {/* Page Header */}
       <section className="page-header" style={{ background: 'linear-gradient(135deg, #1E1B4B 0%, #4C1D95 100%)' }}>
         <div className="container">
-          <h1 style={{ color: '#fff' }}>Our Core Focus Areas & Campaigns</h1>
-          <p style={{ color: 'rgba(255,255,255,.85)' }}>Saferplace Initiative operates across 6 key pillars to strengthen protection, health, and resilience in Sokoto State.</p>
+          <h1 style={{ color: '#fff' }}>Our Core Focus Areas &amp; Campaigns</h1>
+          <p style={{ color: 'rgba(255,255,255,.85)' }}>Saferplace Initiative operates across 9 key pillars to strengthen protection, health, equality, and resilience in Sokoto State.</p>
         </div>
       </section>
 
       {/* How We Help */}
       <section style={{ background: '#F8FAFC', padding: '5rem 0' }}>
         <div className="container">
-          <div className="section-header">
-            <span>Our Approach</span>
-            <h2>How We Deliver Impact</h2>
-            <p>A survivor-centered, community-led, and data-driven process across all 5 operational LGAs.</p>
+          <div className="section-header" data-reveal="up">
+            <span className="float-badge">Our Approach</span>
+            <h2 className="floating-text-glow">How We Deliver Impact</h2>
+            <p>A survivor-centered, community-led, and data-driven process across all 6 operational LGAs.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem' }}>
             {howWeHelp.map((step, i) => (
-              <div key={i} style={{ background: '#fff', borderRadius: '12px', padding: '2rem', textAlign: 'center', border: '1px solid var(--border-color)', position: 'relative' }}>
+              <div key={i} style={{ background: '#fff', borderRadius: '16px', padding: '2rem', textAlign: 'center', border: '1px solid var(--border-color)', position: 'relative' }} data-reveal="up" data-reveal-delay={String((i + 1) * 100)}>
                 <span style={{ position: 'absolute', top: '1rem', right: '1.2rem', fontSize: '2.5rem', fontWeight: 800, color: 'rgba(108, 43, 217, .08)', fontFamily: 'var(--font-display)' }}>{step.step}</span>
                 <i className={step.icon} style={{ fontSize: '2rem', color: '#6C2BD9', marginBottom: '1rem', display: 'block' }}></i>
                 <h4 style={{ marginBottom: '.5rem' }}>{step.title}</h4>
@@ -131,41 +164,45 @@ export default function Programs() {
       {/* Programs Grid */}
       <section className="section-padding" style={{ background: 'var(--bg-light)' }}>
         <div className="container">
-          <div className="section-header">
-            <span>Active Initiatives</span>
-            <h2>Support Our Ongoing Programs</h2>
-            <p>Every donation directly powers field outreach, survivor protection, child health, and tree planting in Sokoto State.</p>
+          <div className="section-header" data-reveal="up">
+            <span className="float-badge">Active Initiatives</span>
+            <h2 className="floating-text-glow">Support Our Ongoing Programs</h2>
+            <p>Every donation directly powers field outreach, survivor protection, disaster relief, child health, and equality in Sokoto State.</p>
           </div>
           <div className="programs-grid">
-            {programs.map(prog => (
-              <div key={prog.id} className="program-card">
-                <div className="program-img">
-                  <img src={prog.image} alt={prog.title} />
-                  <div style={{ position: 'absolute', top: '1rem', left: '1rem', background: '#6C2BD9', color: '#fff', fontSize: '.75rem', fontWeight: 700, textTransform: 'uppercase', padding: '.3rem .8rem', borderRadius: '20px' }}>
-                    {prog.category}
+            {programs.map((prog, idx) => (
+              <div key={prog.id} className="program-card" data-reveal="up" data-reveal-delay={String((idx % 3 + 1) * 120)}>
+                {/* Clean Icon & Category Header */}
+                <div className="program-card-header">
+                  <div className="program-card-icon-wrap">
+                    <i className={prog.icon}></i>
                   </div>
+                  <span className="program-card-badge">
+                    {prog.category}
+                  </span>
                 </div>
-                <div className="program-info">
-                  <h3>{prog.title}</h3>
-                  <p>{prog.desc}</p>
+
+                <div className="program-info" style={{ padding: '0.5rem 0 0 0' }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-dark)', marginBottom: '0.75rem', lineHeight: '1.35' }}>{prog.title}</h3>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '.92rem', lineHeight: '1.6', marginBottom: '1.25rem' }}>{prog.desc}</p>
 
                   {/* Progress Bar */}
-                  <div className="cause-bar-bg" style={{ margin: '1rem 0 .5rem' }}>
-                    <div className="cause-bar-fill" style={{ width: `${prog.percent}%`, background: '#6C2BD9' }}></div>
+                  <div className="cause-bar-bg" style={{ margin: '1rem 0 .5rem', height: '8px', borderRadius: '10px', background: 'rgba(108, 43, 217, 0.1)' }}>
+                    <div className="cause-bar-fill" style={{ width: `${prog.percent}%`, height: '100%', borderRadius: '10px', background: 'linear-gradient(90deg, #6C2BD9 0%, #A78BFA 100%)' }}></div>
                   </div>
-                  <div className="cause-numbers" style={{ marginBottom: '1rem' }}>
-                    <span className="raised">Raised: {prog.raised}</span>
-                    <span className="target">Goal: {prog.goal}</span>
+                  <div className="cause-numbers" style={{ marginBottom: '1.1rem', display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
+                    <span className="raised" style={{ fontWeight: 700, color: '#6C2BD9' }}>Raised: {prog.raised}</span>
+                    <span className="target" style={{ color: 'var(--text-muted)' }}>Goal: {prog.goal}</span>
                   </div>
 
                   {/* Meta Tags */}
-                  <div style={{ display: 'flex', gap: '.6rem', flexWrap: 'wrap', marginBottom: '1.2rem', fontSize: '.8rem', color: 'var(--text-muted)' }}>
+                  <div style={{ display: 'flex', gap: '.6rem', flexWrap: 'wrap', marginBottom: '1.4rem', fontSize: '.82rem', color: 'var(--text-muted)' }}>
                     <span><i className="fas fa-users" style={{ color: '#6C2BD9', marginRight: '.3rem' }}></i>{prog.beneficiaries}</span>
                     <span><i className="fas fa-map-marker-alt" style={{ color: 'var(--secondary)', marginRight: '.3rem' }}></i>{prog.states}</span>
                   </div>
 
-                  <Link to="/contact" className="btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#6C2BD9', borderColor: '#6C2BD9' }}>
-                    <i className="fas fa-heart"></i> Support This Initiative
+                  <Link to="/contact" className="btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#6C2BD9', borderColor: '#6C2BD9', borderRadius: '12px' }}>
+                    <i className="fas fa-heart" style={{ marginRight: '0.4rem' }}></i> Support This Initiative
                   </Link>
                 </div>
               </div>

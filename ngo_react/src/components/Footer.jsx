@@ -17,20 +17,21 @@ export default function Footer() {
             <h4>About Us</h4>
             <ul className="footer-links">
               <li><Link to="/about">About Our NGO</Link></li>
-              <li><Link to="/programs">6 Focus Areas</Link></li>
+              <li><Link to="/programs">9 Core Focus Areas</Link></li>
               <li><Link to="/gallery">Field Gallery</Link></li>
-              <li><Link to="/contact">Contact & Support</Link></li>
+              <li><Link to="/contact">Partner with us</Link></li>
             </ul>
           </div>
 
           <div className="footer-col">
-            <h4>Operational LGAs</h4>
+            <h4>Operational LGAs (6)</h4>
             <ul className="footer-links">
               <li><Link to="/programs">Dange Shuni LGA</Link></li>
               <li><Link to="/programs">Gada LGA</Link></li>
               <li><Link to="/programs">Sokoto North LGA</Link></li>
               <li><Link to="/programs">Sokoto South LGA</Link></li>
               <li><Link to="/programs">Wamakko LGA</Link></li>
+              <li><Link to="/programs">Tangaza LGA</Link></li>
             </ul>
           </div>
 
@@ -42,6 +43,11 @@ export default function Footer() {
               <li><i className="far fa-envelope" style={{ color: '#A78BFA' }}></i> saferplaceinitiativeng@gmail.com</li>
               <li><i className="fas fa-globe" style={{ color: '#A78BFA' }}></i> www.saferplaceinitiative.ng</li>
             </ul>
+            <div className="footer-social-strip" style={{ display: 'flex', gap: '0.6rem', marginTop: '1.2rem' }}>
+              <a href="https://facebook.com/saferplaceinitiative" target="_blank" rel="noreferrer" className="footer-social-btn" aria-label="Facebook" style={{ width: '38px', height: '38px', borderRadius: '50%', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', textDecoration: 'none', transition: 'all 0.3s' }}><i className="fab fa-facebook-f"></i></a>
+              <a href="https://instagram.com/saferplaceinitiative" target="_blank" rel="noreferrer" className="footer-social-btn" aria-label="Instagram" style={{ width: '38px', height: '38px', borderRadius: '50%', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', textDecoration: 'none', transition: 'all 0.3s' }}><i className="fab fa-instagram"></i></a>
+              <a href="https://tiktok.com/@saferplaceinitiative" target="_blank" rel="noreferrer" className="footer-social-btn" aria-label="TikTok" style={{ width: '38px', height: '38px', borderRadius: '50%', background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', textDecoration: 'none', transition: 'all 0.3s' }}><i className="fab fa-tiktok"></i></a>
+            </div>
           </div>
         </div>
 

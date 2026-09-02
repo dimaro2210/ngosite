@@ -30,14 +30,20 @@ function AnimateOnScroll() {
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible')
-              observerRef.current?.unobserve(entry.target)
+              const el = entry.target
+              const delay = parseInt(el.dataset.revealDelay || el.dataset.delay || '0', 10)
+              setTimeout(() => {
+                el.classList.add('is-visible')
+                el.classList.add('revealed')
+              }, delay)
+              observerRef.current?.unobserve(el)
             }
           })
         },
-        { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+        { threshold: 0.08, rootMargin: '0px 0px -20px 0px' }
       )
-      document.querySelectorAll('[data-aos]').forEach((el) => {
+
+      document.querySelectorAll('[data-aos], [data-reveal]').forEach((el) => {
         observerRef.current.observe(el)
       })
     }

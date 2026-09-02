@@ -92,7 +92,7 @@ export default function CTAReveal() {
           <div className="cta-reveal-line"></div>
           <div className="cta-reveal-actions">
             <Link to="/contact" className="btn-primary cta-reveal-btn">
-              Donate Now <i className="fas fa-heart" style={{ marginLeft: '.5rem' }}></i>
+              Partner with us <i className="fas fa-handshake" style={{ marginLeft: '.5rem' }}></i>
             </Link>
             <Link to="/about" className="cta-reveal-ghost-btn">
               Learn Our Story
