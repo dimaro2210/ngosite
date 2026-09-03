@@ -15,6 +15,12 @@ const mediaList = [
   { id: 9,  category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_dr_ebri_unicef.jpg`, alt: 'Dr. Ebri — UNICEF WASH Specialist, Sokoto Field Office addressing the commissioning' },
   { id: 10, category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_principal_hajiya.jpg`, alt: 'Principal Hajiya Mohamed — Nana Girls School, Sokoto' },
   { id: 11, category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_mallam_bello_ruwasa.jpg`, alt: 'Mallam Bello — SA to the Hon. Commissioner RUWASA at the commissioning' },
+  // MNCHW 2026 — Flag-Off at Emir Palace, Gusau
+  { id: 12, category: 'MNCHW 2026', src: `${import.meta.env.BASE_URL}images/mnchw_gusau/mnchw_emir_address.jpg`, alt: 'HRH Emir of Gusau addressing the gathering at the MNCHW 2026 flag-off ceremony' },
+  { id: 13, category: 'MNCHW 2026', src: `${import.meta.env.BASE_URL}images/mnchw_gusau/mnchw_speech_emir_palace.jpg`, alt: 'Dignitary speech at the Emir Palace during MNCHW 2026 flag-off' },
+  { id: 14, category: 'MNCHW 2026', src: `${import.meta.env.BASE_URL}images/mnchw_gusau/mnchw_emir_vaccine_vial.jpg`, alt: 'Emir of Gusau examining vaccine vial with health officials and partners' },
+  { id: 15, category: 'MNCHW 2026', src: `${import.meta.env.BASE_URL}images/mnchw_gusau/mnchw_emir_mother_baby.jpg`, alt: 'Emir of Gusau blessing mother and infant beneficiary with Red Cross health team' },
+  { id: 16, category: 'MNCHW 2026', src: `${import.meta.env.BASE_URL}images/mnchw_gusau/mnchw_infant_immunization.jpg`, alt: 'Healthcare worker administering infant immunization during MNCHW 2026' },
 ];
 
 // Image URLs passed to the 3-D hero
@@ -24,7 +30,7 @@ export default function Gallery() {
   const [filter, setFilter]       = useState('All');
   const [lightboxSrc, setLightboxSrc] = useState(null);
 
-  const categories    = ['All', 'Children', 'WASH Project'];
+  const categories    = ['All', 'Children', 'WASH Project', 'MNCHW 2026'];
   const filteredMedia = filter === 'All'
     ? (() => {
         const counts = {};
@@ -77,7 +83,7 @@ export default function Gallery() {
             maxWidth: '520px',
             textShadow: '0 2px 8px rgba(0,0,0,.5)',
           }}>
-            Real beneficiary portraits, official accreditation letters, and community outreach photos across Sokoto State.
+            Real beneficiary portraits, project commissions, and maternal-child health outreaches across Northwest Nigeria.
           </p>
           <p style={{
             marginTop: '1.5rem',
