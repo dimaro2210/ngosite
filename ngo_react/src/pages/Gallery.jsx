@@ -39,6 +39,12 @@ const mediaList = [
   { id: 29, category: 'Capacity Building', src: `${import.meta.env.BASE_URL}images/capacity_building/workshop_presentation_male.jpg`, alt: 'Facilitator conducting capacity building interactive session with student prefects' },
   { id: 30, category: 'Capacity Building', src: `${import.meta.env.BASE_URL}images/capacity_building/workshop_presentation_female.jpg`, alt: 'Facilitator training environmental and WASH club prefects on school hygiene promotion' },
   { id: 31, category: 'Capacity Building', src: `${import.meta.env.BASE_URL}images/capacity_building/workshop_coordinators_banner.jpg`, alt: 'Saferplace Initiative coordinators in front of workshop banner' },
+  // Reproductive Health & Maternal Sensitization Outreach
+  { id: 32, category: 'Reproductive Health', src: `${import.meta.env.BASE_URL}images/reproductive_health/rh_community_outdoors_group.jpg`, alt: 'Community group photograph following grassroots reproductive health sensitization outreach' },
+  { id: 33, category: 'Reproductive Health', src: `${import.meta.env.BASE_URL}images/reproductive_health/rh_community_elders_session.jpg`, alt: 'Community leaders, elders, and women gathered under canopy for reproductive health dialogue' },
+  { id: 34, category: 'Reproductive Health', src: `${import.meta.env.BASE_URL}images/reproductive_health/rh_facilitator_holding_infant.jpg`, alt: 'Saferplace Initiative maternal healthcare facilitator carrying a beneficiary infant' },
+  { id: 35, category: 'Reproductive Health', src: `${import.meta.env.BASE_URL}images/reproductive_health/rh_facilitator_sensitization_speech.jpg`, alt: 'Saferplace Initiative health facilitator educating community on safe motherhood and family wellness' },
+  { id: 36, category: 'Reproductive Health', src: `${import.meta.env.BASE_URL}images/reproductive_health/rh_mothers_mat_session.jpg`, alt: 'Interactive reproductive health and maternal-child care session with mothers seated on mats' },
 ];
 
 // Image URLs passed to the 3-D hero
@@ -48,7 +54,7 @@ export default function Gallery() {
   const [filter, setFilter]       = useState('All');
   const [lightboxSrc, setLightboxSrc] = useState(null);
 
-  const categories    = ['All', 'Children', 'WASH Project', 'MNCHW 2026', 'Dignity Kits', 'Hepatitis Day', 'Capacity Building'];
+  const categories    = ['All', 'Children', 'WASH Project', 'MNCHW 2026', 'Dignity Kits', 'Hepatitis Day', 'Capacity Building', 'Reproductive Health'];
 
   const categoryDescriptions = {
     'WASH Project': {
@@ -74,6 +80,10 @@ export default function Gallery() {
     'Capacity Building': {
       title: 'Capacity Building Workshop — Hygiene Promotion & WASH Clubs',
       text: 'One-day capacity building workshop organized by Saferplace Initiative for selected environmental and WASH club prefects across 10 Government Girls Secondary Schools in Sokoto South Local Government Area. The training empowered student leaders with peer-to-peer hygiene promotion skills, safe water handling, menstrual hygiene management, and environmental stewardship within their schools.',
+    },
+    'Reproductive Health': {
+      title: 'Reproductive Health & Maternal-Child Wellness Sensitization',
+      text: 'Grassroots reproductive health sensitization and safe motherhood outreach organized by Saferplace Initiative across underserved community settlements. The intervention provides comprehensive education on maternal-newborn health, family planning counseling, antenatal care adherence, birth spacing, adolescent sexual and reproductive health rights (SRHR), menstrual hygiene, and nutritional guidance to empower women, adolescent girls, and community leaders.',
     },
   };
 
