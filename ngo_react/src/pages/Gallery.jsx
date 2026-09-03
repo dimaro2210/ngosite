@@ -27,6 +27,12 @@ const mediaList = [
   { id: 19, category: 'Dignity Kits', src: `${import.meta.env.BASE_URL}images/dignity_kits/dignity_child_mat_unicef.jpg`, alt: 'Young boy carrying UNICEF box and mat — dignity kit distribution to displaced families' },
   { id: 20, category: 'Dignity Kits', src: `${import.meta.env.BASE_URL}images/dignity_kits/dignity_idp_women_queue.jpg`, alt: 'IDP women and girls queuing at distribution point for dignity kits' },
   { id: 21, category: 'Dignity Kits', src: `${import.meta.env.BASE_URL}images/dignity_kits/dignity_unicef_truck_offload.jpg`, alt: 'UNICEF dignity kit boxes being offloaded from delivery truck for IDP distribution' },
+  // World Hepatitis Day — Saferplace Initiatives & Lions Club Caliphate Lions
+  { id: 22, category: 'Hepatitis Day', src: `${import.meta.env.BASE_URL}images/hepatitis_day/hepatitis_screening_queue.jpg`, alt: 'Community members seated in queue for World Hepatitis Day medical screening' },
+  { id: 23, category: 'Hepatitis Day', src: `${import.meta.env.BASE_URL}images/hepatitis_day/hepatitis_blood_test.jpg`, alt: 'Medical staff administering rapid hepatitis diagnostic blood screening to community resident' },
+  { id: 24, category: 'Hepatitis Day', src: `${import.meta.env.BASE_URL}images/hepatitis_day/hepatitis_lions_registration.jpg`, alt: 'Lions Club Caliphate Lions volunteer coordinator registering participants for hepatitis screening' },
+  { id: 25, category: 'Hepatitis Day', src: `${import.meta.env.BASE_URL}images/hepatitis_day/hepatitis_medical_team.jpg`, alt: 'Volunteer medical doctors and clinical team preparing rapid hepatitis test kits' },
+  { id: 26, category: 'Hepatitis Day', src: `${import.meta.env.BASE_URL}images/hepatitis_day/hepatitis_community_women.jpg`, alt: 'Community women gathered for hepatitis health education and clinical testing' },
 ];
 
 // Image URLs passed to the 3-D hero
@@ -36,7 +42,7 @@ export default function Gallery() {
   const [filter, setFilter]       = useState('All');
   const [lightboxSrc, setLightboxSrc] = useState(null);
 
-  const categories    = ['All', 'Children', 'WASH Project', 'MNCHW 2026', 'Dignity Kits'];
+  const categories    = ['All', 'Children', 'WASH Project', 'MNCHW 2026', 'Dignity Kits', 'Hepatitis Day'];
 
   const categoryDescriptions = {
     'WASH Project': {
@@ -54,6 +60,10 @@ export default function Gallery() {
     'Dignity Kits': {
       title: 'UNICEF Dignity Kits — Distribution to IDPs',
       text: 'Distribution of UNICEF dignity kits to Internally Displaced Persons (IDPs) in Sokoto State. Saferplace Initiative was directly involved in the field implementation — coordinating logistics, beneficiary verification, and last-mile delivery of essential relief items including hygiene supplies, sleeping mats, and household necessities to vulnerable displaced women, children, and families.',
+    },
+    'Hepatitis Day': {
+      title: 'World Hepatitis Day — Community Screening & Awareness',
+      text: 'World Hepatitis Day outreach organized by Saferplace Initiative in collaboration with Lions Club (Caliphate Lions). The medical outreach provided free voluntary hepatitis screening, viral load awareness, preventive counseling, and clinical guidance to community members, nursing mothers, and families in Sokoto.',
     },
   };
 
