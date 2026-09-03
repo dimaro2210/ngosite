@@ -216,7 +216,7 @@ export default function Programs() {
         <div className="container">
           <div className="stats-grid">
             <div className="stat-card"><h3 style={{ color: '#fff' }}>6<span></span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Core Focus Areas</p></div>
-            <div className="stat-card"><h3 style={{ color: '#fff' }}>5<span></span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>LGAs in Sokoto</p></div>
+            <div className="stat-card"><h3 style={{ color: '#fff' }}>6<span></span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>LGAs in Sokoto</p></div>
             <div className="stat-card"><h3 style={{ color: '#fff' }}>500<span>+</span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Adolescents Reached</p></div>
             <div className="stat-card"><h3 style={{ color: '#fff' }}>500<span>+</span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Trees in Green Drive</p></div>
           </div>

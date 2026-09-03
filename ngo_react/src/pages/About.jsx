@@ -16,7 +16,7 @@ const team = [
 const milestones = [
   { year: 'CAC Registration', title: 'Official Registration', desc: 'Registered with CAC Nigeria under CAC/IT/NO 7571193 as a social protection nonprofit.' },
   { year: 'State Integration', title: 'Ministry Approval', desc: 'Submitted introduction and operational registration to the Ministry of Budget & Economic Planning, Sokoto State.' },
-  { year: '5 LGAs', title: 'Coverage Expansion', desc: 'Active operations across Dange Shuni, Gada, Sokoto North, Sokoto South, and Wamakko LGAs.' },
+  { year: '6 LGAs', title: 'Coverage Expansion', desc: 'Active operations across Dange Shuni, Gada, Sokoto North, Sokoto South, Wamakko, and Tangaza LGAs.' },
   { year: '500+ Youth', title: 'Safe Schools Outreach', desc: 'Reached 500+ adolescents across schools with child protection, consent, and safety education.' },
   { year: '50 Responders', title: 'Community First Responders', desc: 'Trained 50 community volunteers as survivor support responders in local neighborhoods.' },
   { year: 'June 2026', title: 'Green Sokoto Initiative', desc: 'Launching the World Tree Planting Day campaign to plant 500 indigenous trees across Sokoto.' },
@@ -32,12 +32,48 @@ const focusPillars = [
 ]
 
 const partners = [
-  'Sokoto State Ministry of Budget & Economic Planning',
-  'Sokoto State Ministry of Environment',
-  'Usmanu Danfodiyo University Sokoto (UDUS)',
-  'RUWASSA Sokoto',
-  'BUA Cement Sokoto',
-  'Sokoto Green Movement',
+  {
+    num: '01 / 06',
+    name: 'UNICEF',
+    role: "United Nations Children's Fund",
+    logo: `${BASE}images/unicef_logo.png`,
+    badge: 'International'
+  },
+  {
+    num: '02 / 06',
+    name: 'Sokoto State Government',
+    role: 'Ministry of Budget & Economic Planning',
+    logo: `${BASE}images/sokoto_state_logo.png`,
+    badge: 'State Governance'
+  },
+  {
+    num: '03 / 06',
+    name: 'EL-MAX',
+    role: 'Procurement | Logistics | Event Planning',
+    logo: `${BASE}images/elmax_logo.png`,
+    badge: 'Enterprise Partner'
+  },
+  {
+    num: '04 / 06',
+    name: 'Espring',
+    role: 'Youth & Community Development Partner',
+    logo: `${BASE}images/partner_espring.jpg`,
+    badge: 'Youth & Community'
+  },
+  {
+    num: '05 / 06',
+    name: 'Saferplace Initiative',
+    role: 'Core Implementing Organization (CAC/IT/NO 7571193)',
+    logo: `${BASE}images/logo.jpg`,
+    badge: 'Lead Organization'
+  },
+  {
+    num: '06 / 06',
+    name: 'Egold Technology',
+    role: 'Solar, CCTV Installation & Automation',
+    logo: `${BASE}images/egold_logo.png`,
+    badge: 'Solar & Tech'
+  },
 ]
 
 export default function About() {
@@ -142,8 +178,12 @@ export default function About() {
       <section className="about-block">
         <div className="container">
           <div className="about-grid-content">
-            <div className="about-img">
-              <img src={`${BASE}images/four_children.jpg`} alt="Saferplace Initiative Beneficiary Children" />
+            <div className="about-img" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#FFFFFF', borderRadius: '16px', padding: '2rem', border: '1px solid rgba(108, 43, 217, 0.12)', boxShadow: '0 8px 30px rgba(0, 0, 0, 0.04)' }}>
+              <img 
+                src={`${BASE}images/logo.jpg`} 
+                alt="Saferplace Initiative Logo" 
+                style={{ width: '100%', maxWidth: '380px', height: 'auto', maxHeight: '380px', objectFit: 'contain', borderRadius: '12px' }}
+              />
             </div>
             <div className="about-text">
               <span style={{ color: '#6C2BD9', fontWeight: 700, fontSize: '.85rem', textTransform: 'uppercase', letterSpacing: '.15em', display: 'block', marginBottom: '.6rem' }}>Who We Are</span>
@@ -216,10 +256,10 @@ export default function About() {
           <div className="section-header">
             <span>Field Reach</span>
             <h2>Current Operational LGAs</h2>
-            <p>Our direct community-led operations span 5 Local Government Areas in Sokoto State.</p>
+            <p>Our direct community-led operations span 6 Local Government Areas in Sokoto State.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', textAlign: 'center' }}>
-            {['Dange Shuni LGA', 'Gada LGA', 'Sokoto North LGA', 'Sokoto South LGA', 'Wamakko LGA'].map((lga, i) => (
+            {['Dange Shuni LGA', 'Gada LGA', 'Sokoto North LGA', 'Sokoto South LGA', 'Wamakko LGA', 'Tangaza LGA'].map((lga, i) => (
               <div key={i} style={{ background: '#fff', border: '1px solid var(--border-color)', borderRadius: '12px', padding: '1.8rem', boxShadow: 'var(--shadow)' }}>
                 <i className="fas fa-map-marker-alt" style={{ fontSize: '2rem', color: '#6C2BD9', marginBottom: '0.8rem', display: 'block' }}></i>
                 <h4 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#1E293B' }}>{lga}</h4>
@@ -270,17 +310,31 @@ export default function About() {
 
 
       {/* Partners */}
-      <section style={{ background: '#F8FAFC', padding: '4rem 0' }}>
+      <section className="partner-marquee-section">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header" style={{ marginBottom: '2.5rem' }}>
             <span>Institutional Support</span>
             <h2>Partners & Affiliates</h2>
             <p>Government ministries, academic bodies, and local stakeholders collaborating with us.</p>
           </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
-            {partners.map((p, i) => (
-              <div key={i} style={{ background: '#fff', border: '1px solid var(--border-color)', borderRadius: '8px', padding: '1rem 1.8rem', fontWeight: 600, fontSize: '.9rem', color: 'var(--text-dark)' }}>
-                <i className="fas fa-check-circle" style={{ color: '#6C2BD9', marginRight: '0.5rem' }}></i>{p}
+        </div>
+
+        {/* Infinite marquee ticker moving right to left */}
+        <div className="partner-marquee-wrapper">
+          <div className="partner-marquee-track">
+            {[...partners, ...partners].map((p, i) => (
+              <div key={i} className="partner-marquee-card">
+                <div className="partner-marquee-header">
+                  <span className="partner-num-pill">{p.num}</span>
+                  <span className="partner-cat-pill">{p.badge}</span>
+                </div>
+                <div className="partner-logo-box">
+                  <img src={p.logo} alt={`${p.name} logo`} />
+                </div>
+                <div className="partner-marquee-content">
+                  <h4>{p.name}</h4>
+                  <p>{p.role}</p>
+                </div>
               </div>
             ))}
           </div>

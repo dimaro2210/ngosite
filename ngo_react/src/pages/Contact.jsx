@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     question: 'Which LGAs does Saferplace Initiative operate in?',
-    answer: 'Our current operational coverage spans 5 Local Government Areas in Sokoto State: Dange Shuni, Gada, Sokoto North, Sokoto South, and Wamakko.'
+    answer: 'Our current operational coverage spans 6 Local Government Areas in Sokoto State: Dange Shuni, Gada, Sokoto North, Sokoto South, Wamakko, and Tangaza.'
   },
   {
     question: 'How can I support or sponsor the Green Sokoto Initiative 2026?',
