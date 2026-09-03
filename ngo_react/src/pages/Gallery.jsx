@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import InfiniteGallery from '../components/InfiniteGallery';
 
 const mediaList = [
-  { id: 1,  category: 'Accreditation', src: `${import.meta.env.BASE_URL}images/registration_letter.jpg`, alt: 'Official Ministry of Budget & Economic Planning Registration Letter' },
-  { id: 2,  category: 'Children',      src: `${import.meta.env.BASE_URL}images/children/four_children.jpg`, alt: 'Community children outreach' },
-  { id: 3,  category: 'Children',      src: `${import.meta.env.BASE_URL}images/children/toddler_baby.jpg`, alt: 'Maternal and toddler health beneficiary' },
-  { id: 4,  category: 'Children',      src: `${import.meta.env.BASE_URL}images/children/sparkly_dress_girl.jpg`, alt: 'Youth empowerment and child protection' },
-  { id: 5,  category: 'Children',      src: `${import.meta.env.BASE_URL}images/children/igbo_attire_boy.jpg`, alt: 'Child dignity and cultural inclusion' },
-  { id: 6,  category: 'Children',      src: `${import.meta.env.BASE_URL}images/children/glasses_boy.jpg`, alt: 'Child vision care and educational support' },
-  { id: 7,  category: 'Children',      src: `${import.meta.env.BASE_URL}images/children/kaftan_boy.jpg`, alt: 'Adolescent health and education' },
-  { id: 8,  category: 'Accreditation', src: `${import.meta.env.BASE_URL}images/registration_letter.jpg`, alt: 'Official Ministry of Budget & Economic Planning Registration Letter' },
+  // Children
+  { id: 1, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/four_children.jpg`, alt: 'Community children outreach' },
+  { id: 2, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/toddler_baby.jpg`, alt: 'Maternal and toddler health beneficiary' },
+  { id: 3, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/sparkly_dress_girl.jpg`, alt: 'Youth empowerment and child protection' },
+  { id: 4, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/igbo_attire_boy.jpg`, alt: 'Child dignity and cultural inclusion' },
+  { id: 5, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/glasses_boy.jpg`, alt: 'Child vision care and educational support' },
+  { id: 6, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/kaftan_boy.jpg`, alt: 'Adolescent health and education' },
+  // WASH Project — Nana Girls School Latrine Commissioning
+  { id: 7,  category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_students_assembly.jpg`, alt: 'Nana Girls School students at latrine commissioning ceremony' },
+  { id: 8,  category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_dr_ebri_unicef.jpg`, alt: 'Dr. Ebri — UNICEF WASH Specialist, Sokoto Field Office addressing the commissioning' },
+  { id: 9,  category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_principal_hajiya.jpg`, alt: 'Principal Hajiya Mohamed — Nana Girls School, Sokoto' },
+  { id: 10, category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_mallam_bello_ruwasa.jpg`, alt: 'Mallam Bello — SA to the Hon. Commissioner RUWASA at the commissioning' },
 ];
 
 // Image URLs passed to the 3-D hero
@@ -19,7 +23,7 @@ export default function Gallery() {
   const [filter, setFilter]       = useState('All');
   const [lightboxSrc, setLightboxSrc] = useState(null);
 
-  const categories    = ['All', 'Children', 'Accreditation'];
+  const categories    = ['All', 'Children', 'WASH Project'];
   const filteredMedia = filter === 'All'
     ? mediaList
     : mediaList.filter(item => item.category === filter);
