@@ -3,12 +3,12 @@ import InfiniteGallery from '../components/InfiniteGallery';
 
 const mediaList = [
   { id: 1,  category: 'Accreditation', src: `${import.meta.env.BASE_URL}images/registration_letter.jpg`, alt: 'Official Ministry of Budget & Economic Planning Registration Letter' },
-  { id: 2,  category: 'Child Welfare', src: `${import.meta.env.BASE_URL}images/four_children.jpg`, alt: 'Community children outreach' },
-  { id: 3,  category: 'Infant Health', src: `${import.meta.env.BASE_URL}images/toddler_baby.jpg`, alt: 'Maternal and toddler health beneficiary' },
-  { id: 4,  category: 'Youth',         src: `${import.meta.env.BASE_URL}images/sparkly_dress_girl.jpg`, alt: 'Youth empowerment and child protection' },
-  { id: 5,  category: 'Cultural',      src: `${import.meta.env.BASE_URL}images/igbo_attire_boy.jpg`, alt: 'Child dignity and cultural inclusion' },
-  { id: 6,  category: 'Health',        src: `${import.meta.env.BASE_URL}images/glasses_boy.jpg`, alt: 'Child vision care and educational support' },
-  { id: 7,  category: 'Adolescent',    src: `${import.meta.env.BASE_URL}images/kaftan_boy.jpg`, alt: 'Adolescent health and education' },
+  { id: 2,  category: 'Children',      src: `${import.meta.env.BASE_URL}images/children/four_children.jpg`, alt: 'Community children outreach' },
+  { id: 3,  category: 'Children',      src: `${import.meta.env.BASE_URL}images/children/toddler_baby.jpg`, alt: 'Maternal and toddler health beneficiary' },
+  { id: 4,  category: 'Children',      src: `${import.meta.env.BASE_URL}images/children/sparkly_dress_girl.jpg`, alt: 'Youth empowerment and child protection' },
+  { id: 5,  category: 'Children',      src: `${import.meta.env.BASE_URL}images/children/igbo_attire_boy.jpg`, alt: 'Child dignity and cultural inclusion' },
+  { id: 6,  category: 'Children',      src: `${import.meta.env.BASE_URL}images/children/glasses_boy.jpg`, alt: 'Child vision care and educational support' },
+  { id: 7,  category: 'Children',      src: `${import.meta.env.BASE_URL}images/children/kaftan_boy.jpg`, alt: 'Adolescent health and education' },
   { id: 8,  category: 'Accreditation', src: `${import.meta.env.BASE_URL}images/registration_letter.jpg`, alt: 'Official Ministry of Budget & Economic Planning Registration Letter' },
 ];
 
@@ -19,7 +19,7 @@ export default function Gallery() {
   const [filter, setFilter]       = useState('All');
   const [lightboxSrc, setLightboxSrc] = useState(null);
 
-  const categories    = ['All', 'Branding', 'Child Welfare', 'Infant Health', 'Youth', 'Cultural', 'Health', 'Accreditation'];
+  const categories    = ['All', 'Children', 'Accreditation'];
   const filteredMedia = filter === 'All'
     ? mediaList
     : mediaList.filter(item => item.category === filter);

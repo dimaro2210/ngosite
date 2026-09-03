@@ -37,7 +37,7 @@ const slideItems = [
   },
   {
     id: 5,
-    image: `${BASE}images/four_children.jpg`,
+    image: `${BASE}images/children/four_children.jpg`,
     title: 'Safe Spaces & Child Protection',
     location: 'Sokoto Metropolis',
     category: 'Child Welfare',
@@ -45,7 +45,7 @@ const slideItems = [
   },
   {
     id: 6,
-    image: `${BASE}images/toddler_baby.jpg`,
+    image: `${BASE}images/children/toddler_baby.jpg`,
     title: 'Infant Wellness & Antenatal Care',
     location: '6 Operational LGAs',
     category: 'Child Survival',
