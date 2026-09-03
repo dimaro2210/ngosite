@@ -10,10 +10,11 @@ const mediaList = [
   { id: 5, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/glasses_boy.jpg`, alt: 'Child vision care and educational support' },
   { id: 6, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/kaftan_boy.jpg`, alt: 'Adolescent health and education' },
   // WASH Project — Nana Girls School Latrine Commissioning
-  { id: 7,  category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_students_assembly.jpg`, alt: 'Nana Girls School students at latrine commissioning ceremony' },
-  { id: 8,  category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_dr_ebri_unicef.jpg`, alt: 'Dr. Ebri — UNICEF WASH Specialist, Sokoto Field Office addressing the commissioning' },
-  { id: 9,  category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_principal_hajiya.jpg`, alt: 'Principal Hajiya Mohamed — Nana Girls School, Sokoto' },
-  { id: 10, category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_mallam_bello_ruwasa.jpg`, alt: 'Mallam Bello — SA to the Hon. Commissioner RUWASA at the commissioning' },
+  { id: 7,  category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_project_signboard.jpg`, alt: 'Official Commissioning Signboard — Renovation and upgrade of 4 pit latrines to modern toilet facility for Nana Girls Secondary School' },
+  { id: 8,  category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_students_assembly.jpg`, alt: 'Nana Girls School students at latrine commissioning ceremony' },
+  { id: 9,  category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_dr_ebri_unicef.jpg`, alt: 'Dr. Ebri — UNICEF WASH Specialist, Sokoto Field Office addressing the commissioning' },
+  { id: 10, category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_principal_hajiya.jpg`, alt: 'Principal Hajiya Mohamed — Nana Girls School, Sokoto' },
+  { id: 11, category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_mallam_bello_ruwasa.jpg`, alt: 'Mallam Bello — SA to the Hon. Commissioner RUWASA at the commissioning' },
 ];
 
 // Image URLs passed to the 3-D hero
