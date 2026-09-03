@@ -31,6 +31,22 @@ export default function Gallery() {
   const [lightboxSrc, setLightboxSrc] = useState(null);
 
   const categories    = ['All', 'Children', 'WASH Project', 'MNCHW 2026'];
+
+  const categoryDescriptions = {
+    'WASH Project': {
+      title: 'WASH Project — Nana Girls School Latrine Commissioning',
+      text: 'Renovation and upgrade of 1 block of 4 pit toilet to a modern water closet facility for Nana Girls Secondary School Staff Toilet, Sokoto South Local Government Area. By Felix Favour Okpuniyi. Funded by Safer Place Initiative and commissioned by the S.A. to the Executive Governor Sokoto State on RUWASA — Hon. Abubakar Umar Dan Tama, June 2026. Dignitaries present included Dr. Ebri (UNICEF WASH Specialist, Sokoto Field Office), Mallam Bello (SA to the Hon. Commissioner RUWASA), Principal Hajiya Mohamed (Nana Girls School), Vice Principal, and NYSC Local Inspector.',
+    },
+    'MNCHW 2026': {
+      title: 'MNCHW 2026 — Flag-Off at Emir Palace, Gusau',
+      text: 'Flag-off ceremony of the Maternal, Newborn and Child Health Week (MNCHW) 2026 held at the Emir Palace in Gusau, Zamfara State. The event was graced by HRH the Emir of Gusau, health officials, Red Cross volunteers, UNICEF partners, and community leaders. Infant immunization drives and maternal-child wellness screenings were conducted on-site to launch the week-long campaign across the state.',
+    },
+    'Children': {
+      title: 'Children — Beneficiary Portraits',
+      text: 'Portraits of children and young beneficiaries across Saferplace Initiative community outreach programs in Sokoto State. These photos document real impact — from child welfare and educational support to youth empowerment and cultural inclusion.',
+    },
+  };
+
   const filteredMedia = filter === 'All'
     ? (() => {
         const counts = {};
@@ -141,6 +157,38 @@ export default function Gallery() {
               </button>
             ))}
           </div>
+
+          {/* Category Description Banner */}
+          {filter !== 'All' && categoryDescriptions[filter] && (
+            <div style={{
+              background:      'linear-gradient(135deg, rgba(108,43,217,.08), rgba(88,10,94,.06))',
+              border:          '1px solid rgba(108,43,217,.15)',
+              borderRadius:    'var(--radius-md)',
+              padding:         '2rem 2.5rem',
+              marginBottom:    '2.5rem',
+              textAlign:       'center',
+              maxWidth:        '800px',
+              margin:          '0 auto 2.5rem',
+            }}>
+              <h3 style={{
+                fontFamily:    'var(--font-display)',
+                fontWeight:    800,
+                fontSize:      '1.3rem',
+                color:         'var(--text-dark)',
+                marginBottom:  '.8rem',
+              }}>
+                {categoryDescriptions[filter].title}
+              </h3>
+              <p style={{
+                color:         'var(--text-muted)',
+                fontSize:      '.92rem',
+                lineHeight:    1.7,
+                margin:        0,
+              }}>
+                {categoryDescriptions[filter].text}
+              </p>
+            </div>
+          )}
 
           {/* Media Grid */}
           <div className="gallery-grid">
