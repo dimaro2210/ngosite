@@ -62,8 +62,6 @@ export default function NewsCarousel({ newsItems }) {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Ambient background blob behind carousel */}
-      <div className="carousel-ambient-glow" aria-hidden="true"></div>
 
       {/* Perspective Container */}
       <div 

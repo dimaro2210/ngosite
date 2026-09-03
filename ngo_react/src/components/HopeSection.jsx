@@ -77,9 +77,6 @@ export default function HopeSection() {
 
   return (
     <section className="hope-section section-padding relative overflow-hidden">
-      {/* Decorative ambient background flares */}
-      <div className="hope-ambient-glow-1" aria-hidden="true"></div>
-      <div className="hope-ambient-glow-2" aria-hidden="true"></div>
       <div className="hope-grain" aria-hidden="true"></div>
 
       <div className="container relative z-10">

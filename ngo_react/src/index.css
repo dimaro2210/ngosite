@@ -79,12 +79,12 @@ h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 700; }
   50%       { transform: translateY(-6px) rotate(0.3deg); box-shadow: var(--shadow-hover); }
 }
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 4px 15px rgba(212,157,66,.3); }
-  50%       { box-shadow: 0 4px 32px rgba(212,157,66,.65), 0 0 0 6px rgba(212,157,66,.08); }
+  0%, 100% { box-shadow: var(--shadow); }
+  50%       { box-shadow: var(--shadow); }
 }
 @keyframes pulseGlowGreen {
-  0%, 100% { box-shadow: 0 4px 15px rgba(12,124,89,.3); }
-  50%       { box-shadow: 0 4px 32px rgba(12,124,89,.6), 0 0 0 6px rgba(12,124,89,.08); }
+  0%, 100% { box-shadow: var(--shadow); }
+  50%       { box-shadow: var(--shadow); }
 }
 @keyframes shimmer {
   0%   { background-position: -800px 0; }
@@ -224,7 +224,6 @@ h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 700; }
 .btn-primary {
   position: relative;
   overflow: hidden;
-  animation: pulseGlow 3s ease-in-out infinite;
 }
 .btn-primary::after {
   content: '';
@@ -253,9 +252,9 @@ h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 700; }
 .btn-secondary:hover::after { transform: translateX(100%) skewX(-15deg); }
 .btn-secondary:hover { transform: translateY(-3px) !important; }
 
-/* WhatsApp floating button enhanced */
+/* WhatsApp floating button */
 .whatsapp-float {
-  animation: pulseGlowGreen 2.5s ease-in-out infinite, float 3s ease-in-out infinite;
+  /* clean appearance without glow animation */
 }
 
 /* ══════════════════════════════════════════════════
@@ -340,7 +339,9 @@ h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 700; }
 }
 
 /* Testimonial slider nav buttons */
-.testimonial-nav-btn.primary { animation: pulseGlowGreen 2.5s ease-in-out infinite; }
+.testimonial-nav-btn.primary {
+  box-shadow: var(--shadow);
+}
 
 /* Scroll indicator on gallery hero */
 @keyframes bounceArrow {
@@ -423,16 +424,7 @@ body { padding-top: 80px; }
   overflow: hidden;
 }
 .hero-glow-blob {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(212, 157, 66, 0.22) 0%, rgba(12, 124, 89, 0.08) 50%, transparent 70%);
-  filter: blur(80px);
-  pointer-events: none;
-  z-index: 1;
+  display: none !important;
 }
 .hero-grid {
   display: grid;
@@ -838,17 +830,7 @@ body { padding-top: 80px; }
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .page-header::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(212, 157, 66, 0.18) 0%, rgba(12, 124, 89, 0.05) 50%, transparent 70%);
-  filter: blur(80px);
-  pointer-events: none;
-  z-index: 1;
+  display: none !important;
 }
 .page-header .container {
   position: relative;
@@ -1398,7 +1380,7 @@ body { padding-top: 80px; }
   }
 }
 
-/* Decorative blobs — give the glass something colourful to blur */
+/* Decorative blobs disabled to eliminate glow effects */
 .causes-section::before,
 .causes-section::after,
 .events-section::before,
@@ -1409,15 +1391,7 @@ body { padding-top: 80px; }
 .news-section::after,
 .testimonials-section::before,
 .testimonials-section::after {
-  content: '';
-  position: absolute;
-  width: 550px;
-  height: 550px;
-  filter: blur(140px);
-  opacity: 0.18;
-  pointer-events: none;
-  z-index: 0;
-  will-change: transform, border-radius;
+  display: none !important;
 }
 
 /* Apply slow morphing animations */
@@ -1705,17 +1679,7 @@ body { padding-top: 80px; }
 
 /* ── 24. ABOUT SECTION — Blob decoration ── */
 .about-section::after {
-  content: '';
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(212,157,66,.12) 0%, rgba(12,124,89,.08) 70%);
-  filter: blur(80px);
-  bottom: -100px;
-  right: -100px;
-  pointer-events: none;
-  z-index: 0;
+  display: none !important;
 }
 .about-section > * { position: relative; z-index: 1; }
 
@@ -1762,17 +1726,7 @@ body { padding-top: 80px; }
 }
 
 .carousel-ambient-glow {
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.06) 0%, rgba(12, 124, 89, 0.04) 50%, transparent 70%);
-  filter: blur(80px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 1;
+  display: none !important;
 }
 
 .carousel-cards-container {
@@ -2242,31 +2196,10 @@ body { padding-top: 80px; }
   padding: 6rem 0;
 }
 
-/* Ambient glow flares */
-.hope-ambient-glow-1 {
-  position: absolute;
-  width: 520px;
-  height: 520px;
-  background: radial-gradient(circle, rgba(212, 157, 66, 0.1) 0%, transparent 70%);
-  top: -160px;
-  left: -120px;
-  filter: blur(90px);
-  pointer-events: none;
-  opacity: 0.8;
-  z-index: 1;
-}
-
+/* Ambient glow flares disabled */
+.hope-ambient-glow-1,
 .hope-ambient-glow-2 {
-  position: absolute;
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(circle, rgba(12, 124, 89, 0.1) 0%, transparent 70%);
-  bottom: -140px;
-  right: -100px;
-  filter: blur(80px);
-  pointer-events: none;
-  opacity: 0.6;
-  z-index: 1;
+  display: none !important;
 }
 
 .hope-grain {
@@ -2631,31 +2564,11 @@ body { padding-top: 80px; }
   border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 
-/* Ambient orbs */
-.cta-reveal-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  pointer-events: none;
-  opacity: 0.6;
-}
-
-.cta-reveal-orb-1 {
-  width: 500px;
-  height: 500px;
-  background: rgba(12, 124, 89, 0.12);
-  top: -150px;
-  left: -100px;
-  animation: ctaOrbFloat1 20s ease-in-out infinite;
-}
-
+/* Ambient orbs disabled */
+.cta-reveal-orb,
+.cta-reveal-orb-1,
 .cta-reveal-orb-2 {
-  width: 400px;
-  height: 400px;
-  background: rgba(212, 157, 66, 0.09);
-  bottom: -120px;
-  right: -80px;
-  animation: ctaOrbFloat2 25s ease-in-out infinite;
+  display: none !important;
 }
 
 @keyframes ctaOrbFloat1 {
@@ -2976,20 +2889,7 @@ body { padding-top: 80px; }
 }
 
 .ngo-cac-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: rgba(255, 255, 255, 0.09);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  padding: 0.45rem 1.1rem;
-  border-radius: 9999px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  width: fit-content;
+  display: none !important;
 }
 
 .ngo-hero-headline {
@@ -3807,7 +3707,7 @@ body { padding-top: 80px; }
 
 .floating-text-glow {
   display: inline-block;
-  animation: textGlowFloat 4s ease-in-out infinite;
+  animation: none !important;
 }
 
 /* ── Enhanced Interactive Floating Card Hover ── */

@@ -55,10 +55,6 @@ export default function CTAReveal() {
 
   return (
     <section className="cta-reveal-section" ref={sectionRef}>
-      {/* Ambient flares */}
-      <div className="cta-reveal-orb cta-reveal-orb-1" aria-hidden="true"></div>
-      <div className="cta-reveal-orb cta-reveal-orb-2" aria-hidden="true"></div>
-
       {/* Subtle grid background */}
       <div className="cta-reveal-grid" aria-hidden="true"></div>
 

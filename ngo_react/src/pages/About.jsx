@@ -83,17 +83,11 @@ export default function About() {
     <>
       {/* ========== HERO SECTION (About Page) ========== */}
       <section className="hero" style={{ background: 'linear-gradient(135deg, #18181D 0%, #3B063F 50%, #580A5E 100%)' }}>
-        <div className="hero-glow-blob"></div>
-
         <div className="container" style={{ position: 'relative', zIndex: 10 }}>
           <div className="hero-grid">
             
             {/* Left Content Column */}
             <div className="hero-content">
-              <div className="hero-award-tag" style={{ background: 'rgba(255,255,255,.15)', borderColor: 'rgba(255,255,255,.3)' }}>
-                <span style={{ color: '#fff' }}>CAC/IT/NO 7571193 · SOKOTO STATE</span>
-                <i className="fas fa-heart" style={{ color: '#A78BFA', fontSize: '.75rem' }}></i>
-              </div>
               <h1 className="hero-title" style={{ color: '#fff' }}>
                 Saferplace <br />
                 <span className="text-gradient">Initiative</span>

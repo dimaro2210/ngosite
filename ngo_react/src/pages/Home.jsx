@@ -173,8 +173,8 @@ export default function Home() {
       <section className="causes-section section-padding">
         <div className="container">
           <div className="section-header" data-reveal="up">
-            <span className="float-badge">Active Initiatives</span>
-            <h2 className="floating-text-glow">Support Child Welfare &amp; Protection</h2>
+            <span>Active Initiatives</span>
+            <h2>Support Child Welfare &amp; Protection</h2>
             <p>Every partnership directly supports maternal health, child nutrition, disaster emergency response, and safe learning spaces in Sokoto.</p>
           </div>
 
@@ -209,8 +209,8 @@ export default function Home() {
       <section className="events-section section-padding" style={{ background: '#F8FAFC' }}>
         <div className="container">
           <div className="section-header" data-reveal="up">
-            <span className="float-badge">Community Events</span>
-            <h2 className="floating-text-glow">Upcoming Field Outreaches &amp; Clinics</h2>
+            <span>Community Events</span>
+            <h2>Upcoming Field Outreaches &amp; Clinics</h2>
             <p>Join our scheduled field programs, nutrition drives, and safe schools workshops across Sokoto State.</p>
           </div>
 
@@ -241,8 +241,8 @@ export default function Home() {
       <section className="volunteers-section section-padding">
         <div className="container">
           <div className="section-header" data-reveal="up">
-            <span className="float-badge">Leadership &amp; Team</span>
-            <h2 className="floating-text-glow">Meet The Team Behind Saferplace Initiative</h2>
+            <span>Leadership &amp; Team</span>
+            <h2>Meet The Team Behind Saferplace Initiative</h2>
             <p>Our dedicated directors, board members, and field leads in Sokoto State.</p>
           </div>
 
@@ -272,8 +272,8 @@ export default function Home() {
       <section className="news-section section-padding" style={{ background: '#F8FAFC' }}>
         <div className="container">
           <div className="section-header" data-reveal="up">
-            <span className="float-badge">Updates &amp; Articles</span>
-            <h2 className="floating-text-glow">Latest Field Reports &amp; Program Updates</h2>
+            <span>Updates &amp; Articles</span>
+            <h2>Latest Field Reports &amp; Program Updates</h2>
             <p>Read detailed reports of our child welfare outreaches, nutrition distributions, and disaster preparedness in Sokoto State.</p>
           </div>
 

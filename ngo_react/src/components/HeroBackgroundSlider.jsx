@@ -95,12 +95,6 @@ export default function HeroBackgroundSlider() {
         {/* ── LEFT CARD (Branding & CTAs) ── */}
         <div className="ngo-hero-left-card" data-aos="fade-right">
 
-          {/* CAC badge */}
-          <div className="ngo-cac-badge">
-            <span>CAC/IT/NO 7571193 - SOKOTO STATE</span>
-            <i className="fas fa-heart" style={{ color: '#A78BFA', fontSize: '0.75rem' }}></i>
-          </div>
-
           {/* Headline */}
           <h1 className="ngo-hero-headline">
             Saferplace<br />

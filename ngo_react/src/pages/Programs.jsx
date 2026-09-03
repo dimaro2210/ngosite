@@ -144,8 +144,8 @@ export default function Programs() {
       <section style={{ background: '#F8FAFC', padding: '5rem 0' }}>
         <div className="container">
           <div className="section-header" data-reveal="up">
-            <span className="float-badge">Our Approach</span>
-            <h2 className="floating-text-glow">How We Deliver Impact</h2>
+            <span>Our Approach</span>
+            <h2>How We Deliver Impact</h2>
             <p>A survivor-centered, community-led, and data-driven process across all 6 operational LGAs.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem' }}>
@@ -165,8 +165,8 @@ export default function Programs() {
       <section className="section-padding" style={{ background: 'var(--bg-light)' }}>
         <div className="container">
           <div className="section-header" data-reveal="up">
-            <span className="float-badge">Active Initiatives</span>
-            <h2 className="floating-text-glow">Support Our Ongoing Programs</h2>
+            <span>Active Initiatives</span>
+            <h2>Support Our Ongoing Programs</h2>
             <p>Every donation directly powers field outreach, survivor protection, disaster relief, child health, and equality in Sokoto State.</p>
           </div>
           <div className="programs-grid">
