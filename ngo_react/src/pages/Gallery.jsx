@@ -26,7 +26,13 @@ export default function Gallery() {
 
   const categories    = ['All', 'Children', 'WASH Project'];
   const filteredMedia = filter === 'All'
-    ? mediaList
+    ? (() => {
+        const counts = {};
+        return mediaList.filter(item => {
+          counts[item.category] = (counts[item.category] || 0) + 1;
+          return counts[item.category] <= 2;
+        });
+      })()
     : mediaList.filter(item => item.category === filter);
 
   return (
