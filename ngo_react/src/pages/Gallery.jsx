@@ -33,6 +33,12 @@ const mediaList = [
   { id: 24, category: 'Hepatitis Day', src: `${import.meta.env.BASE_URL}images/hepatitis_day/hepatitis_lions_registration.jpg`, alt: 'Lions Club Caliphate Lions volunteer coordinator registering participants for hepatitis screening' },
   { id: 25, category: 'Hepatitis Day', src: `${import.meta.env.BASE_URL}images/hepatitis_day/hepatitis_medical_team.jpg`, alt: 'Volunteer medical doctors and clinical team preparing rapid hepatitis test kits' },
   { id: 26, category: 'Hepatitis Day', src: `${import.meta.env.BASE_URL}images/hepatitis_day/hepatitis_community_women.jpg`, alt: 'Community women gathered for hepatitis health education and clinical testing' },
+  // Capacity Building Workshop — Environmental & WASH Club Prefects
+  { id: 27, category: 'Capacity Building', src: `${import.meta.env.BASE_URL}images/capacity_building/workshop_group_banner.jpg`, alt: 'Group photograph of facilitators and participants at the hygiene promotion capacity building workshop' },
+  { id: 28, category: 'Capacity Building', src: `${import.meta.env.BASE_URL}images/capacity_building/workshop_facilitators_panel.jpg`, alt: 'Workshop facilitators and coordinators seated at the training session table' },
+  { id: 29, category: 'Capacity Building', src: `${import.meta.env.BASE_URL}images/capacity_building/workshop_presentation_male.jpg`, alt: 'Facilitator conducting capacity building interactive session with student prefects' },
+  { id: 30, category: 'Capacity Building', src: `${import.meta.env.BASE_URL}images/capacity_building/workshop_presentation_female.jpg`, alt: 'Facilitator training environmental and WASH club prefects on school hygiene promotion' },
+  { id: 31, category: 'Capacity Building', src: `${import.meta.env.BASE_URL}images/capacity_building/workshop_coordinators_banner.jpg`, alt: 'Saferplace Initiative coordinators in front of workshop banner' },
 ];
 
 // Image URLs passed to the 3-D hero
@@ -42,7 +48,7 @@ export default function Gallery() {
   const [filter, setFilter]       = useState('All');
   const [lightboxSrc, setLightboxSrc] = useState(null);
 
-  const categories    = ['All', 'Children', 'WASH Project', 'MNCHW 2026', 'Dignity Kits', 'Hepatitis Day'];
+  const categories    = ['All', 'Children', 'WASH Project', 'MNCHW 2026', 'Dignity Kits', 'Hepatitis Day', 'Capacity Building'];
 
   const categoryDescriptions = {
     'WASH Project': {
@@ -64,6 +70,10 @@ export default function Gallery() {
     'Hepatitis Day': {
       title: 'World Hepatitis Day — Community Screening & Awareness',
       text: 'World Hepatitis Day outreach organized by Saferplace Initiative in collaboration with Lions Club (Caliphate Lions). The medical outreach provided free voluntary hepatitis screening, viral load awareness, preventive counseling, and clinical guidance to community members, nursing mothers, and families in Sokoto.',
+    },
+    'Capacity Building': {
+      title: 'Capacity Building Workshop — Hygiene Promotion & WASH Clubs',
+      text: 'One-day capacity building workshop organized by Saferplace Initiative for selected environmental and WASH club prefects across 10 Government Girls Secondary Schools in Sokoto South Local Government Area. The training empowered student leaders with peer-to-peer hygiene promotion skills, safe water handling, menstrual hygiene management, and environmental stewardship within their schools.',
     },
   };
 
