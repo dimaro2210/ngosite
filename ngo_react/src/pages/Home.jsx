@@ -78,7 +78,7 @@ export default function Home() {
   const testimonials = [
     {
       id: 1,
-      quote: "Saferplace Initiative has greatly and tremendously impacted our communities here in Sokoto South Local Government. They have improved the livelihood of women and children of internally displaced persons. They have also impacted the school community in my domain by building toilets and establishing environmental clubs in all the over 50 schools in Sokoto South LGA. Their tree planting campaign has also helped our green life and improved our climatic condition. They are currently embarking on hygiene promotion in the community; this activity has helped greatly in improving environmental and personal hygiene. Solid waste littering has drastically reduced and the rate of sickness such as typhoid, malaria, and cholera has reduced. Our women and children are healthier and our communities are happier for this. Mungode, thank you Saferplace Initiative.",
+      quote: "Saferplace Initiative has transformed our communities across Sokoto South—uplifting displaced women and children, improving school sanitation, greening our environment, and promoting community hygiene to drastically reduce preventable diseases. Our families are healthier and deeply grateful. Mungode!",
       name: 'Alhaji Sani Umar Jabbi',
       affiliation: 'District Head of GaGi Community · Sarkin Yakin Gagi, Sokoto South LGA',
       imageSrc: `${BASE}images/alhaji_sani_umar_jabbi.jpg`,
