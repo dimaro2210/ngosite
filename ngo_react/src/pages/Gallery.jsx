@@ -21,6 +21,12 @@ const mediaList = [
   { id: 14, category: 'MNCHW 2026', src: `${import.meta.env.BASE_URL}images/mnchw_gusau/mnchw_emir_vaccine_vial.jpg`, alt: 'Emir of Gusau examining vaccine vial with health officials and partners' },
   { id: 15, category: 'MNCHW 2026', src: `${import.meta.env.BASE_URL}images/mnchw_gusau/mnchw_emir_mother_baby.jpg`, alt: 'Emir of Gusau blessing mother and infant beneficiary with Red Cross health team' },
   { id: 16, category: 'MNCHW 2026', src: `${import.meta.env.BASE_URL}images/mnchw_gusau/mnchw_infant_immunization.jpg`, alt: 'Healthcare worker administering infant immunization during MNCHW 2026' },
+  // UNICEF Dignity Kits — Distribution to IDPs
+  { id: 17, category: 'Dignity Kits', src: `${import.meta.env.BASE_URL}images/dignity_kits/dignity_idp_women_carrying.jpg`, alt: 'IDP women carrying dignity kit boxes and mats after distribution' },
+  { id: 18, category: 'Dignity Kits', src: `${import.meta.env.BASE_URL}images/dignity_kits/dignity_unicef_box_handover.jpg`, alt: 'IDP beneficiary receiving UNICEF dignity kit box during field distribution' },
+  { id: 19, category: 'Dignity Kits', src: `${import.meta.env.BASE_URL}images/dignity_kits/dignity_child_mat_unicef.jpg`, alt: 'Young boy carrying UNICEF box and mat — dignity kit distribution to displaced families' },
+  { id: 20, category: 'Dignity Kits', src: `${import.meta.env.BASE_URL}images/dignity_kits/dignity_idp_women_queue.jpg`, alt: 'IDP women and girls queuing at distribution point for dignity kits' },
+  { id: 21, category: 'Dignity Kits', src: `${import.meta.env.BASE_URL}images/dignity_kits/dignity_unicef_truck_offload.jpg`, alt: 'UNICEF dignity kit boxes being offloaded from delivery truck for IDP distribution' },
 ];
 
 // Image URLs passed to the 3-D hero
@@ -30,7 +36,7 @@ export default function Gallery() {
   const [filter, setFilter]       = useState('All');
   const [lightboxSrc, setLightboxSrc] = useState(null);
 
-  const categories    = ['All', 'Children', 'WASH Project', 'MNCHW 2026'];
+  const categories    = ['All', 'Children', 'WASH Project', 'MNCHW 2026', 'Dignity Kits'];
 
   const categoryDescriptions = {
     'WASH Project': {
@@ -44,6 +50,10 @@ export default function Gallery() {
     'Children': {
       title: 'Children — Beneficiary Portraits',
       text: 'Portraits of children and young beneficiaries across Saferplace Initiative community outreach programs in Sokoto State. These photos document real impact — from child welfare and educational support to youth empowerment and cultural inclusion.',
+    },
+    'Dignity Kits': {
+      title: 'UNICEF Dignity Kits — Distribution to IDPs',
+      text: 'Distribution of UNICEF dignity kits to Internally Displaced Persons (IDPs) in Sokoto State. Saferplace Initiative was directly involved in the field implementation — coordinating logistics, beneficiary verification, and last-mile delivery of essential relief items including hygiene supplies, sleeping mats, and household necessities to vulnerable displaced women, children, and families.',
     },
   };
 
