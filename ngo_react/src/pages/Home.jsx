@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import TestimonialSlider from '../components/TestimonialSlider';
-import NewsCarousel from '../components/NewsCarousel';
 import TeamStack from '../components/TeamStack';
 import HopeSection from '../components/HopeSection';
 import CTAReveal from '../components/CTAReveal';
@@ -15,64 +14,35 @@ export default function Home() {
       id: 1,
       image: `${BASE}images/marathon_campaign.jpg`,
       title: 'Sokoto 10KM Marathon — Unite to End Open Defecation',
-      percent: '30%',
-      raised: '₦450,000',
-      target: '₦1,500,000'
+      category: 'WASH & Clean Sanitation',
+      reach: '50,000+ Targeted',
+      status: 'Active Campaign'
     },
     {
       id: 2,
-      image: `${BASE}images/child_nutrition.jpg`,
+      image: `${BASE}images/maternal_child_nutrition_drive.jpg`,
       title: 'Maternal & Child Nutrition Support Drive',
-      percent: '55%',
-      raised: '₦550,000',
-      target: '₦1,000,000'
+      category: 'Child Nutrition',
+      reach: 'Underserved Communities',
+      status: 'Ongoing Outreach'
     },
     {
       id: 3,
-      image: `${BASE}images/child_welfare_care.jpg`,
+      image: `${BASE}images/rmncah_maternal_child_health.jpg`,
       title: 'RMNCAH Maternal & Child Health Outreach',
-      percent: '68%',
-      raised: '₦920,000',
-      target: '₦1,500,000'
-    }
-  ];
-
-  const events = [
-    {
-      id: 1,
-      image: `${BASE}images/marathon_campaign.jpg`,
-      day: '15',
-      month: 'Nov',
-      time: '06:30 AM - 12:00 PM',
-      location: 'Sokoto Metropolis',
-      title: 'Sokoto 10KM Marathon — Unite to End Open Defecation'
-    },
-    {
-      id: 2,
-      image: `${BASE}images/child_nutrition.jpg`,
-      day: '12',
-      month: 'Jul',
-      time: '09:00 AM - 2:00 PM',
-      location: 'Tangaza & Gada LGAs',
-      title: 'Community Nutrition & Child Food Security Outreach.'
-    },
-    {
-      id: 3,
-      image: `${BASE}images/child_welfare_care.jpg`,
-      day: '14',
-      month: 'Aug',
-      time: '10:00 AM - 1:00 PM',
-      location: 'Sokoto North & South LGAs',
-      title: 'Safe Schools Child Protection & Consent Education.'
+      category: 'Maternal & Child Health',
+      reach: '8,500+ Mothers & Children',
+      status: 'Active Clinic'
     }
   ];
 
   const volunteers = [
-    { id: 1, name: 'Prince Nicholas', role: 'Founder & Executive Director', image: `${BASE}images/prince_nicholas.jpg` },
-    { id: 2, name: 'Kola Odejobi', role: 'Governance & Policy Advocacy Team Lead', image: `${BASE}images/team_director.jpg` },
-    { id: 3, name: 'Jemima Karatu', role: 'Disaster & Emergency Management Response Team Lead', image: `${BASE}images/team_board.jpg` },
-    { id: 4, name: 'Nefisa Muhammad', role: 'Reproductive Sexual Health & Maternal Newborn Team Lead', image: `${BASE}images/team_health.jpg` },
-    { id: 5, name: 'Victory Meschak', role: 'Gender Equality & Inclusion (GESI) Lead', image: `${BASE}images/victory_meschak.jpg` }
+    { id: 1, name: 'Arnold Nicholas', role: 'Child Protection Advocate', image: `${BASE}images/arnold_nicholas.jpg` },
+    { id: 2, name: 'Prince Nicholas', role: 'Founder & Executive Director', image: `${BASE}images/prince_nicholas.jpg` },
+    { id: 3, name: 'Kola Odejobi', role: 'Governance & Policy Advocacy Team Lead', image: `${BASE}images/team_director.jpg` },
+    { id: 4, name: 'Jemima Karatu', role: 'Disaster & Emergency Management Response Team Lead', image: `${BASE}images/team_board.jpg` },
+    { id: 5, name: 'Nefisa Muhammad', role: 'Reproductive Sexual Health & Maternal Newborn Team Lead', image: `${BASE}images/team_health.jpg` },
+    { id: 6, name: 'Victory Meschak', role: 'Gender Equality & Inclusion (GESI) Lead', image: `${BASE}images/victory_meschak.jpg` }
   ];
 
   const testimonials = [
@@ -102,41 +72,6 @@ export default function Home() {
     }
   ];
 
-  const news = [
-    {
-      id: 1,
-      image: `${BASE}images/child_nutrition.jpg`,
-      category: 'Nutrition & Wellbeing',
-      title: 'Maternal & Child Nutrition Drive Expands to Tangaza and Gada LGAs',
-      desc: 'Delivering nutritional assessments, micronutrient supplements, and infant care toolkits to underserved communities.',
-      date: 'June 20, 2026'
-    },
-    {
-      id: 2,
-      image: `${BASE}images/women_empowerment.jpg`,
-      category: 'Gender & Inclusion (GESI)',
-      title: 'Gender Equality & Social Inclusion (GESI) Safe Space Forums Established',
-      desc: 'Saferplace Initiative hosts grassroots dialogues empowering women groups and youth advocates across 6 LGAs.',
-      date: 'July 16, 2026'
-    },
-    {
-      id: 3,
-      image: `${BASE}images/child_welfare_care.jpg`,
-      category: 'Child Protection',
-      title: 'Safe Schools Workshop Reaches 1,500+ Adolescents, Women & Children',
-      desc: 'Equipping school children with safety kits, emergency contact channels, and peer reporting networks.',
-      date: 'August 02, 2026'
-    },
-    {
-      id: 4,
-      image: `${BASE}images/disaster_relief.jpg`,
-      category: 'Disaster Management',
-      title: 'Emergency Relief & Disaster Response Teams Deployed in Sokoto',
-      desc: 'Providing immediate food, clean water, and emergency medical kits to flood-prone vulnerable communities.',
-      date: 'August 18, 2026'
-    }
-  ];
-
   return (
     <>
       {/* ========== HERO SECTION WITH DYNAMIC BACKGROUND SLIDER ========== */}
@@ -154,8 +89,8 @@ export default function Home() {
               <p style={{ color: 'rgba(255,255,255,.8)' }}>Core Focus Areas</p>
             </div>
             <div className="stat-card" data-reveal="zoom" data-reveal-delay="200">
-              <h3 style={{ color: '#fff' }}>6</h3>
-              <p style={{ color: 'rgba(255,255,255,.8)' }}>Operational LGAs (Tangaza added)</p>
+              <h3 style={{ color: '#fff' }}>6 States</h3>
+              <p style={{ color: 'rgba(255,255,255,.8)' }}>Across 13 LGAs in Nigeria</p>
             </div>
             <div className="stat-card" data-reveal="zoom" data-reveal-delay="300">
               <h3 style={{ color: '#fff' }}>1,500<span>+</span></h3>
@@ -185,51 +120,15 @@ export default function Home() {
                   <img src={cause.image} alt={cause.title} style={{ height: '220px', width: '100%', objectFit: 'cover' }} />
                 </div>
                 <div className="cause-body">
+                  <span style={{ fontSize: '.78rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.06em', color: '#6C2BD9', display: 'block', marginBottom: '.4rem' }}>{cause.category}</span>
                   <h3>{cause.title}</h3>
-                  <div className="cause-progress">
-                    <div className="cause-bar-bg">
-                      <div className="cause-bar-fill" style={{ width: cause.percent, background: '#6C2BD9' }}></div>
-                    </div>
-                    <div className="cause-numbers">
-                      <span className="raised">Raised: {cause.raised}</span>
-                      <span className="target">Goal: {cause.target}</span>
-                    </div>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '.75rem 0', borderTop: '1px solid #F1F5F9', borderBottom: '1px solid #F1F5F9', margin: '1rem 0 1.25rem', fontSize: '.85rem' }}>
+                    <span style={{ color: 'var(--text-muted)' }}><i className="fas fa-users" style={{ color: '#6C2BD9', marginRight: '.4rem' }}></i>{cause.reach}</span>
+                    <span style={{ fontWeight: 600, color: '#10B981', background: '#ECFDF5', padding: '.2rem .6rem', borderRadius: '12px', fontSize: '.78rem' }}>{cause.status}</span>
                   </div>
                   <Link to="/contact" className="btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#6C2BD9', borderColor: '#6C2BD9' }}>
                     Partner with us <i className="fas fa-handshake" style={{ marginLeft: '.5rem' }}></i>
                   </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========== UPCOMING EVENTS ========== */}
-      <section className="events-section section-padding" style={{ background: '#F8FAFC' }}>
-        <div className="container">
-          <div className="section-header" data-reveal="up">
-            <span>Community Events</span>
-            <h2>Upcoming Field Outreaches &amp; Clinics</h2>
-            <p>Join our scheduled field programs, nutrition drives, and safe schools workshops across Sokoto State.</p>
-          </div>
-
-          <div className="events-grid">
-            {events.map((event, idx) => (
-              <div key={event.id} className="event-card" data-reveal="up" data-reveal-delay={String((idx + 1) * 150)}>
-                <div className="event-img-wrap">
-                  <img src={event.image} alt={event.title} style={{ height: '200px', width: '100%', objectFit: 'cover' }} />
-                  <div className="event-date-badge float-badge" style={{ background: '#6C2BD9' }}>
-                    <h4>{event.day}</h4>
-                    <span>{event.month}</span>
-                  </div>
-                </div>
-                <div className="event-body">
-                  <div className="event-meta">
-                    <span><i className="far fa-clock"></i> {event.time}</span>
-                    <span><i className="fas fa-map-marker-alt" style={{ color: '#6C2BD9' }}></i> {event.location}</span>
-                  </div>
-                  <h3>{event.title}</h3>
                 </div>
               </div>
             ))}
@@ -265,19 +164,6 @@ export default function Home() {
           </div>
 
           <TestimonialSlider reviews={testimonials} />
-        </div>
-      </section>
-
-      {/* ========== LATEST NEWS & BLOG ========== */}
-      <section className="news-section section-padding" style={{ background: '#F8FAFC' }}>
-        <div className="container">
-          <div className="section-header" data-reveal="up">
-            <span>Updates &amp; Articles</span>
-            <h2>Latest Field Reports &amp; Program Updates</h2>
-            <p>Read detailed reports of our child welfare outreaches, nutrition distributions, and disaster preparedness in Sokoto State.</p>
-          </div>
-
-          <NewsCarousel newsItems={news} />
         </div>
       </section>
     </>

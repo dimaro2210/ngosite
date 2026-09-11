@@ -1,45 +1,43 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Link } from 'react-router-dom';
-import CountUp from './CountUp';
 
 const BASE = import.meta.env.BASE_URL;
 
 const heroSlides = [
   {
     id: 1,
-    image: `${BASE}images/child_welfare_care.jpg`,
-    title: 'Maternal & Child Health',
-    location: 'Sokoto North & South LGAs'
+    image: `${BASE}images/wash_commission/wash_project_signboard.jpg`,
+    title: 'WASH Project — School Sanitation',
+    location: 'Nana Girls School, Sokoto South LGA'
   },
   {
     id: 2,
-    image: `${BASE}images/child_nutrition.jpg`,
-    title: 'Child Nutrition & Food Security',
-    location: 'Tangaza & Gada LGAs'
+    image: `${BASE}images/mnchw_gusau/mnchw_emir_address.jpg`,
+    title: 'MNCHW 2026 Flag-Off Ceremony',
+    location: 'Emir Palace, Gusau'
   },
   {
     id: 3,
-    image: `${BASE}images/women_empowerment.jpg`,
-    title: 'Women & Social Inclusion (GESI)',
-    location: 'Dange Shuni LGA'
+    image: `${BASE}images/dignity_kits/dignity_idp_women_carrying.jpg`,
+    title: 'UNICEF Dignity Kits Distribution',
+    location: 'IDP Communities, Sokoto'
   },
   {
     id: 4,
-    image: `${BASE}images/disaster_relief.jpg`,
-    title: 'Disaster Relief & Rapid Response',
-    location: 'Wamakko & Rural Outreaches'
+    image: `${BASE}images/hepatitis_day/hepatitis_screening_queue.jpg`,
+    title: 'World Hepatitis Day Screening',
+    location: 'Community Outreach, Sokoto'
   },
   {
     id: 5,
-    image: `${BASE}images/children/four_children.jpg`,
-    title: 'Safe Spaces & Child Protection',
-    location: 'Sokoto Metropolis'
+    image: `${BASE}images/capacity_building/workshop_group_banner.jpg`,
+    title: 'Capacity Building & WASH Training',
+    location: 'Hygiene Promotion Workshop'
   },
   {
     id: 6,
-    image: `${BASE}images/children/toddler_baby.jpg`,
-    title: 'Infant Wellness & Antenatal Care',
-    location: '6 Operational LGAs'
+    image: `${BASE}images/reproductive_health/rh_community_outdoors_group.jpg`,
+    title: 'Reproductive Health Outreach',
+    location: 'Community Sensitization, Sokoto'
   }
 ];
 
@@ -90,89 +88,81 @@ export default function HeroBackgroundSlider() {
       <div className="ngo-hero-overlay"></div>
       <div className="ngo-hero-vignette"></div>
 
-      <div className="container ngo-hero-container">
+      {/* ── Prev / Next Navigation Arrows ── */}
+      <button
+        onClick={prevSlide}
+        aria-label="Previous Slide"
+        className="hero-arrow-btn prev"
+        style={{
+          position: 'absolute',
+          left: '1.8rem',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          zIndex: 15,
+          background: 'rgba(255,255,255,0.18)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          border: '1px solid rgba(255,255,255,0.3)',
+          color: '#FFFFFF',
+          width: '50px',
+          height: '50px',
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: 'pointer',
+          fontSize: '1.1rem',
+          transition: 'all 0.3s ease',
+          boxShadow: '0 8px 24px rgba(0,0,0,0.3)'
+        }}
+      >
+        <i className="fas fa-chevron-left"></i>
+      </button>
 
-        {/* ── LEFT CARD (Branding & CTAs) ── */}
-        <div className="ngo-hero-left-card" data-aos="fade-right">
+      <button
+        onClick={nextSlide}
+        aria-label="Next Slide"
+        className="hero-arrow-btn next"
+        style={{
+          position: 'absolute',
+          right: '1.8rem',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          zIndex: 15,
+          background: 'rgba(255,255,255,0.18)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          border: '1px solid rgba(255,255,255,0.3)',
+          color: '#FFFFFF',
+          width: '50px',
+          height: '50px',
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: 'pointer',
+          fontSize: '1.1rem',
+          transition: 'all 0.3s ease',
+          boxShadow: '0 8px 24px rgba(0,0,0,0.3)'
+        }}
+      >
+        <i className="fas fa-chevron-right"></i>
+      </button>
 
-          {/* Headline */}
-          <h1 className="ngo-hero-headline">
-            Saferplace<br />
-            <span className="ngo-hero-gradient-word">Initiative</span>
-          </h1>
-
-          {/* Description */}
-          <p className="ngo-hero-desc">
-            Dedicated to strengthening community safety, resilience, and social protection for vulnerable populations, particularly women, children, and young people in Sokoto State.
+      {/* ── Active Slide Caption Overlay ── */}
+      <div className="container" style={{ position: 'relative', zIndex: 10, width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', minHeight: '62vh', paddingBottom: '3.5rem' }}>
+        <div style={{ maxWidth: '620px', textShadow: '0 2px 12px rgba(0,0,0,0.7)' }}>
+          <span style={{ display: 'inline-block', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#E9D5FF', marginBottom: '0.6rem', background: 'rgba(108, 43, 217, 0.55)', padding: '0.35rem 0.9rem', borderRadius: '20px', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.25)' }}>
+            Field Outreach Gallery · {current + 1} / {heroSlides.length}
+          </span>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 3.8vw, 2.8rem)', fontWeight: 800, color: '#FFFFFF', margin: '0.4rem 0 0.6rem', lineHeight: '1.2' }}>
+            {heroSlides[current].title}
+          </h2>
+          <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.92)', margin: 0, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <i className="fas fa-map-marker-alt" style={{ color: '#C084FC' }}></i>
+            {heroSlides[current].location}
           </p>
-
-          {/* CTA Buttons */}
-          <div className="ngo-hero-btns">
-            <Link to="/contact" className="ngo-btn-solid">
-              Get In Touch <i className="fas fa-arrow-right" style={{ marginLeft: '0.4rem', fontSize: '0.85rem' }}></i>
-            </Link>
-            <Link to="/about#team" className="ngo-btn-outline">
-              Meet Leadership <i className="fas fa-users" style={{ marginLeft: '0.4rem', fontSize: '0.85rem' }}></i>
-            </Link>
-          </div>
         </div>
-
-        {/* ── RIGHT METRIC CARD ── */}
-        <div className="ngo-hero-right-card" data-aos="fade-left" data-aos-delay="100">
-
-          {/* Metric Header Row */}
-          <div className="ngo-metric-header">
-            <div className="ngo-metric-icon-wrap">
-              <i className="fas fa-shield-alt"></i>
-            </div>
-            <div>
-              <h2 className="ngo-metric-big">6 LGAs</h2>
-              <p className="ngo-metric-sub">Active Coverage in Sokoto</p>
-            </div>
-          </div>
-
-          {/* Progress Section */}
-          <div className="ngo-progress-wrap">
-            <div className="ngo-progress-label-row">
-              <span>COMMUNITY PROTECTION &amp; INTEGRITY</span>
-              <span className="ngo-progress-percent">100%</span>
-            </div>
-            <div className="ngo-progress-track">
-              <div className="ngo-progress-fill" style={{ width: '100%' }}></div>
-            </div>
-          </div>
-
-          {/* Stats 3-Col Grid */}
-          <div className="ngo-stats-row">
-            <div className="ngo-stat-item">
-              <strong className="ngo-stat-number"><CountUp end={500} suffix="+" /></strong>
-              <span className="ngo-stat-label">STUDENTS</span>
-            </div>
-            <div className="ngo-stat-divider"></div>
-            <div className="ngo-stat-item">
-              <strong className="ngo-stat-number"><CountUp end={50} suffix="+" /></strong>
-              <span className="ngo-stat-label">CHAMPIONS</span>
-            </div>
-            <div className="ngo-stat-divider"></div>
-            <div className="ngo-stat-item">
-              <strong className="ngo-stat-number">6</strong>
-              <span className="ngo-stat-label">PILLARS</span>
-            </div>
-          </div>
-
-          {/* Status Badges Row */}
-          <div className="ngo-badge-row">
-            <span className="ngo-status-badge registered">
-              <span className="ngo-dot green"></span> CAC REGISTERED
-            </span>
-            <span className="ngo-status-badge sokoto">
-              <i className="fas fa-crown" style={{ marginRight: '0.35rem', fontSize: '0.7rem' }}></i>
-              SOKOTO BASED
-            </span>
-          </div>
-
-        </div>
-
       </div>
 
       {/* ── Slide Indicator Dots at bottom ── */}

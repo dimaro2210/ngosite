@@ -54,7 +54,7 @@ export default function Footer() {
         <div className="footer-divider"></div>
         <div className="footer-bottom">
           <p>© 2026 Saferplace Initiative (CAC/IT/NO 7571193). All rights reserved.</p>
-          <p>Sokoto State, Northwest Nigeria.</p>
+          <p>6 States · 13 LGAs · Nigeria</p>
         </div>
       </div>
     </footer>

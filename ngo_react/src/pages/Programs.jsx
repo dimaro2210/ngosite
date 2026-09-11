@@ -9,9 +9,6 @@ const programs = [
     category: 'Active Campaign',
     title: 'Sokoto 10KM Marathon — Unite to End Open Defecation',
     desc: 'A state-wide 10KM marathon race to raise awareness, mobilize communities, and advocate for clean sanitation across Sokoto. Runners unite to end open defecation and promote WASH hygiene in every LGA.',
-    raised: '₦450,000',
-    goal: '₦1,500,000',
-    percent: 30,
     beneficiaries: '50,000+ residents targeted',
     states: 'Sokoto Metropolis (all 6 LGAs)',
     tag: '#sokoto10km',
@@ -22,9 +19,6 @@ const programs = [
     category: 'Gender & Inclusion',
     title: 'Gender Equality & Social Inclusion (GESI)',
     desc: "Advancing equal rights, women's socio-economic empowerment, youth leadership, disability inclusion, and community dialogues to eradicate marginalization across Sokoto State.",
-    raised: '₦850,000',
-    goal: '₦1,400,000',
-    percent: 61,
     beneficiaries: '4,500+ women, youth & persons with disabilities',
     states: 'Sokoto Metropolis & Rural LGAs',
     tag: '#gesi',
@@ -35,9 +29,6 @@ const programs = [
     category: 'Disaster & Relief',
     title: 'Disaster Management & Emergency Response',
     desc: 'Deploying rapid disaster preparedness, mobile emergency relief kits, flood mitigation support, and safe shelter assistance for vulnerable families across flood-prone LGAs.',
-    raised: '₦1,200,000',
-    goal: '₦2,000,000',
-    percent: 60,
     beneficiaries: '6,000+ flood-affected residents',
     states: 'Dange Shuni, Wamakko, Gada & Tangaza',
     tag: '#disasterresponse',
@@ -48,9 +39,6 @@ const programs = [
     category: 'Climate Resilience',
     title: 'Green Sokoto Initiative 2026',
     desc: 'Planting 500 drought-resistant indigenous trees (Neem, Baobab, Moringa, Bagaruwa) across 10 sites in Sokoto Metropolis for World Tree Planting Day (June 6, 2026).',
-    raised: '₦350,000',
-    goal: '₦800,000',
-    percent: 44,
     beneficiaries: '2,000+ residents daily',
     states: 'Sokoto North, South, Wamakko',
     tag: '#greensokoto',
@@ -61,9 +49,6 @@ const programs = [
     category: 'Protection',
     title: 'Protection & Survivor Support',
     desc: 'Providing safe reporting channels, psychosocial support, legal aid referrals, and emergency shelter resources for survivors of abuse and gender-based violence.',
-    raised: '₦780,000',
-    goal: '₦1,200,000',
-    percent: 65,
     beneficiaries: '1,200+ survivors & families',
     states: 'Dange Shuni, Gada, Sokoto South',
     tag: '#protection',
@@ -74,9 +59,6 @@ const programs = [
     category: 'Health',
     title: 'RMNCAH & Community Health',
     desc: 'Delivering Reproductive, Maternal, Newborn, Child, and Adolescent Health clinics, vaccines, antenatal toolkits, and nutritional support across rural Sokoto LGAs.',
-    raised: '₦920,000',
-    goal: '₦1,500,000',
-    percent: 61,
     beneficiaries: '8,500+ mothers & children',
     states: 'Sokoto State (6 LGAs)',
     tag: '#rmncah',
@@ -87,9 +69,6 @@ const programs = [
     category: 'Education & Prevention',
     title: 'Safe Schools & Social Norm Change',
     desc: 'Conducting interactive workshops on child safety, consent, digital security, and conflict resolution for over 500 adolescents across secondary schools in Sokoto.',
-    raised: '₦540,000',
-    goal: '₦900,000',
-    percent: 60,
     beneficiaries: '500+ adolescents',
     states: 'Sokoto North & South LGAs',
     tag: '#safeschools',
@@ -100,9 +79,6 @@ const programs = [
     category: 'WASH & Hygiene',
     title: 'WASH & Community Hygiene Drive',
     desc: 'Installing clean solar boreholes, sanitation blocks, and hygiene toolkits to prevent waterborne diseases in underserved communities across Sokoto.',
-    raised: '₦1,150,000',
-    goal: '₦1,800,000',
-    percent: 64,
     beneficiaries: '10,000+ residents',
     states: 'Gada, Wamakko, Dange Shuni',
     tag: '#wash',
@@ -113,9 +89,6 @@ const programs = [
     category: 'Governance & Advocacy',
     title: 'Governance & Policy Advocacy',
     desc: 'Training community safety champions, engaging traditional rulers (Mai Angwan), and advocating for government policies that protect human dignity.',
-    raised: '₦610,000',
-    goal: '₦1,000,000',
-    percent: 61,
     beneficiaries: '50+ trained champions',
     states: 'Sokoto Metropolis',
     tag: '#advocacy',
@@ -146,7 +119,7 @@ export default function Programs() {
           <div className="section-header" data-reveal="up">
             <span>Our Approach</span>
             <h2>How We Deliver Impact</h2>
-            <p>A survivor-centered, community-led, and data-driven process across all 6 operational LGAs.</p>
+            <p>A survivor-centered, community-led, and data-driven process across all 13 operational LGAs in 6 Nigerian states.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem' }}>
             {howWeHelp.map((step, i) => (
@@ -167,7 +140,7 @@ export default function Programs() {
           <div className="section-header" data-reveal="up">
             <span>Active Initiatives</span>
             <h2>Support Our Ongoing Programs</h2>
-            <p>Every donation directly powers field outreach, survivor protection, disaster relief, child health, and equality in Sokoto State.</p>
+            <p>Every partnership directly powers field outreach, survivor protection, disaster relief, child health, and equality across Nigerian communities.</p>
           </div>
           <div className="programs-grid">
             {programs.map((prog, idx) => (
@@ -186,13 +159,9 @@ export default function Programs() {
                   <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-dark)', marginBottom: '0.75rem', lineHeight: '1.35' }}>{prog.title}</h3>
                   <p style={{ color: 'var(--text-muted)', fontSize: '.92rem', lineHeight: '1.6', marginBottom: '1.25rem' }}>{prog.desc}</p>
 
-                  {/* Progress Bar */}
-                  <div className="cause-bar-bg" style={{ margin: '1rem 0 .5rem', height: '8px', borderRadius: '10px', background: 'rgba(108, 43, 217, 0.1)' }}>
-                    <div className="cause-bar-fill" style={{ width: `${prog.percent}%`, height: '100%', borderRadius: '10px', background: 'linear-gradient(90deg, #6C2BD9 0%, #A78BFA 100%)' }}></div>
-                  </div>
-                  <div className="cause-numbers" style={{ marginBottom: '1.1rem', display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
-                    <span className="raised" style={{ fontWeight: 700, color: '#6C2BD9' }}>Raised: {prog.raised}</span>
-                    <span className="target" style={{ color: 'var(--text-muted)' }}>Goal: {prog.goal}</span>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '.6rem 0', margin: '.6rem 0 1.1rem', borderTop: '1px solid #F1F5F9', borderBottom: '1px solid #F1F5F9', fontSize: '.84rem' }}>
+                    <span style={{ color: '#6C2BD9', fontWeight: 600 }}><i className="fas fa-check-circle" style={{ marginRight: '.35rem' }}></i>Active Program</span>
+                    <span style={{ color: 'var(--text-muted)' }}><i className="fas fa-tag" style={{ marginRight: '.35rem' }}></i>{prog.tag}</span>
                   </div>
 
                   {/* Meta Tags */}
@@ -215,9 +184,9 @@ export default function Programs() {
       <section className="stats-section" style={{ background: 'linear-gradient(135deg, #4C1D95 0%, #1E1B4B 100%)' }}>
         <div className="container">
           <div className="stats-grid">
-            <div className="stat-card"><h3 style={{ color: '#fff' }}>6<span></span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Core Focus Areas</p></div>
-            <div className="stat-card"><h3 style={{ color: '#fff' }}>6<span></span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>LGAs in Sokoto</p></div>
-            <div className="stat-card"><h3 style={{ color: '#fff' }}>500<span>+</span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Adolescents Reached</p></div>
+            <div className="stat-card"><h3 style={{ color: '#fff' }}>9</h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Core Focus Areas</p></div>
+            <div className="stat-card"><h3 style={{ color: '#fff' }}>6 States</h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Across 13 LGAs</p></div>
+            <div className="stat-card"><h3 style={{ color: '#fff' }}>1,500<span>+</span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Adolescents, Women &amp; Children</p></div>
             <div className="stat-card"><h3 style={{ color: '#fff' }}>500<span>+</span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Trees in Green Drive</p></div>
           </div>
         </div>

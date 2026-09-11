@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 
-const FULL_TEXT = "Your donation means a lot to them. Every naira you give reaches a child, a village, a life.";
+const FULL_TEXT = "Your support means a lot to them. Every action you take reaches a child, a community, a life.";
 
 export default function CTAReveal() {
   const sectionRef = useRef(null);

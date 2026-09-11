@@ -8,12 +8,12 @@ const faqs = [
     answer: 'Saferplace Initiative is an officially registered non-profit organization in Nigeria under CAC/IT/NO 7571193, based in Sokoto State with official registration under the Ministry of Budget and Economic Planning, Sokoto.'
   },
   {
-    question: 'Which LGAs does Saferplace Initiative operate in?',
-    answer: 'Our current operational coverage spans 6 Local Government Areas in Sokoto State: Dange Shuni, Gada, Sokoto North, Sokoto South, Wamakko, and Tangaza.'
+    question: 'Which areas does Saferplace Initiative operate in?',
+    answer: 'Our operational reach spans 13 Local Government Areas across 6 states in Nigeria: Sokoto, Zamfara, Kebbi, Abia, Bayelsa, and Rivers State.'
   },
   {
     question: 'How can I support or sponsor the Green Sokoto Initiative 2026?',
-    answer: 'You can support the World Tree Planting Day drive by donating towards seedlings (₦500 per tree), manure, or digging tool sets. Select "Project Support / Donation" in the contact form below or reach out directly.'
+    answer: 'You can support the World Tree Planting Day drive by contributing towards tree seedlings, organic manure, or community planting tool sets. Select "Project Support / Partnership" in the contact form below or reach out directly.'
   },
   {
     question: 'Can I volunteer as a community responder or Tree Guardian?',

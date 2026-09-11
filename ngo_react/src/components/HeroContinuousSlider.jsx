@@ -5,50 +5,50 @@ const BASE = import.meta.env.BASE_URL;
 const slideItems = [
   {
     id: 1,
-    image: `${BASE}images/child_welfare_care.jpg`,
-    title: 'Maternal & Child Health',
-    location: 'Sokoto North & South',
-    category: 'Healthcare & RMNCAH',
-    badge: '1,500+ Reached'
+    image: `${BASE}images/wash_commission/wash_students_assembly.jpg`,
+    title: 'WASH School Sanitation Project',
+    location: 'Nana Girls School, Sokoto',
+    category: 'WASH & Sanitation',
+    badge: 'Commissioned 2026'
   },
   {
     id: 2,
-    image: `${BASE}images/child_nutrition.jpg`,
-    title: 'Child Nutrition & School Welfare',
-    location: 'Tangaza & Gada LGAs',
-    category: 'Nutrition Support',
-    badge: 'Active Outreach'
+    image: `${BASE}images/mnchw_gusau/mnchw_speech_emir_palace.jpg`,
+    title: 'MNCHW 2026 Flag-Off',
+    location: 'Emir Palace, Gusau',
+    category: 'Healthcare & RMNCAH',
+    badge: 'State-Wide Campaign'
   },
   {
     id: 3,
-    image: `${BASE}images/women_empowerment.jpg`,
-    title: 'Women & Social Inclusion (GESI)',
-    location: 'Dange Shuni LGA',
-    category: 'Empowerment',
-    badge: 'Community Groups'
-  },
-  {
-    id: 4,
-    image: `${BASE}images/disaster_relief.jpg`,
-    title: 'Disaster Relief & Rapid Response',
-    location: 'Wamakko & Rural Outreaches',
-    category: 'Emergency Care',
+    image: `${BASE}images/dignity_kits/dignity_unicef_box_handover.jpg`,
+    title: 'UNICEF Dignity Kit Distribution',
+    location: 'IDP Communities, Sokoto',
+    category: 'Humanitarian Aid',
     badge: 'Relief Aid'
   },
   {
+    id: 4,
+    image: `${BASE}images/hepatitis_day/hepatitis_blood_test.jpg`,
+    title: 'World Hepatitis Day Screening',
+    location: 'Community Outreach, Sokoto',
+    category: 'Health Screening',
+    badge: 'Free Testing'
+  },
+  {
     id: 5,
-    image: `${BASE}images/children/four_children.jpg`,
-    title: 'Safe Spaces & Child Protection',
-    location: 'Sokoto Metropolis',
-    category: 'Child Welfare',
-    badge: 'Protection Nexus'
+    image: `${BASE}images/capacity_building/workshop_facilitators_panel.jpg`,
+    title: 'Capacity Building Workshop',
+    location: 'Hygiene Promotion Training',
+    category: 'Training & Development',
+    badge: 'WASH Prefects'
   },
   {
     id: 6,
-    image: `${BASE}images/children/toddler_baby.jpg`,
-    title: 'Infant Wellness & Antenatal Care',
-    location: '6 Operational LGAs',
-    category: 'Child Survival',
+    image: `${BASE}images/reproductive_health/rh_mothers_mat_session.jpg`,
+    title: 'Reproductive Health Outreach',
+    location: 'Community Sensitization',
+    category: 'Maternal Health',
     badge: 'Grassroots Care'
   }
 ];
@@ -86,8 +86,8 @@ export default function HeroContinuousSlider() {
       {/* Interactive Quick Metrics Bar at bottom of slider */}
       <div className="hero-slider-footer-stats">
         <div className="slider-mini-stat">
-          <strong>6</strong>
-          <span>LGAs (Tangaza added)</span>
+          <strong>6 States</strong>
+          <span>Across 13 LGAs</span>
         </div>
         <div className="slider-mini-divider"></div>
         <div className="slider-mini-stat">
