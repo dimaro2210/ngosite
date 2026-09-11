@@ -85,31 +85,15 @@ export default function HeroBackgroundSlider() {
       <div className="ngo-hero-vignette"></div>
 
       {/* ── Active Slide Caption Overlay with Bold, High-Contrast Typography ── */}
-      <div className="container" style={{ position: 'relative', zIndex: 10, width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', minHeight: '65vh', paddingBottom: '3.8rem' }}>
-        <div style={{ maxWidth: '680px', textShadow: '0 3px 20px rgba(0,0,0,0.9)' }}>
-          <span style={{ 
-            display: 'inline-block', 
-            fontSize: '0.85rem', 
-            fontWeight: 800, 
-            letterSpacing: '0.1em', 
-            textTransform: 'uppercase', 
-            color: '#F3E8FF', 
-            marginBottom: '0.75rem', 
-            background: 'rgba(108, 43, 217, 0.75)', 
-            padding: '0.45rem 1.1rem', 
-            borderRadius: '24px', 
-            backdropFilter: 'blur(12px)', 
-            border: '1.5px solid rgba(255,255,255,0.35)',
-            boxShadow: '0 4px 16px rgba(0,0,0,0.4)'
-          }}>
-            Field Outreach Gallery · {current + 1} / {heroSlides.length}
-          </span>
+      <div className="container" style={{ position: 'relative', zIndex: 10, width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '65vh', textAlign: 'center' }}>
+        <div style={{ maxWidth: '780px', textShadow: '0 3px 20px rgba(0,0,0,0.9)' }}>
+
           <h1 style={{ 
-            fontSize: 'clamp(2.2rem, 4.8vw, 3.5rem)', 
+            fontSize: 'clamp(2.4rem, 5.2vw, 3.8rem)', 
             fontWeight: 900, 
             color: '#FFFFFF', 
-            margin: '0.4rem 0 0.85rem', 
-            lineHeight: '1.18',
+            margin: '0 0 1rem', 
+            lineHeight: '1.15',
             letterSpacing: '-0.025em',
             textShadow: '0 4px 28px rgba(0,0,0,0.95), 0 2px 8px rgba(0,0,0,0.95)'
           }}>
@@ -122,6 +106,7 @@ export default function HeroBackgroundSlider() {
             margin: 0, 
             display: 'flex', 
             alignItems: 'center', 
+            justifyContent: 'center',
             gap: '0.6rem',
             textShadow: '0 2px 14px rgba(0,0,0,0.9)'
           }}>
