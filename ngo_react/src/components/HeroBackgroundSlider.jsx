@@ -50,10 +50,6 @@ export default function HeroBackgroundSlider() {
     setCurrent((prev) => (prev + 1) % heroSlides.length);
   }, []);
 
-  const prevSlide = useCallback(() => {
-    setCurrent((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  }, []);
-
   useEffect(() => {
     if (!isPaused) {
       autoPlayRef.current = setInterval(nextSlide, 5000);
@@ -88,94 +84,51 @@ export default function HeroBackgroundSlider() {
       <div className="ngo-hero-overlay"></div>
       <div className="ngo-hero-vignette"></div>
 
-      {/* ── Prev / Next Navigation Arrows ── */}
-      <button
-        onClick={prevSlide}
-        aria-label="Previous Slide"
-        className="hero-arrow-btn prev"
-        style={{
-          position: 'absolute',
-          left: '1.8rem',
-          top: '50%',
-          transform: 'translateY(-50%)',
-          zIndex: 15,
-          background: 'rgba(255,255,255,0.18)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
-          border: '1px solid rgba(255,255,255,0.3)',
-          color: '#FFFFFF',
-          width: '50px',
-          height: '50px',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          fontSize: '1.1rem',
-          transition: 'all 0.3s ease',
-          boxShadow: '0 8px 24px rgba(0,0,0,0.3)'
-        }}
-      >
-        <i className="fas fa-chevron-left"></i>
-      </button>
-
-      <button
-        onClick={nextSlide}
-        aria-label="Next Slide"
-        className="hero-arrow-btn next"
-        style={{
-          position: 'absolute',
-          right: '1.8rem',
-          top: '50%',
-          transform: 'translateY(-50%)',
-          zIndex: 15,
-          background: 'rgba(255,255,255,0.18)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
-          border: '1px solid rgba(255,255,255,0.3)',
-          color: '#FFFFFF',
-          width: '50px',
-          height: '50px',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          fontSize: '1.1rem',
-          transition: 'all 0.3s ease',
-          boxShadow: '0 8px 24px rgba(0,0,0,0.3)'
-        }}
-      >
-        <i className="fas fa-chevron-right"></i>
-      </button>
-
-      {/* ── Active Slide Caption Overlay ── */}
-      <div className="container" style={{ position: 'relative', zIndex: 10, width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', minHeight: '62vh', paddingBottom: '3.5rem' }}>
-        <div style={{ maxWidth: '620px', textShadow: '0 2px 12px rgba(0,0,0,0.7)' }}>
-          <span style={{ display: 'inline-block', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#E9D5FF', marginBottom: '0.6rem', background: 'rgba(108, 43, 217, 0.55)', padding: '0.35rem 0.9rem', borderRadius: '20px', backdropFilter: 'blur(10px)', border: '1px solid rgba(255,255,255,0.25)' }}>
+      {/* ── Active Slide Caption Overlay with Bold, High-Contrast Typography ── */}
+      <div className="container" style={{ position: 'relative', zIndex: 10, width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', minHeight: '65vh', paddingBottom: '3.8rem' }}>
+        <div style={{ maxWidth: '680px', textShadow: '0 3px 20px rgba(0,0,0,0.9)' }}>
+          <span style={{ 
+            display: 'inline-block', 
+            fontSize: '0.85rem', 
+            fontWeight: 800, 
+            letterSpacing: '0.1em', 
+            textTransform: 'uppercase', 
+            color: '#F3E8FF', 
+            marginBottom: '0.75rem', 
+            background: 'rgba(108, 43, 217, 0.75)', 
+            padding: '0.45rem 1.1rem', 
+            borderRadius: '24px', 
+            backdropFilter: 'blur(12px)', 
+            border: '1.5px solid rgba(255,255,255,0.35)',
+            boxShadow: '0 4px 16px rgba(0,0,0,0.4)'
+          }}>
             Field Outreach Gallery · {current + 1} / {heroSlides.length}
           </span>
-          <h2 style={{ fontSize: 'clamp(1.8rem, 3.8vw, 2.8rem)', fontWeight: 800, color: '#FFFFFF', margin: '0.4rem 0 0.6rem', lineHeight: '1.2' }}>
+          <h1 style={{ 
+            fontSize: 'clamp(2.2rem, 4.8vw, 3.5rem)', 
+            fontWeight: 900, 
+            color: '#FFFFFF', 
+            margin: '0.4rem 0 0.85rem', 
+            lineHeight: '1.18',
+            letterSpacing: '-0.025em',
+            textShadow: '0 4px 28px rgba(0,0,0,0.95), 0 2px 8px rgba(0,0,0,0.95)'
+          }}>
             {heroSlides[current].title}
-          </h2>
-          <p style={{ fontSize: '1.05rem', color: 'rgba(255,255,255,0.92)', margin: 0, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <i className="fas fa-map-marker-alt" style={{ color: '#C084FC' }}></i>
+          </h1>
+          <p style={{ 
+            fontSize: '1.25rem', 
+            fontWeight: 700, 
+            color: '#FFFFFF', 
+            margin: 0, 
+            display: 'flex', 
+            alignItems: 'center', 
+            gap: '0.6rem',
+            textShadow: '0 2px 14px rgba(0,0,0,0.9)'
+          }}>
+            <i className="fas fa-map-marker-alt" style={{ color: '#D8B4FE', fontSize: '1.2rem' }}></i>
             {heroSlides[current].location}
           </p>
         </div>
-      </div>
-
-      {/* ── Slide Indicator Dots at bottom ── */}
-      <div className="ngo-hero-dots" aria-label="Slide navigation">
-        {heroSlides.map((slide, idx) => (
-          <button
-            key={slide.id}
-            onClick={() => setCurrent(idx)}
-            className={`ngo-hero-dot ${idx === current ? 'active' : ''}`}
-            aria-label={`Slide ${idx + 1}: ${slide.title}`}
-            title={`${slide.title} (${slide.location})`}
-          />
-        ))}
       </div>
     </section>
   );
