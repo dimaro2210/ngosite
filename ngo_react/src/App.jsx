@@ -9,6 +9,7 @@ import About from './pages/About'
 import Programs from './pages/Programs'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
+import ChildProtection from './pages/ChildProtection'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -73,6 +74,8 @@ export default function App() {
           <Route path="/programs" element={<Programs />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/child-protection" element={<ChildProtection />} />
+          <Route path="/team/arnold-nicholas" element={<ChildProtection />} />
         </Routes>
       </main>
       <Footer />

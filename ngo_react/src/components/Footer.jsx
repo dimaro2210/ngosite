@@ -18,6 +18,7 @@ export default function Footer() {
             <ul className="footer-links">
               <li><Link to="/about">About Our NGO</Link></li>
               <li><Link to="/programs">9 Core Focus Areas</Link></li>
+              <li><Link to="/child-protection">Child Protection (Arnold Nicholas)</Link></li>
               <li><Link to="/gallery">Field Gallery</Link></li>
               <li><Link to="/contact">Partner with us</Link></li>
             </ul>

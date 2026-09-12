@@ -24,6 +24,7 @@ export function StackingCards({
       <div
         className={`stacking-cards-container ${className}`}
         ref={containerRef}
+        style={{ '--total-cards': totalCards }}
         {...props}
       >
         {children}

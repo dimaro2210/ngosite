@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arnold Nicholas · Child Protection Advocate | Saferplace Initiative</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .cp-profile-box { display: grid; grid-template-columns: 320px 1fr; gap: 2.5rem; align-items: center; background: #fff; border-radius: 20px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.06); margin-bottom: 3rem; }
+    .cp-img-wrap { border-radius: 16px; overflow: hidden; height: 360px; background: #f1f5f9; }
+    .cp-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .cp-quote-card { background: #F8FAFC; border-left: 5px solid #6C2BD9; border-radius: 0 16px 16px 0; padding: 2rem; margin: 2rem 0; }
+    .cp-quote-card p { font-size: 1.1rem; line-height: 1.7; color: #1E293B; margin-bottom: 0.8rem; }
+    .cp-amenities-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2.5rem 0; }
+    .cp-amenity-item { background: #fff; border: 1px solid #E2E8F0; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+    .cp-amenity-item h3 { font-size: 1.15rem; color: #1E293B; margin-bottom: 0.5rem; }
+    .cp-amenity-item p { font-size: 0.9rem; color: #64748B; line-height: 1.55; }
+    .cp-menaces-box { background: #FFF5F5; border: 1px solid #FECACA; border-radius: 16px; padding: 2rem; margin: 2.5rem 0; }
+    .cp-menaces-title { color: #991B1B; font-size: 1.3rem; margin-bottom: 1rem; }
+    .cp-menaces-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .cp-menace-item { background: #fff; padding: 1rem; border-radius: 10px; border: 1px solid #FEE2E2; }
+    .cp-menace-item strong { color: #B91C1C; display: block; font-size: 0.95rem; }
+    .cp-menace-item span { color: #64748B; font-size: 0.82rem; }
+    .children-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+    .child-card { background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid #E2E8F0; box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
+    .child-card img { width: 100%; height: 260px; object-fit: cover; }
+    .child-card-body { padding: 1.25rem; }
+    .child-card-body h4 { font-size: 1rem; color: #1E293B; margin-bottom: 0.4rem; }
+    .child-card-body p { font-size: 0.84rem; color: #64748B; line-height: 1.45; }
+    @media (max-width: 768px) {
+      .cp-profile-box { grid-template-columns: 1fr; }
+      .cp-amenities-grid, .cp-menaces-list, .children-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-seedling"></i> Safer<span>place</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="child-protection.html" class="active">Child Protection</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn-donate-nav">Partner With Us</a>
+      <button class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ========== PAGE HEADER ========== -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Child Protection Advocacy</h1>
+        <p>Arnold Nicholas · Standing for the Rights, Agency &amp; Basic Life Amenities of Children Across the Globe</p>
+      </div>
+    </section>
+
+    <!-- ========== ADVOCATE PROFILE ========== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="cp-profile-box">
+          <div class="cp-img-wrap">
+            <img src="../ngo_react/public/images/arnold_nicholas.jpg" alt="Arnold Nicholas">
+          </div>
+          <div>
+            <span style="color: #6C2BD9; font-weight: 700; text-transform: uppercase; font-size: 0.82rem; letter-spacing: 0.05em;">Saferplace Initiative · Official Advocate</span>
+            <h2 style="font-size: 2.2rem; margin: 0.4rem 0 0.8rem; color: #1E293B;">Arnold Nicholas</h2>
+            <p style="font-size: 1.05rem; color: #475569; line-height: 1.65; margin-bottom: 1.5rem;">
+              Arnold Nicholas is a child advocate of <strong>Saferplace Initiative</strong>, standing to advocate for the rights of children across the globe. Arnold believes in creating a safe space where children can thrive to become what they want to be.
+            </p>
+            <a href="#statement" class="btn-primary" style="background: #6C2BD9; border-color: #6C2BD9;">Read Arnold's Statement</a>
+          </div>
+        </div>
+
+        <!-- ========== STATEMENT ========== -->
+        <div id="statement" class="cp-quote-card">
+          <h3 style="color: #6C2BD9; margin-bottom: 1rem; font-size: 1.4rem;">Official Statement by Arnold Nicholas</h3>
+          <p><em>"Arnold Nicholas is a child advocate of Saferplace Initiative, standing to advocate for the rights of children across the globe.</em></p>
+          <p><em>Arnold believes in creating a safe space where children can thrive to become what they want to be.</em></p>
+          <p><em>Arnold stands to advocate for child rights, for child protection, for child access to basic life amenities such as:</em></p>
+          <ul style="margin: 1rem 0 1.5rem 1.5rem; line-height: 1.8; color: #334155;">
+            <li><strong>Access to Education</strong></li>
+            <li><strong>Access to Safe and Potable Drinking Water</strong></li>
+            <li><strong>Access to Nutritional-Based Food</strong></li>
+            <li><strong>Access to a Good Hospital &amp; Healthcare</strong></li>
+          </ul>
+          <p style="font-weight: 600; color: #4C1D95;"><em>Join me, Arnold Nicholas, as I advocate for these things for children across the globe. Thank you."</em></p>
+        </div>
+
+        <!-- ========== 4 BASIC LIFE AMENITIES ========== -->
+        <div class="cp-amenities-grid">
+          <div class="cp-amenity-item">
+            <i class="fas fa-graduation-cap" style="color: #6C2BD9; font-size: 1.8rem; margin-bottom: 0.75rem;"></i>
+            <h3>1. Access to Education</h3>
+            <p>Every child deserves quality schooling, standard learning kits, and an uninterrupted academic path to reach their dreams.</p>
+          </div>
+          <div class="cp-amenity-item">
+            <i class="fas fa-tint" style="color: #0284C7; font-size: 1.8rem; margin-bottom: 0.75rem;"></i>
+            <h3>2. Access to Safe &amp; Potable Water</h3>
+            <p>Safe drinking water is essential to life. We construct clean school wash blocks and community water points to prevent water-borne disease.</p>
+          </div>
+          <div class="cp-amenity-item">
+            <i class="fas fa-apple-alt" style="color: #D97706; font-size: 1.8rem; margin-bottom: 0.75rem;"></i>
+            <h3>3. Access to Nutritional-Based Food</h3>
+            <p>Shielding children from malnutrition and starvation by delivering therapeutic supplementary foods and growth screening.</p>
+          </div>
+          <div class="cp-amenity-item">
+            <i class="fas fa-hospital" style="color: #16A34A; font-size: 1.8rem; margin-bottom: 0.75rem;"></i>
+            <h3>4. Access to a Good Hospital</h3>
+            <p>Free pediatric clinical checkups, routine childhood immunizations, and emergency medication for rural children.</p>
+          </div>
+        </div>
+
+        <!-- ========== STANDING AGAINST MENACES ========== -->
+        <div class="cp-menaces-box">
+          <h3 class="cp-menaces-title"><i class="fas fa-shield-virus"></i> What Arnold Nicholas Stands Firmly Against</h3>
+          <div class="cp-menaces-list">
+            <div class="cp-menace-item">
+              <strong>Child Labor</strong>
+              <span>Ending street hawking, quarry labor, and commercial exploitation of minors.</span>
+            </div>
+            <div class="cp-menace-item">
+              <strong>Child Trafficking</strong>
+              <span>Combating illegal trafficking rings and safeguarding vulnerable and displaced children.</span>
+            </div>
+            <div class="cp-menace-item">
+              <strong>Starvation &amp; Severe Hunger</strong>
+              <span>Immediate clinical nutrition intervention and food support for impoverished families.</span>
+            </div>
+            <div class="cp-menace-item">
+              <strong>Deprivation &amp; Abuse</strong>
+              <span>Protecting minors from physical violence, sexual abuse, and lack of birth registration.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== CHILDREN PICTURE GALLERY ========== -->
+        <div style="margin-top: 4rem;">
+          <h2 style="text-align: center; color: #1E293B; margin-bottom: 0.5rem;">The Faces We Protect: Our Children's Gallery</h2>
+          <p style="text-align: center; color: #64748B; max-width: 650px; margin: 0 auto 2.5rem;">
+            Every photograph represents a child whose rights, health, education, and safe spaces are guarded by Arnold Nicholas and Saferplace Initiative.
+          </p>
+
+          <div class="children-grid">
+            <div class="child-card">
+              <img src="../ngo_react/public/images/children/four_children.jpg" alt="Children Safe Space">
+              <div class="child-card-body">
+                <h4>Right to Safe Space &amp; Shared Joy</h4>
+                <p>Children in Sokoto South in our community safe space.</p>
+              </div>
+            </div>
+            <div class="child-card">
+              <img src="../ngo_react/public/images/children/glasses_boy.jpg" alt="Child Learning">
+              <div class="child-card-body">
+                <h4>Right to Education &amp; Vision</h4>
+                <p>Equipping young learners with education and vision screening.</p>
+              </div>
+            </div>
+            <div class="child-card">
+              <img src="../ngo_react/public/images/children/igbo_attire_boy.jpg" alt="Child Dignity">
+              <div class="child-card-body">
+                <h4>Right to Cultural Identity &amp; Dignity</h4>
+                <p>Upholding each child's name, culture, and self-worth.</p>
+              </div>
+            </div>
+            <div class="child-card">
+              <img src="../ngo_react/public/images/children/kaftan_boy.jpg" alt="Anti Child Labor">
+              <div class="child-card-body">
+                <h4>Freedom from Child Labor</h4>
+                <p>Ensuring children are in classrooms, not in hazardous labor.</p>
+              </div>
+            </div>
+            <div class="child-card">
+              <img src="../ngo_react/public/images/children/sparkly_dress_girl.jpg" alt="Girl-Child Safeguarding">
+              <div class="child-card-body">
+                <h4>Protection of the Girl-Child</h4>
+                <p>Safeguarding young girls from early forced marriage and abuse.</p>
+              </div>
+            </div>
+            <div class="child-card">
+              <img src="../ngo_react/public/images/children/toddler_baby.jpg" alt="Infant Nutrition">
+              <div class="child-card-body">
+                <h4>Right to Nutritional-Based Food</h4>
+                <p>Protecting infants from acute malnutrition through therapeutic feeding.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" style="background: #111827; color: #fff; padding: 3rem 0; text-align: center;">
+    <div class="container">
+      <p>&copy; 2026 Saferplace Initiative. All rights reserved. Registered CAC/IT/NO 7571193.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

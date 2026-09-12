@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function TeamStack({ members }) {
   const [hoveredId, setHoveredId] = useState(null);
@@ -9,11 +10,11 @@ export default function TeamStack({ members }) {
     const x = e.clientX - rect.left;
     const half = rect.width / 2;
     const offset = x - half;
-    const percent = offset / half; // Normalized value between -1 and 1
+    const percent = offset / half;
 
     setMouseOffsets({
-      x: percent * 30, // shift up to 30px
-      rotate: percent * 25, // rotate up to 25 degrees
+      x: percent * 30,
+      rotate: percent * 25,
     });
   };
 
@@ -28,16 +29,20 @@ export default function TeamStack({ members }) {
     <div className="team-avatar-stack">
       {members.map((member, index) => {
         const isHovered = hoveredId === index;
+        const targetLink =
+          member.name === 'Arnold Nicholas' || member.role?.includes('Child Protection')
+            ? '/child-protection'
+            : member.link;
 
-        return (
+        const content = (
           <div
-            key={index}
             className="team-avatar-item"
             onMouseEnter={() => setHoveredId(index)}
             onMouseLeave={handleMouseLeave}
             onMouseMove={(e) => handleMouseMove(e, index)}
             style={{
               zIndex: isHovered ? 50 : 10 + index,
+              cursor: targetLink ? 'pointer' : 'default',
             }}
           >
             {/* Tooltip */}
@@ -50,12 +55,15 @@ export default function TeamStack({ members }) {
               }}
             >
               <div className="tooltip-inner">
-                {/* Gradient underline decorations */}
                 <div className="tooltip-line primary"></div>
                 <div className="tooltip-line secondary"></div>
                 <span className="tooltip-name">{member.name}</span>
                 <span className="tooltip-role">{member.role}</span>
-                {member.bio && <span className="tooltip-bio">{member.bio}</span>}
+                {targetLink && (
+                  <span style={{ fontSize: '0.7rem', color: '#A855F7', marginTop: '0.2rem', display: 'block', fontWeight: 700 }}>
+                    View Advocate Profile ➔
+                  </span>
+                )}
               </div>
             </div>
 
@@ -66,6 +74,14 @@ export default function TeamStack({ members }) {
               className="team-avatar-img"
             />
           </div>
+        );
+
+        return targetLink ? (
+          <Link key={index} to={targetLink} style={{ textDecoration: 'none' }}>
+            {content}
+          </Link>
+        ) : (
+          <React.Fragment key={index}>{content}</React.Fragment>
         );
       })}
     </div>

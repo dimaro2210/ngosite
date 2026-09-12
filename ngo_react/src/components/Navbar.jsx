@@ -30,6 +30,7 @@ export default function Navbar() {
             <li><NavLink to="/" end>Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
             <li><NavLink to="/programs">Programs</NavLink></li>
+            <li><NavLink to="/child-protection">Child Protection</NavLink></li>
             <li><NavLink to="/gallery">Gallery</NavLink></li>
             <li><NavLink to="/contact">Contact</NavLink></li>
           </ul>
@@ -75,6 +76,7 @@ export default function Navbar() {
           <li><NavLink to="/" end onClick={close}><i className="fas fa-home"></i> Home</NavLink></li>
           <li><NavLink to="/about" onClick={close}><i className="fas fa-info-circle"></i> About</NavLink></li>
           <li><NavLink to="/programs" onClick={close}><i className="fas fa-project-diagram"></i> Programs</NavLink></li>
+          <li><NavLink to="/child-protection" onClick={close}><i className="fas fa-shield-alt"></i> Child Protection</NavLink></li>
           <li><NavLink to="/gallery" onClick={close}><i className="fas fa-images"></i> Gallery</NavLink></li>
           <li><NavLink to="/contact" onClick={close}><i className="fas fa-envelope"></i> Contact</NavLink></li>
         </ul>
