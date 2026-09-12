@@ -34,7 +34,7 @@ export default function Home() {
       location: 'Sokoto Metropolis · 6 LGAs',
       status: 'Active Campaign',
       statusColor: '#10B981',
-      image: `${BASE}images/marathon_campaign.jpg`,
+      image: `${BASE}images/wash_commission/wash_students_assembly.jpg`,
       themeGradient: 'linear-gradient(135deg, #181428 0%, #2A103C 50%, #3B124D 100%)',
       accentColor: '#A855F7',
     },
@@ -107,8 +107,8 @@ export default function Home() {
         'Saferplace Initiative provides vital safe spaces and referral support for vulnerable women and children in Sokoto. Their dedication to dignity, child nutrition, and survivor privacy is remarkable.',
       name: 'Hajiya Amina Bello',
       affiliation: 'Community Women Leader, Sokoto',
-      imageSrc: `${BASE}images/women_empowerment.jpg`,
-      thumbnailSrc: `${BASE}images/women_empowerment.jpg`,
+      imageSrc: `${BASE}images/reproductive_health/rh_mothers_mat_session.jpg`,
+      thumbnailSrc: `${BASE}images/reproductive_health/rh_mothers_mat_session.jpg`,
     },
     {
       id: 3,
@@ -116,8 +116,8 @@ export default function Home() {
         'Their RMNCAH medical outreaches and maternal nutrition packs reach rural mothers who have no nearby hospital. This is true grassroots healthcare access.',
       name: 'Dr. Aliyu Shehu',
       affiliation: 'Public Health Officer, Sokoto State',
-      imageSrc: `${BASE}images/child_nutrition.jpg`,
-      thumbnailSrc: `${BASE}images/child_nutrition.jpg`,
+      imageSrc: `${BASE}images/mnchw_gusau/mnchw_emir_mother_baby.jpg`,
+      thumbnailSrc: `${BASE}images/mnchw_gusau/mnchw_emir_mother_baby.jpg`,
     },
   ];
 

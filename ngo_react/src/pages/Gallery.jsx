@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import InfiniteGallery from '../components/InfiniteGallery';
 
 const mediaList = [
-  // Children
-  { id: 1, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/four_children.jpg`, alt: 'Community children outreach' },
-  { id: 2, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/toddler_baby.jpg`, alt: 'Maternal and toddler health beneficiary' },
-  { id: 3, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/sparkly_dress_girl.jpg`, alt: 'Youth empowerment and child protection' },
-  { id: 4, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/igbo_attire_boy.jpg`, alt: 'Child dignity and cultural inclusion' },
-  { id: 5, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/glasses_boy.jpg`, alt: 'Child vision care and educational support' },
-  { id: 6, category: 'Children', src: `${import.meta.env.BASE_URL}images/children/kaftan_boy.jpg`, alt: 'Adolescent health and education' },
+  // Community Outreach
+  { id: 1, category: 'Community Outreach', src: `${import.meta.env.BASE_URL}images/dignity_kits/dignity_idp_women_queue.jpg`, alt: 'IDP women queuing for dignity kit distribution' },
+  { id: 2, category: 'Community Outreach', src: `${import.meta.env.BASE_URL}images/dignity_kits/dignity_idp_women_carrying.jpg`, alt: 'Women carrying UNICEF dignity kits' },
+  { id: 3, category: 'Community Outreach', src: `${import.meta.env.BASE_URL}images/mnchw_gusau/mnchw_emir_mother_baby.jpg`, alt: 'Mother and baby at MNCHW Gusau event' },
+  { id: 4, category: 'Community Outreach', src: `${import.meta.env.BASE_URL}images/mnchw_gusau/mnchw_infant_immunization.jpg`, alt: 'Infant immunization at MNCHW event' },
+  { id: 5, category: 'Community Outreach', src: `${import.meta.env.BASE_URL}images/maternal_child_nutrition_drive.jpg`, alt: 'Maternal and child nutrition support drive' },
+  { id: 6, category: 'Community Outreach', src: `${import.meta.env.BASE_URL}images/reproductive_health/rh_mothers_mat_session.jpg`, alt: 'Reproductive health mothers session' },
   // WASH Project — Nana Girls School Latrine Commissioning
   { id: 7,  category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_project_signboard.jpg`, alt: 'Official Commissioning Signboard — Renovation and upgrade of 4 pit latrines to modern toilet facility for Nana Girls Secondary School' },
   { id: 8,  category: 'WASH Project', src: `${import.meta.env.BASE_URL}images/wash_commission/wash_students_assembly.jpg`, alt: 'Nana Girls School students at latrine commissioning ceremony' },

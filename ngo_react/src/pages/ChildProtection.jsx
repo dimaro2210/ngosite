@@ -10,7 +10,7 @@ export default function ChildProtection() {
   const childrenGallery = [
     {
       id: 1,
-      src: `${BASE}images/children/four_children.jpg`,
+      src: `${BASE}images/dignity_kits/dignity_idp_women_queue.jpg`,
       title: 'Right to Safe Spaces & Shared Joy',
       caption: 'Children in our community safe space in Sokoto South, learning and thriving in an environment free from fear.',
       badge: 'Safe Space & Joy',
@@ -18,7 +18,7 @@ export default function ChildProtection() {
     },
     {
       id: 2,
-      src: `${BASE}images/children/glasses_boy.jpg`,
+      src: `${BASE}images/capacity_building/workshop_presentation_female.jpg`,
       title: 'Right to Quality Education & Learning Vision',
       caption: 'Every child deserves the tools, books, and visual health screening necessary to excel in school.',
       badge: 'Access to Education',
@@ -26,7 +26,7 @@ export default function ChildProtection() {
     },
     {
       id: 3,
-      src: `${BASE}images/children/igbo_attire_boy.jpg`,
+      src: `${BASE}images/mnchw_gusau/mnchw_emir_mother_baby.jpg`,
       title: 'Right to Cultural Heritage & Inviolable Dignity',
       caption: 'Upholding each child’s unique identity, culture, and self-worth without discrimination or marginalization.',
       badge: 'Identity & Dignity',
@@ -34,7 +34,7 @@ export default function ChildProtection() {
     },
     {
       id: 4,
-      src: `${BASE}images/children/kaftan_boy.jpg`,
+      src: `${BASE}images/wash_commission/wash_students_assembly.jpg`,
       title: 'Freedom from Child Labor & Exploitation',
       caption: 'Rescuing children from early street labor so they can enjoy their childhood and remain in classrooms.',
       badge: 'Anti-Child Labor',
@@ -42,7 +42,7 @@ export default function ChildProtection() {
     },
     {
       id: 5,
-      src: `${BASE}images/children/sparkly_dress_girl.jpg`,
+      src: `${BASE}images/reproductive_health/rh_mothers_mat_session.jpg`,
       title: 'Protection of the Girl-Child & Safe Future',
       caption: 'Empowering young girls with education, hygiene dignity packs, and legal protection against early forced marriage.',
       badge: 'Girl-Child Safeguarding',
@@ -50,7 +50,7 @@ export default function ChildProtection() {
     },
     {
       id: 6,
-      src: `${BASE}images/children/toddler_baby.jpg`,
+      src: `${BASE}images/mnchw_gusau/mnchw_infant_immunization.jpg`,
       title: 'Right to Nutritional-Based Food in Infancy',
       caption: 'Protecting infants from acute malnutrition through therapeutic feeding support and growth monitoring.',
       badge: 'Nutrition-Based Food',
@@ -58,7 +58,7 @@ export default function ChildProtection() {
     },
     {
       id: 7,
-      src: `${BASE}images/child_welfare_care.jpg`,
+      src: `${BASE}images/hepatitis_day/hepatitis_medical_team.jpg`,
       title: 'Access to Good Hospitals & Clinical Healthcare',
       caption: 'Routine childhood vaccinations, clinical checkups, and free pediatric care in underserved rural communities.',
       badge: 'Good Hospital & Health',
@@ -66,7 +66,7 @@ export default function ChildProtection() {
     },
     {
       id: 8,
-      src: `${BASE}images/child_nutrition.jpg`,
+      src: `${BASE}images/maternal_child_nutrition_drive.jpg`,
       title: 'Eradicating Starvation & Severe Deprivation',
       caption: 'Field nutritional screening and supplementary food distribution to shield vulnerable families from hunger.',
       badge: 'Zero Starvation',
