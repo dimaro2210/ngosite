@@ -1,16 +1,115 @@
-import React, { createContext, useContext, useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const StackingCardsContext = createContext(null);
+/**
+ * Dimacode Portfolio-style Stacked Shuffling Cards
+ * Based directly on https://adminsuiteteam-ux.github.io/Portfolio/ Projects section
+ */
 
-export function StackingCards({
-  children,
-  className = '',
-  scaleMultiplier = 0.035,
-  totalCards = 4,
-  ...props
-}) {
+function CardItem({ initiative, index, totalCards, progress }) {
+  // Target scale when scrolling through the stack: earlier cards scale down smoothly
+  const targetScale = 1 - (totalCards - 1 - index) * 0.035;
+  const scale = useTransform(progress, [index / totalCards, 1], [1, targetScale]);
+
+  return (
+    <div
+      className="portfolio-stack-wrapper"
+      style={{
+        top: `calc(5.2rem + ${index * 24}px)`,
+      }}
+    >
+      <motion.div
+        style={{ scale, transformOrigin: 'top center' }}
+        className="portfolio-stack-card"
+      >
+        {/* Top Header Row */}
+        <div className="portfolio-card-topbar">
+          <div className="portfolio-card-meta-left">
+            <span className="portfolio-card-number">{initiative.number}</span>
+            <div className="portfolio-card-headings">
+              <span className="portfolio-card-category">{initiative.category}</span>
+              <h3 className="portfolio-card-title">{initiative.title}</h3>
+            </div>
+          </div>
+          <Link to={initiative.link || '/contact'} className="portfolio-pill-btn">
+            <span>Partner with Us</span>
+            <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: '0.78rem' }}></i>
+          </Link>
+        </div>
+
+        {/* 12-Column Multi-Perspective Showcase Grid */}
+        <div className="portfolio-card-grid">
+          {/* Left 5 Columns: 2 Stacked Preview Cards */}
+          <div className="portfolio-grid-left">
+            <div className="portfolio-preview-box">
+              <img
+                src={initiative.heroImg}
+                alt={`${initiative.title} - Preview 1`}
+                loading="lazy"
+                className="portfolio-preview-img"
+              />
+              <div className="portfolio-glass-badge">
+                <span className="badge-dot"></span>
+                <span>{initiative.heroBadge || 'Field Operation'}</span>
+              </div>
+            </div>
+
+            <div className="portfolio-preview-box">
+              <img
+                src={initiative.featuresImg}
+                alt={`${initiative.title} - Preview 2`}
+                loading="lazy"
+                className="portfolio-preview-img"
+              />
+              <div className="portfolio-glass-badge">
+                <span className="badge-dot" style={{ background: '#38BDF8' }}></span>
+                <span>{initiative.featuresBadge || 'Community Outreach'}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right 7 Columns: 1 Large Live Showcase with overlay info */}
+          <div className="portfolio-grid-right">
+            <div className="portfolio-preview-box portfolio-showcase-box">
+              <img
+                src={initiative.showcaseImg}
+                alt={`${initiative.title} - Full Showcase`}
+                loading="lazy"
+                className="portfolio-showcase-img"
+              />
+              <div className="portfolio-glass-badge portfolio-glass-badge-lg">
+                <i className="fas fa-certificate" style={{ color: '#F59E0B' }}></i>
+                <span>{initiative.showcaseBadge || 'Verified Live Initiative'}</span>
+              </div>
+
+              {/* Bottom Quick Facts Overlay */}
+              <div className="portfolio-card-bottom-overlay">
+                <p className="portfolio-overlay-desc">{initiative.description}</p>
+                <div className="portfolio-metrics-pills">
+                  <span className="portfolio-metric-chip">
+                    <i className="fas fa-users" style={{ color: '#A855F7' }}></i>
+                    {initiative.reach}
+                  </span>
+                  <span className="portfolio-metric-chip">
+                    <i className="fas fa-map-marker-alt" style={{ color: '#F59E0B' }}></i>
+                    {initiative.location}
+                  </span>
+                  <span className="portfolio-metric-chip portfolio-status-chip">
+                    <span className="live-pulse-dot"></span>
+                    {initiative.status}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+export function StackingCards({ initiatives = [] }) {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -18,159 +117,18 @@ export function StackingCards({
   });
 
   return (
-    <StackingCardsContext.Provider
-      value={{ progress: scrollYProgress, scaleMultiplier, totalCards }}
-    >
-      <div
-        className={`stacking-cards-container ${className}`}
-        ref={containerRef}
-        {...props}
-      >
-        {children}
-      </div>
-    </StackingCardsContext.Provider>
-  );
-}
-
-export function StackingCardItem({
-  index,
-  topOffset = 100,
-  stepOffset = 22,
-  className = '',
-  children,
-  ...props
-}) {
-  const context = useContext(StackingCardsContext);
-  const progress = context?.progress;
-  const totalCards = context?.totalCards || 4;
-  const scaleMultiplier = context?.scaleMultiplier ?? 0.035;
-
-  const scaleTo = 1 - (totalCards - index - 1) * scaleMultiplier;
-  const rangeScale = [index / totalCards, 1];
-
-  const scale = progress ? useTransform(progress, rangeScale, [1, scaleTo]) : 1;
-  const top = `${topOffset + index * stepOffset}px`;
-
-  return (
-    <div
-      className={`stacking-card-item-wrapper ${className}`}
-      style={{
-        position: 'sticky',
-        top,
-        zIndex: index + 10,
-      }}
-      {...props}
-    >
-      <motion.div
-        className="stacking-card-motion"
-        style={{
-          scale,
-          transformOrigin: 'top center',
-        }}
-      >
-        {children}
-      </motion.div>
+    <div className="portfolio-cards-container" ref={containerRef}>
+      {initiatives.map((item, index) => (
+        <CardItem
+          key={item.id || item.number || index}
+          initiative={item}
+          index={index}
+          totalCards={initiatives.length}
+          progress={scrollYProgress}
+        />
+      ))}
     </div>
   );
 }
 
-export function InitiativeCard({
-  index,
-  total,
-  category,
-  title,
-  description,
-  reach,
-  location,
-  status,
-  statusColor = '#10B981',
-  image,
-  link = '/contact',
-  themeGradient = 'linear-gradient(135deg, #181428 0%, #29113B 50%, #3B124D 100%)',
-  accentColor = '#A855F7',
-}) {
-  return (
-    <div
-      className="initiative-stack-card"
-      style={{
-        background: themeGradient,
-        borderColor: 'rgba(255, 255, 255, 0.12)',
-      }}
-    >
-      {/* Top Meta Bar */}
-      <div className="initiative-card-topbar">
-        <div className="initiative-category-badge" style={{ borderColor: `${accentColor}40`, color: '#E9D5FF' }}>
-          <span className="initiative-category-dot" style={{ background: accentColor }}></span>
-          {category}
-        </div>
-        <div className="initiative-index-pill">
-          0{index + 1} <span style={{ opacity: 0.4 }}>/ 0{total}</span>
-        </div>
-      </div>
-
-      {/* Main Grid Content */}
-      <div className="initiative-card-content-grid">
-        {/* Left text column */}
-        <div className="initiative-card-info">
-          <h3 className="initiative-card-title">{title}</h3>
-          <p className="initiative-card-desc">{description}</p>
-
-          {/* Key metadata pills */}
-          <div className="initiative-metrics-row">
-            <div className="initiative-metric-pill">
-              <i className="fas fa-users" style={{ color: accentColor }}></i>
-              <span>{reach}</span>
-            </div>
-            <div className="initiative-metric-pill">
-              <i className="fas fa-map-marker-alt" style={{ color: '#F59E0B' }}></i>
-              <span>{location}</span>
-            </div>
-            <div
-              className="initiative-metric-pill"
-              style={{
-                background: 'rgba(16, 185, 129, 0.12)',
-                borderColor: 'rgba(16, 185, 129, 0.3)',
-                color: '#6EE7B7',
-              }}
-            >
-              <span
-                style={{
-                  width: '6px',
-                  height: '6px',
-                  borderRadius: '50%',
-                  background: '#10B981',
-                  boxShadow: '0 0 8px #10B981',
-                  display: 'inline-block',
-                }}
-              ></span>
-              <span>{status}</span>
-            </div>
-          </div>
-
-          {/* Action Row */}
-          <div className="initiative-action-row">
-            <Link to={link} className="initiative-cta-btn">
-              <span>Partner with this Initiative</span>
-              <i className="fas fa-arrow-right"></i>
-            </Link>
-            <span className="initiative-audit-tag">
-              <i className="fas fa-shield-alt"></i> Verified Field Outreach
-            </span>
-          </div>
-        </div>
-
-        {/* Right image column */}
-        <div className="initiative-card-visual">
-          <div className="initiative-img-wrapper">
-            <img src={image} alt={title} className="initiative-card-img" />
-            <div className="initiative-img-overlay"></div>
-            <div className="initiative-badge-overlay">
-              <i className="fas fa-check-circle" style={{ color: '#10B981' }}></i>
-              <span>100% Direct Impact Delivery</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+export default StackingCards;

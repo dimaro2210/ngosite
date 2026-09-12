@@ -5,7 +5,7 @@ import TeamStack from '../components/TeamStack';
 import HopeSection from '../components/HopeSection';
 import CTAReveal from '../components/CTAReveal';
 import HeroBackgroundSlider from '../components/HeroBackgroundSlider';
-import { StackingCards, StackingCardItem, InitiativeCard } from '../components/StackingCards';
+import { StackingCards } from '../components/StackingCards';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -26,59 +26,75 @@ export default function Home() {
   const initiatives = [
     {
       id: 1,
-      category: 'WASH & Clean Sanitation',
+      number: '01',
+      category: 'WASH & Clean Sanitation Campaign',
       title: 'Sokoto 10KM Marathon — Unite to End Open Defecation',
       description:
-        'Mobilizing thousands of runners, youth groups, and traditional rulers (Mai Angwan) across Sokoto to eradicate open defecation, install clean school wash blocks, and champion community health hygiene in every LGA.',
-      reach: '50,000+ Targeted',
+        'Mobilizing 50,000+ runners, youth volunteers, and traditional rulers (Mai Angwan) across Sokoto to eradicate open defecation, install clean school wash blocks, and champion community health hygiene in every LGA.',
+      reach: '50,000+ Targeted Citizens',
       location: 'Sokoto Metropolis · 6 LGAs',
       status: 'Active Campaign',
-      statusColor: '#10B981',
-      image: `${BASE}images/marathon_campaign.jpg`,
-      themeGradient: 'linear-gradient(135deg, #181428 0%, #2A103C 50%, #3B124D 100%)',
-      accentColor: '#A855F7',
+      heroImg: `${BASE}images/marathon_campaign.jpg`,
+      heroBadge: 'Marathon Mobilization',
+      featuresImg: `${BASE}images/wash_commission/wash_students_assembly.jpg`,
+      featuresBadge: 'School WASH Projects',
+      showcaseImg: `${BASE}images/wash_commission/wash_project_signboard.jpg`,
+      showcaseBadge: 'UNICEF & RUWASA Certified',
+      link: '/contact',
     },
     {
       id: 2,
-      category: 'Child Welfare & Nutrition',
+      number: '02',
+      category: 'Child Welfare & Infant Nutrition',
       title: 'Maternal & Child Nutrition Support Drive',
       description:
         'Delivering vital nutrient-dense food packs, therapeutic infant feedings, and clinical growth monitoring directly to nursing mothers and severely vulnerable infants across rural health posts.',
       reach: '8,500+ Mothers & Infants',
       location: 'Underserved Communities',
       status: 'Ongoing Outreach',
-      statusColor: '#38BDF8',
-      image: `${BASE}images/maternal_child_nutrition_drive.jpg`,
-      themeGradient: 'linear-gradient(135deg, #0F172A 0%, #162447 50%, #1E3A8A 100%)',
-      accentColor: '#38BDF8',
+      heroImg: `${BASE}images/child_nutrition.jpg`,
+      heroBadge: 'Nutrition Screening',
+      featuresImg: `${BASE}images/maternal_child_nutrition_drive.jpg`,
+      featuresBadge: 'Therapeutic Food Supply',
+      showcaseImg: `${BASE}images/child_welfare_care.jpg`,
+      showcaseBadge: 'Mother & Infant Support',
+      link: '/contact',
     },
     {
       id: 3,
-      category: 'Maternal & Child Health',
-      title: 'RMNCAH Maternal & Child Health Outreach',
+      number: '03',
+      category: 'Clinical Healthcare & Immunization',
+      title: 'RMNCAH Maternal & Child Health Clinical Outreach',
       description:
         'Delivering free Reproductive, Maternal, Newborn, Child, and Adolescent Health clinics, antenatal toolkits, routine childhood immunizations, and vital medical supplies to rural communities.',
       reach: '6,200+ Clinical Checkups',
       location: 'Priority LGAs · Sokoto State',
       status: 'Active Field Clinic',
-      statusColor: '#EC4899',
-      image: `${BASE}images/rmncah_maternal_child_health.jpg`,
-      themeGradient: 'linear-gradient(135deg, #240E24 0%, #381232 50%, #4D1540 100%)',
-      accentColor: '#EC4899',
+      heroImg: `${BASE}images/team_health.jpg`,
+      heroBadge: 'Clinical Field Officers',
+      featuresImg: `${BASE}images/children/four_children.jpg`,
+      featuresBadge: 'Pediatric Care & Vaccines',
+      showcaseImg: `${BASE}images/rmncah_maternal_child_health.jpg`,
+      showcaseBadge: 'Free Maternal Consultations',
+      link: '/contact',
     },
     {
       id: 4,
-      category: 'Protection & Dignity',
-      title: 'UNICEF Dignity Kits & Survivor Protection Support',
+      number: '04',
+      category: 'Protection & Dignity Kits',
+      title: 'UNICEF Dignity Kits & IDP Survivor Care Support',
       description:
-        'In strategic partnership with UNICEF, distributing comprehensive dignity packs, hygiene essentials, trauma-informed psychosocial counseling, and emergency relief supplies to vulnerable women and children.',
+        'In strategic partnership with UNICEF, distributing comprehensive dignity packs, hygiene essentials, trauma-informed psychosocial counseling, and emergency relief supplies to vulnerable displaced families.',
       reach: '1,500+ Displaced Families',
       location: 'IDP Settlements · Sokoto',
       status: 'Field Distribution Active',
-      statusColor: '#10B981',
-      image: `${BASE}images/dignity_kits/dignity_idp_women_carrying.jpg`,
-      themeGradient: 'linear-gradient(135deg, #0D2818 0%, #133E23 50%, #1A532E 100%)',
-      accentColor: '#34D399',
+      heroImg: `${BASE}images/dignity_kits/dignity_idp_women_carrying.jpg`,
+      heroBadge: 'Emergency Kit Handover',
+      featuresImg: `${BASE}images/dignity_kits/dignity_idp_women_queue.jpg`,
+      featuresBadge: 'Community Safe Queuing',
+      showcaseImg: `${BASE}images/dignity_kits/dignity_unicef_box_handover.jpg`,
+      showcaseBadge: 'UNICEF Official Partnership',
+      link: '/contact',
     },
   ];
 
@@ -176,48 +192,21 @@ export default function Home() {
         </section>
       </motion.div>
 
-      {/* ========== 21ST.DEV FLOATING STACKING CARDS: ACTIVE INITIATIVES ========== */}
-      <section className="stacking-cards-section">
-        <div className="container">
-          <div className="section-header" data-reveal="up" style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-            <span style={{ color: '#6C2BD9', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: '0.84rem' }}>
-              ✦ Priority Operations · 2026
-            </span>
-            <h2 style={{ fontSize: 'clamp(2rem, 3.2vw, 2.75rem)', fontWeight: 800, marginTop: '0.5rem', marginBottom: '0.75rem' }}>
-              Support Child Welfare &amp; Protection
-            </h2>
-            <p style={{ maxWidth: '680px', margin: '0 auto', color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: '1.6' }}>
-              Scroll down to explore our flagship field initiatives across Sokoto State. Each card pins and layers into view as you journey through our mission.
-            </p>
-          </div>
-
-          <StackingCards totalCards={initiatives.length} scaleMultiplier={0.035}>
-            {initiatives.map((item, idx) => (
-              <StackingCardItem
-                key={item.id}
-                index={idx}
-                topOffset={85}
-                stepOffset={20}
-              >
-                <InitiativeCard
-                  index={idx}
-                  total={initiatives.length}
-                  category={item.category}
-                  title={item.title}
-                  description={item.description}
-                  reach={item.reach}
-                  location={item.location}
-                  status={item.status}
-                  statusColor={item.statusColor}
-                  image={item.image}
-                  themeGradient={item.themeGradient}
-                  accentColor={item.accentColor}
-                  link="/contact"
-                />
-              </StackingCardItem>
-            ))}
-          </StackingCards>
+      {/* ========== DIMACODE PORTFOLIO-STYLE STACKING CARDS: ACTIVE INITIATIVES ========== */}
+      <section className="stacking-cards-section" id="initiatives">
+        <div className="portfolio-section-header" data-reveal="up">
+          <span className="portfolio-section-badge">
+            ✦ Priority Operations · 2026
+          </span>
+          <h2 className="portfolio-section-title">
+            Support Child Welfare &amp; Protection
+          </h2>
+          <p className="portfolio-section-desc">
+            Explore our flagship field operations across Sokoto State. As you scroll down, each operation card pins, layers, and shuffles smoothly into depth.
+          </p>
         </div>
+
+        <StackingCards initiatives={initiatives} />
       </section>
 
       {/* ========== MEET OUR VOLUNTEERS ========== */}
