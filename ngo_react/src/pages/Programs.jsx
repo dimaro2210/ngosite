@@ -119,7 +119,7 @@ export default function Programs() {
           <div className="section-header" data-reveal="up">
             <span>Our Approach</span>
             <h2>How We Deliver Impact</h2>
-            <p>A survivor-centered, community-led, and data-driven process across all 13 operational LGAs in 6 Nigerian states.</p>
+            <p>A survivor-centered, community-led, and data-driven process across all 33 operational LGAs in 6 Nigerian states.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem' }}>
             {howWeHelp.map((step, i) => (
@@ -185,7 +185,7 @@ export default function Programs() {
         <div className="container">
           <div className="stats-grid">
             <div className="stat-card"><h3 style={{ color: '#fff' }}>9</h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Core Focus Areas</p></div>
-            <div className="stat-card"><h3 style={{ color: '#fff' }}>6 States</h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Across 13 LGAs</p></div>
+            <div className="stat-card"><h3 style={{ color: '#fff' }}>6 States</h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Across 33 LGAs</p></div>
             <div className="stat-card"><h3 style={{ color: '#fff' }}>1,500<span>+</span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Adolescents, Women &amp; Children</p></div>
             <div className="stat-card"><h3 style={{ color: '#fff' }}>500<span>+</span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Trees in Green Drive</p></div>
           </div>

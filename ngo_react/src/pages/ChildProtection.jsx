@@ -1,11 +1,43 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import TeamStack from '../components/TeamStack';
 
 const BASE = import.meta.env.BASE_URL;
 
 export default function ChildProtection() {
   const [activePhoto, setActivePhoto] = useState(null);
+
+  const childAdvocates = [
+    {
+      id: 1,
+      name: 'Arnold Nicholas',
+      role: 'Lead Child Right Advocate (Team Lead)',
+      image: `${BASE}images/arnold_nicholas.jpg`,
+      link: '#statement',
+    },
+    {
+      id: 2,
+      name: 'Fatima Aliyu',
+      role: 'Child Right Advocate',
+      image: `${BASE}images/child_advocate_fatima.jpg`,
+      link: null,
+    },
+    {
+      id: 3,
+      name: 'Emmanuel Okafor',
+      role: 'Child Right Advocate',
+      image: `${BASE}images/child_advocate_emmanuel.jpg`,
+      link: null,
+    },
+    {
+      id: 4,
+      name: 'Zainab Bello',
+      role: 'Child Right Advocate',
+      image: `${BASE}images/child_advocate_zainab.jpg`,
+      link: null,
+    },
+  ];
 
   const childrenGallery = [
     {
@@ -169,6 +201,9 @@ export default function ChildProtection() {
               <div className="cp-action-buttons">
                 <a href="#statement" className="btn-primary" style={{ background: '#6C2BD9', borderColor: '#6C2BD9' }}>
                   Read Arnold's Statement <i className="fas fa-arrow-down" style={{ marginLeft: '.5rem' }}></i>
+                </a>
+                <a href="#advocates-team" className="btn-primary" style={{ background: '#4F46E5', borderColor: '#4F46E5' }}>
+                  Advocates Team <i className="fas fa-users" style={{ marginLeft: '.5rem' }}></i>
                 </a>
                 <a href="#gallery" className="btn-secondary" style={{ background: '#10B981', color: '#fff' }}>
                   The Faces We Protect <i className="fas fa-images" style={{ marginLeft: '.5rem' }}></i>
@@ -335,6 +370,46 @@ export default function ChildProtection() {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ── CHILD RIGHT ADVOCATES TEAM SECTION ── */}
+      <section id="advocates-team" className="volunteers-section section-padding" style={{ background: 'linear-gradient(135deg, #F8FAFC 0%, #F5F3FF 50%, #FAF5FF 100%)', borderTop: '1px solid rgba(108, 43, 217, 0.1)', borderBottom: '1px solid rgba(108, 43, 217, 0.1)' }}>
+        <div className="container">
+          <div className="section-header" style={{ textAlign: 'center' }}>
+            <span style={{ color: '#6C2BD9', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: '0.84rem' }}>
+              ✦ Peer Leadership &amp; Youth Cadre
+            </span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: 800, marginTop: '0.5rem', marginBottom: '0.75rem', color: '#1E1B4B' }}>
+              Child Right Advocates Team
+            </h2>
+            <p style={{ maxWidth: '740px', margin: '0 auto', color: '#4B5563', fontSize: '1.05rem', lineHeight: '1.6' }}>
+              Meet our community of young champions standing for child rights, education, and protection across Nigeria. Arnold Nicholas leads the team, mobilizing peers to speak up and create safe spaces for every child.
+            </p>
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}>
+            <TeamStack members={childAdvocates} />
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <span style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.55rem',
+              background: '#fff',
+              padding: '0.6rem 1.4rem',
+              borderRadius: '999px',
+              border: '1px solid rgba(108, 43, 217, 0.2)',
+              fontSize: '0.88rem',
+              fontWeight: 600,
+              color: '#6C2BD9',
+              boxShadow: '0 4px 16px rgba(108, 43, 217, 0.08)'
+            }}>
+              <i className="fas fa-crown" style={{ color: '#F59E0B' }}></i>
+              Hover over each advocate to view their profile · Arnold Nicholas Leading The Team
+            </span>
+          </div>
         </div>
       </section>
 

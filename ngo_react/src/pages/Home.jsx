@@ -83,7 +83,7 @@ export default function Home() {
   ];
 
   const volunteers = [
-    { id: 1, name: 'Arnold Nicholas', role: 'Child Protection Advocate', image: `${BASE}images/arnold_nicholas.jpg` },
+    { id: 1, name: 'Arnold Nicholas', role: 'Lead Child Right Advocate', image: `${BASE}images/arnold_nicholas.jpg` },
     { id: 2, name: 'Prince Nicholas', role: 'Founder & Executive Director', image: `${BASE}images/prince_nicholas.jpg` },
     { id: 3, name: 'Kola Odejobi', role: 'Governance & Policy Advocacy Team Lead', image: `${BASE}images/team_director.jpg` },
     { id: 4, name: 'Jemima Karatu', role: 'Disaster & Emergency Management Response Team Lead', image: `${BASE}images/team_board.jpg` },
@@ -157,7 +157,7 @@ export default function Home() {
               </div>
               <div className="stat-card" data-reveal="zoom" data-reveal-delay="200">
                 <h3 style={{ color: '#fff' }}>6 States</h3>
-                <p style={{ color: 'rgba(255,255,255,.8)' }}>Across 13 LGAs in Nigeria</p>
+                <p style={{ color: 'rgba(255,255,255,.8)' }}>Across 33 LGAs in Nigeria</p>
               </div>
               <div className="stat-card" data-reveal="zoom" data-reveal-delay="300">
                 <h3 style={{ color: '#fff' }}>

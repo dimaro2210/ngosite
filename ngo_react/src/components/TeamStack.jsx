@@ -28,11 +28,12 @@ export default function TeamStack({ members }) {
   return (
     <div className="team-avatar-stack">
       {members.map((member, index) => {
-        const isHovered = hoveredId === index;
         const targetLink =
-          member.name === 'Arnold Nicholas' || member.role?.includes('Child Protection')
-            ? '/child-protection'
-            : member.link;
+          member.link !== undefined
+            ? member.link
+            : (member.name === 'Arnold Nicholas' || member.role?.includes('Child Protection')
+              ? '/child-protection'
+              : null);
 
         const content = (
           <div
@@ -59,9 +60,13 @@ export default function TeamStack({ members }) {
                 <div className="tooltip-line secondary"></div>
                 <span className="tooltip-name">{member.name}</span>
                 <span className="tooltip-role">{member.role}</span>
-                {targetLink && (
+                {targetLink ? (
                   <span style={{ fontSize: '0.7rem', color: '#A855F7', marginTop: '0.2rem', display: 'block', fontWeight: 700 }}>
                     View Advocate Profile ➔
+                  </span>
+                ) : (
+                  <span style={{ fontSize: '0.7rem', color: '#10B981', marginTop: '0.2rem', display: 'block', fontWeight: 600 }}>
+                    ✦ Child Right Advocate
                   </span>
                 )}
               </div>

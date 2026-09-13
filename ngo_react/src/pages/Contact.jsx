@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     question: 'Which areas does Saferplace Initiative operate in?',
-    answer: 'Our operational reach spans 13 Local Government Areas across 6 states in Nigeria: Sokoto, Zamfara, Kebbi, Abia, Bayelsa, and Rivers State.'
+    answer: 'Our operational reach spans 33 Local Government Areas across 6 states in Nigeria: Sokoto, Zamfara, Kebbi, Abia, Bayelsa, and Rivers State.'
   },
   {
     question: 'How can I support or sponsor the Green Sokoto Initiative 2026?',

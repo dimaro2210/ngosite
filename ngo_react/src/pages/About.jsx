@@ -6,7 +6,7 @@ import TeamStack from '../components/TeamStack'
 const BASE = import.meta.env.BASE_URL;
 
 const team = [
-  { id: 1, name: 'Arnold Nicholas', role: 'Child Protection Advocate', image: `${BASE}images/arnold_nicholas.jpg` },
+  { id: 1, name: 'Arnold Nicholas', role: 'Lead Child Right Advocate', image: `${BASE}images/arnold_nicholas.jpg` },
   { id: 2, name: 'Prince Nicholas', role: 'Founder & Executive Director', image: `${BASE}images/prince_nicholas.jpg` },
   { id: 3, name: 'Kola Odejobi', role: 'Governance & Policy Advocacy Team Lead', image: `${BASE}images/team_director.jpg` },
   { id: 4, name: 'Jemima Karatu', role: 'Disaster & Emergency Management Response Team Lead', image: `${BASE}images/team_board.jpg` },
@@ -17,7 +17,7 @@ const team = [
 const milestones = [
   { year: 'CAC Registration', title: 'Official Registration', desc: 'Registered with CAC Nigeria under CAC/IT/NO 7571193 as a social protection nonprofit.' },
   { year: 'State Integration', title: 'Ministry Approval', desc: 'Submitted introduction and operational registration to the Ministry of Budget & Economic Planning, Sokoto State.' },
-  { year: '6 States', title: 'Coverage Expansion', desc: 'Active operations across 13 LGAs in Sokoto, Zamfara, Kebbi, Abia, Bayelsa, and Rivers State.' },
+  { year: '6 States', title: 'Coverage Expansion', desc: 'Active operations across 33 LGAs in Sokoto, Zamfara, Kebbi, Abia, Bayelsa, and Rivers State.' },
   { year: '500+ Youth', title: 'Safe Schools Outreach', desc: 'Reached 500+ adolescents across schools with child protection, consent, and safety education.' },
   { year: '50 Responders', title: 'Community First Responders', desc: 'Trained 50 community volunteers as survivor support responders in local neighborhoods.' },
   { year: 'June 2026', title: 'Green Sokoto Initiative', desc: 'Launching the World Tree Planting Day campaign to plant 500 indigenous trees across Sokoto.' },
@@ -123,7 +123,7 @@ export default function About() {
                   </div>
                   <div>
                     <h3 style={{ color: '#fff' }}>6 States</h3>
-                    <p style={{ color: 'rgba(255,255,255,.8)' }}>Across 13 LGAs in Nigeria (Sokoto, Zamfara, Kebbi, Abia, Bayelsa, Rivers State)</p>
+                    <p style={{ color: 'rgba(255,255,255,.8)' }}>Across 33 LGAs in Nigeria (Sokoto, Zamfara, Kebbi, Abia, Bayelsa, Rivers State)</p>
                   </div>
                 </div>
 

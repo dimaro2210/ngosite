@@ -210,7 +210,7 @@ export default function HopeSection() {
         <div className="hope-footer-info">
           <span>Index · 01 — 06</span>
           <span className="hope-quote-tag">"Creating safe spaces for every life, everywhere."</span>
-          <span>6 STATES · 13 LGAs · NIGERIA</span>
+          <span>6 STATES · 33 LGAs · NIGERIA</span>
         </div>
 
       </div>

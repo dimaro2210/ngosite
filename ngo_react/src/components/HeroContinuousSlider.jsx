@@ -87,7 +87,7 @@ export default function HeroContinuousSlider() {
       <div className="hero-slider-footer-stats">
         <div className="slider-mini-stat">
           <strong>6 States</strong>
-          <span>Across 13 LGAs</span>
+          <span>Across 33 LGAs</span>
         </div>
         <div className="slider-mini-divider"></div>
         <div className="slider-mini-stat">
