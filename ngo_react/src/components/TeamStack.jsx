@@ -28,6 +28,7 @@ export default function TeamStack({ members }) {
   return (
     <div className="team-avatar-stack">
       {members.map((member, index) => {
+        const isHovered = hoveredId === index;
         const targetLink =
           member.link !== undefined
             ? member.link
