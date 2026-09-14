@@ -392,21 +392,116 @@ h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 700; }
 .top-bar-social a { color: rgba(255,255,255,.8); margin-left: .8rem; }
 .top-bar-social a:hover { color: var(--primary); }
 
-/* â”€â”€ NAVBAR â”€â”€ */
-.navbar { background-color: #fff; box-shadow: 0 2px 15px rgba(0,0,0,.03); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+/* ── NAVBAR ── */
+.navbar { 
+  background-color: #fff; 
+  box-shadow: 0 2px 15px rgba(0,0,0,.04); 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  z-index: 1000; 
+  transition: all 0.3s ease;
+}
 body { padding-top: 80px; }
-.nav-container { display: flex; align-items: center; justify-content: space-between; height: 80px; }
-.logo { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--text-dark); display: flex; align-items: center; gap: .4rem; }
-.logo span { color: var(--primary); }
-.nav-links { display: flex; gap: 2.2rem; }
-.nav-links a { color: var(--text-dark); font-family: var(--font-display); font-weight: 600; font-size: .85rem; letter-spacing: .05em; text-transform: uppercase; }
-.nav-links a:hover, .nav-links a.active { color: var(--secondary); }
-.nav-actions { display: flex; align-items: center; gap: 1.5rem; }
-.nav-icon-btn { background: none; border: none; font-size: 1.1rem; color: var(--text-dark); cursor: pointer; }
-.nav-icon-btn:hover { color: var(--secondary); }
-.btn-donate-nav { background-color: var(--primary); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: .8rem; padding: .6rem 1.4rem; border-radius: var(--radius-full); }
-.btn-donate-nav:hover { background-color: var(--primary-hover); }
-.mobile-toggle { display: none; font-size: 1.5rem; background: none; border: none; cursor: pointer; color: var(--text-dark); }
+.nav-container { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  height: 80px; 
+}
+.logo { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.65rem; 
+  text-decoration: none; 
+  min-width: 0;
+  flex-shrink: 1;
+}
+.logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #fff;
+  padding: 2px;
+  flex-shrink: 0;
+}
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+.logo-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: #1E293B;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+.logo-accent {
+  color: #6C2BD9;
+}
+.logo-tagline {
+  font-size: 0.65rem;
+  color: #64748B;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a { 
+  color: var(--text-dark); 
+  font-family: var(--font-display); 
+  font-weight: 600; 
+  font-size: .85rem; 
+  letter-spacing: .04em; 
+  text-transform: uppercase; 
+  transition: color 0.2s ease;
+}
+.nav-links a:hover, .nav-links a.active { color: #6C2BD9; }
+.nav-actions { 
+  display: flex; 
+  align-items: center; 
+  gap: 1rem; 
+  flex-shrink: 0; 
+}
+.btn-donate-nav { 
+  background-color: #6C2BD9; 
+  color: #fff; 
+  font-family: var(--font-display); 
+  font-weight: 700; 
+  font-size: .84rem; 
+  padding: .55rem 1.25rem; 
+  border-radius: 100px; 
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.btn-donate-nav:hover { 
+  background-color: #581C87; 
+  transform: translateY(-1px);
+}
+.mobile-toggle { 
+  display: none; 
+  font-size: 1.4rem; 
+  background: none; 
+  border: none; 
+  cursor: pointer; 
+  color: var(--text-dark); 
+  padding: 0.4rem;
+  align-items: center;
+  justify-content: center;
+}
 
 /* â”€â”€ HERO â”€â”€ */
 .hero {
@@ -1245,8 +1340,12 @@ body { padding-top: 80px; }
 .modal-dialog h3 { font-size: 1.5rem; margin-bottom: .5rem; }
 .modal-dialog p { color: var(--text-muted); margin-bottom: 1.8rem; }
 
-/* â”€â”€ RESPONSIVE â”€â”€ */
+/* ── RESPONSIVE ── */
 @media (max-width: 992px) {
+  /* switch to mobile drawer navigation */
+  .nav-links { display: none !important; }
+  .mobile-toggle { display: flex !important; }
+  .logo-tagline { display: none !important; }
   .hero-grid, .about-grid, .contact-grid-content { grid-template-columns: 1fr; gap: 3rem; }
   .about-grid-content { grid-template-columns: 1fr; gap: 3rem; }
   .about-pill-gallery { transform: rotate(0deg); justify-content: center; }
@@ -1261,10 +1360,25 @@ body { padding-top: 80px; }
   .mission-vision-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
-  /* hide desktop nav-links on mobile (drawer takes over) */
-  .nav-links { display: none !important; }
-  .mobile-toggle { display: block; }
-  .btn-donate-nav { display: none; }
+  .nav-container { height: 68px; padding: 0 1rem; }
+  body { padding-top: 68px; }
+  .logo { gap: 0.55rem; }
+  .logo-img { width: 38px; height: 38px; border-radius: 8px; }
+  .logo-title { font-size: 1.08rem; }
+  .logo-tagline { display: none !important; }
+  .nav-actions { gap: 0.55rem; }
+  .btn-donate-nav { 
+    display: inline-flex !important; 
+    padding: 0.42rem 0.85rem !important; 
+    font-size: 0.78rem !important; 
+    gap: 0.35rem !important; 
+  }
+  .mobile-toggle { 
+    display: flex !important; 
+    width: 38px; 
+    height: 38px; 
+    font-size: 1.35rem; 
+  }
   .hero { padding: 4rem 0; }
   .hero-grid { gap: 3rem; }
   .hero-content h1 { font-size: 2.3rem; }
@@ -1286,7 +1400,18 @@ body { padding-top: 80px; }
   .mission-vision-grid { grid-template-columns: 1fr !important; }
 }
 @media (max-width: 480px) {
-  body { padding-top: 80px; }
+  .nav-container { height: 62px; padding: 0 0.8rem; }
+  body { padding-top: 62px; }
+  .logo { gap: 0.45rem; }
+  .logo-img { width: 34px; height: 34px; }
+  .logo-title { font-size: 0.96rem; }
+  .nav-actions { gap: 0.42rem; }
+  .btn-donate-nav { 
+    padding: 0.36rem 0.68rem !important; 
+    font-size: 0.74rem !important; 
+  }
+  .btn-donate-nav i { font-size: 0.7rem; }
+  .mobile-toggle { font-size: 1.25rem; }
   .hero-content h1 { font-size: 1.9rem; }
   .hero-cta-buttons { flex-direction: column; width: 100%; align-items: stretch; gap: 0.8rem; }
   .hero-btn-white, .hero-btn-outline { justify-content: center; width: 100%; }
@@ -1302,6 +1427,11 @@ body { padding-top: 80px; }
   .pill-img { width: 80px; height: 190px; }
   .about-contact-row { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
   .about-call h4 { font-size: .9rem; }
+}
+@media (max-width: 360px) {
+  .logo-title { font-size: 0.86rem; }
+  .btn-donate-nav span { display: none; }
+  .btn-donate-nav { padding: 0.4rem 0.55rem !important; }
 }
 
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•

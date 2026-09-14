@@ -10,17 +10,17 @@ export default function Navbar() {
     <>
       <nav className="navbar">
         <div className="container nav-container">
-          <Link to="/" className="logo" onClick={close} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}>
+          <Link to="/" className="logo" onClick={close}>
             <img
               src={`${import.meta.env.BASE_URL}images/logo.jpg`}
               alt="Saferplace Initiative Logo"
-              style={{ width: '44px', height: '44px', borderRadius: '10px', objectFit: 'contain', background: '#fff', padding: '2px' }}
+              className="logo-img"
             />
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <span style={{ fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-0.02em', color: '#1E293B', lineHeight: 1.1 }}>
-                Saferplace <span style={{ color: '#6C2BD9' }}>Initiative</span>
+            <div className="logo-text-group">
+              <span className="logo-title">
+                Saferplace <span className="logo-accent">Initiative</span>
               </span>
-              <span style={{ fontSize: '0.65rem', color: '#64748B', fontWeight: 500, letterSpacing: '0.01em' }}>
+              <span className="logo-tagline">
                 ...for Women &amp; Child Health &amp; Good Governance
               </span>
             </div>
@@ -41,9 +41,9 @@ export default function Navbar() {
               type="button" 
               className="btn-donate-nav" 
               onClick={() => { close(); openDonateModal('Saferplace General Support'); }} 
-              style={{ background: '#6C2BD9', borderColor: '#6C2BD9', cursor: 'pointer', border: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.45rem' }}
             >
-              <i className="fas fa-heart"></i> Donate
+              <i className="fas fa-heart"></i>
+              <span>Donate</span>
             </button>
             <button
               className="mobile-toggle"
