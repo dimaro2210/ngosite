@@ -59,15 +59,19 @@ export default function TeamStack({ members }) {
               <div className="tooltip-inner">
                 <div className="tooltip-line primary"></div>
                 <div className="tooltip-line secondary"></div>
-                <span className="tooltip-name">{member.name}</span>
+                {member.hideName ? (
+                  <span className="tooltip-name">{member.title || 'Child Right Advocacy'}</span>
+                ) : member.name ? (
+                  <span className="tooltip-name">{member.name}</span>
+                ) : null}
                 <span className="tooltip-role">{member.role}</span>
                 {targetLink ? (
-                  <span style={{ fontSize: '0.7rem', color: '#A855F7', marginTop: '0.2rem', display: 'block', fontWeight: 700 }}>
+                  <span style={{ fontSize: '0.7rem', color: '#C4B5FD', marginTop: '0.2rem', display: 'block', fontWeight: 700 }}>
                     View Advocate Profile ➔
                   </span>
                 ) : (
-                  <span style={{ fontSize: '0.7rem', color: '#6C2BD9', marginTop: '0.2rem', display: 'block', fontWeight: 600 }}>
-                    ✦ Child Right Advocate
+                  <span style={{ fontSize: '0.7rem', color: '#C4B5FD', marginTop: '0.2rem', display: 'block', fontWeight: 600 }}>
+                    ✦ Child Right Advocacy
                   </span>
                 )}
               </div>
