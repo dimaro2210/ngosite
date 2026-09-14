@@ -45,6 +45,12 @@ const mediaList = [
   { id: 34, category: 'Reproductive Health', src: `${import.meta.env.BASE_URL}images/reproductive_health/rh_facilitator_holding_infant.jpg`, alt: 'Saferplace Initiative maternal healthcare facilitator carrying a beneficiary infant' },
   { id: 35, category: 'Reproductive Health', src: `${import.meta.env.BASE_URL}images/reproductive_health/rh_facilitator_sensitization_speech.jpg`, alt: 'Saferplace Initiative health facilitator educating community on safe motherhood and family wellness' },
   { id: 36, category: 'Reproductive Health', src: `${import.meta.env.BASE_URL}images/reproductive_health/rh_mothers_mat_session.jpg`, alt: 'Interactive reproductive health and maternal-child care session with mothers seated on mats' },
+  // Citizenship Training — Collaboration with Yiaga Africa & NED
+  { id: 37, category: 'Citizenship Training', src: `${import.meta.env.BASE_URL}images/yiaga_africa_training/yiaga_training_banner_hall.jpg`, alt: 'Civic Awareness & Digital Empowerment for a New Nigeria Project banner at Dankani Guest Palace Hotel, Sokoto' },
+  { id: 38, category: 'Citizenship Training', src: `${import.meta.env.BASE_URL}images/yiaga_africa_training/yiaga_keynote_podium_speech.jpg`, alt: 'Keynote address at the grassroots civic education and youth empowerment training in Sokoto' },
+  { id: 39, category: 'Citizenship Training', src: `${import.meta.env.BASE_URL}images/yiaga_africa_training/yiaga_participants_training_hall.jpg`, alt: 'Youth, women, and community leaders participating in citizenship awareness training in Sokoto' },
+  { id: 40, category: 'Citizenship Training', src: `${import.meta.env.BASE_URL}images/yiaga_africa_training/yiaga_budget_civic_presentation.jpg`, alt: 'Training presentation on public budget analysis and civic monitoring for governance accountability' },
+  { id: 41, category: 'Citizenship Training', src: `${import.meta.env.BASE_URL}images/yiaga_africa_training/yiaga_facilitator_rights_session.jpg`, alt: 'Facilitator leading training module on fundamental citizen rights and democratic participation' },
 ];
 
 // Image URLs passed to the 3-D hero
@@ -54,9 +60,13 @@ export default function Gallery() {
   const [filter, setFilter]       = useState('All');
   const [lightboxSrc, setLightboxSrc] = useState(null);
 
-  const categories    = ['All', 'Children', 'WASH Project', 'MNCHW 2026', 'Dignity Kits', 'Hepatitis Day', 'Capacity Building', 'Reproductive Health'];
+  const categories    = ['All', 'Citizenship Training', 'Children', 'WASH Project', 'MNCHW 2026', 'Dignity Kits', 'Hepatitis Day', 'Capacity Building', 'Reproductive Health'];
 
   const categoryDescriptions = {
+    'Citizenship Training': {
+      title: 'Citizenship & Civic Awareness Training — In Collaboration with Yiaga Africa',
+      text: 'Grassroots civic education, citizenship training, and digital empowerment workshop organized in Sokoto State in collaboration with Yiaga Africa, with support from the National Endowment for Democracy (NED). Held at Dankani Guest Palace Hotel, Sokoto, under the "Civic Awareness & Digital Empowerment for a New Nigeria Project", the training empowered youth, women, and community stakeholders with essential skills in constitutional fundamental rights, budget tracking, and active democratic participation.',
+    },
     'WASH Project': {
       title: 'WASH Project — Nana Girls School Latrine Commissioning',
       text: 'Renovation and upgrade of 1 block of 4 pit toilet to a modern water closet facility for Nana Girls Secondary School Staff Toilet, Sokoto South Local Government Area. By Felix Favour Okpuniyi. Funded by Safer Place Initiative and commissioned by the S.A. to the Executive Governor Sokoto State on RUWASA — Hon. Abubakar Umar Dan Tama, June 2026. Dignitaries present included Dr. Ebri (UNICEF WASH Specialist, Sokoto Field Office), Mallam Bello (SA to the Hon. Commissioner RUWASA), Principal Hajiya Mohamed (Nana Girls School), Vice Principal, and NYSC Local Inspector.',
