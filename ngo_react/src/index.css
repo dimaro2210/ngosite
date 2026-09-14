@@ -4357,7 +4357,7 @@ main .faq-section {
 }
 
 .cp-portrait-badge i {
-  color: #38BDF8;
+  color: #A78BFA;
 }
 
 .cp-portrait-footer {
@@ -4634,9 +4634,9 @@ main .faq-section {
   gap: 0.5rem;
   padding: 0.5rem 1.1rem;
   border-radius: 100px;
-  background: #ECFDF5;
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  color: #065F46;
+  background: #F5F3FF;
+  border: 1px solid rgba(108, 43, 217, 0.25);
+  color: #6C2BD9;
   font-weight: 700;
   font-size: 0.82rem;
 }
@@ -5001,8 +5001,8 @@ main .faq-section {
 }
 
 .cp-menaces-block {
-  background: #FFF5F5;
-  border: 1px solid rgba(239, 68, 68, 0.2);
+  background: #FAF5FF;
+  border: 1px solid rgba(108, 43, 217, 0.18);
   border-radius: 24px;
   padding: 2.5rem;
   margin: 2.5rem 0;
@@ -5011,7 +5011,7 @@ main .faq-section {
 .cp-menaces-title {
   font-size: 1.4rem;
   font-weight: 800;
-  color: #991B1B;
+  color: #1E1B4B;
   display: flex;
   align-items: center;
   margin-bottom: 0.6rem;
@@ -5026,7 +5026,7 @@ main .faq-section {
 .cp-menace-card {
   background: #ffffff;
   border-radius: 16px;
-  border: 1px solid rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(108, 43, 217, 0.12);
   padding: 1.2rem 1.4rem;
   display: flex;
   gap: 1rem;
@@ -5037,8 +5037,8 @@ main .faq-section {
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: #FEE2E2;
-  color: #EF4444;
+  background: #F5F3FF;
+  color: #6C2BD9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5049,7 +5049,7 @@ main .faq-section {
 .cp-menace-card strong {
   display: block;
   font-size: 0.95rem;
-  color: #991B1B;
+  color: #0F172A;
   margin-bottom: 0.2rem;
 }
 

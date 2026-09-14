@@ -199,14 +199,14 @@ export default function ChildProtection() {
               </div>
 
               <div className="cp-action-buttons">
-                <a href="#statement" className="btn-primary" style={{ background: '#6C2BD9', borderColor: '#6C2BD9' }}>
+                <a href="#statement" className="btn-primary" style={{ background: '#6C2BD9', color: '#fff', borderColor: '#6C2BD9' }}>
                   Read Arnold's Statement <i className="fas fa-arrow-down" style={{ marginLeft: '.5rem' }}></i>
                 </a>
-                <a href="#advocates-team" className="btn-primary" style={{ background: '#4F46E5', borderColor: '#4F46E5' }}>
+                <a href="#advocates-team" className="btn-primary" style={{ background: '#1E1B4B', color: '#fff', borderColor: '#1E1B4B' }}>
                   Advocates Team <i className="fas fa-users" style={{ marginLeft: '.5rem' }}></i>
                 </a>
-                <a href="#gallery" className="btn-secondary" style={{ background: '#10B981', color: '#fff' }}>
-                  The Faces We Protect <i className="fas fa-images" style={{ marginLeft: '.5rem' }}></i>
+                <a href="#gallery" className="btn-secondary" style={{ background: '#FFFFFF', color: '#1E293B', borderColor: '#CBD5E1' }}>
+                  The Faces We Protect <i className="fas fa-images" style={{ marginLeft: '.5rem', color: '#6C2BD9' }}></i>
                 </a>
               </div>
             </motion.div>
@@ -250,7 +250,7 @@ export default function ChildProtection() {
               {/* 4 Core Basic Life Amenities */}
               <div className="cp-principles-grid">
                 <div className="cp-principle-item">
-                  <div className="cp-principle-icon" style={{ background: '#EDE9FE', color: '#6C2BD9' }}>
+                  <div className="cp-principle-icon" style={{ background: '#F5F3FF', color: '#6C2BD9' }}>
                     <i className="fas fa-graduation-cap"></i>
                   </div>
                   <h4>1. Access to Education</h4>
@@ -260,7 +260,7 @@ export default function ChildProtection() {
                 </div>
 
                 <div className="cp-principle-item">
-                  <div className="cp-principle-icon" style={{ background: '#E0F2FE', color: '#0284C7' }}>
+                  <div className="cp-principle-icon" style={{ background: '#F5F3FF', color: '#6C2BD9' }}>
                     <i className="fas fa-tint"></i>
                   </div>
                   <h4>2. Access to Safe &amp; Potable Drinking Water</h4>
@@ -270,7 +270,7 @@ export default function ChildProtection() {
                 </div>
 
                 <div className="cp-principle-item">
-                  <div className="cp-principle-icon" style={{ background: '#FEF3C7', color: '#D97706' }}>
+                  <div className="cp-principle-icon" style={{ background: '#F5F3FF', color: '#6C2BD9' }}>
                     <i className="fas fa-apple-alt"></i>
                   </div>
                   <h4>3. Access to Nutritional-Based Food</h4>
@@ -280,7 +280,7 @@ export default function ChildProtection() {
                 </div>
 
                 <div className="cp-principle-item">
-                  <div className="cp-principle-icon" style={{ background: '#DCFCE7', color: '#16A34A' }}>
+                  <div className="cp-principle-icon" style={{ background: '#F5F3FF', color: '#6C2BD9' }}>
                     <i className="fas fa-hospital"></i>
                   </div>
                   <h4>4. Access to a Good Hospital &amp; Healthcare</h4>
@@ -298,7 +298,7 @@ export default function ChildProtection() {
               {/* Menaces Arnold Stands Firmly Against */}
               <div className="cp-menaces-block">
                 <h3 className="cp-menaces-title">
-                  <i className="fas fa-shield-virus" style={{ color: '#EF4444', marginRight: '.6rem' }}></i>
+                  <i className="fas fa-shield-alt" style={{ color: '#6C2BD9', marginRight: '.6rem' }}></i>
                   What Arnold Nicholas Stands Firmly Against
                 </h3>
                 <p style={{ color: '#475569', marginBottom: '1.25rem' }}>
@@ -406,7 +406,7 @@ export default function ChildProtection() {
               color: '#6C2BD9',
               boxShadow: '0 4px 16px rgba(108, 43, 217, 0.08)'
             }}>
-              <i className="fas fa-crown" style={{ color: '#F59E0B' }}></i>
+              <i className="fas fa-crown" style={{ color: '#6C2BD9' }}></i>
               Hover over each advocate to view their profile · Arnold Nicholas Leading The Team
             </span>
           </div>
@@ -495,7 +495,7 @@ export default function ChildProtection() {
                 <p>{activePhoto.caption}</p>
                 <div className="cp-dialog-meta">
                   <span className="badge-pill">
-                    <i className="fas fa-check-circle" style={{ color: '#10B981' }}></i> Active Child Protection Program
+                    <i className="fas fa-check-circle" style={{ color: '#6C2BD9' }}></i> Active Child Protection Program
                   </span>
                   <span className="badge-pill">
                     <i className="fas fa-user-shield" style={{ color: '#6C2BD9' }}></i> Advocate: Arnold Nicholas
@@ -521,8 +521,8 @@ export default function ChildProtection() {
                 <Link to="/contact" className="btn-primary" style={{ background: '#6C2BD9', borderColor: '#6C2BD9' }}>
                   Partner with Child Protection Office <i className="fas fa-hand-holding-heart" style={{ marginLeft: '.5rem' }}></i>
                 </Link>
-                <a href="tel:+2349117622762" className="btn-secondary" style={{ background: '#fff', color: '#1E293B' }}>
-                  <i className="fas fa-phone-alt" style={{ marginRight: '.5rem', color: '#10B981' }}></i>
+                <a href="tel:+2349117622762" className="btn-secondary" style={{ background: '#fff', color: '#1E293B', borderColor: '#E2E8F0' }}>
+                  <i className="fas fa-phone-alt" style={{ marginRight: '.5rem', color: '#6C2BD9' }}></i>
                   Emergency Protection Hotline: +234-9117622762
                 </a>
               </div>

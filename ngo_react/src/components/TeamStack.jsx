@@ -66,7 +66,7 @@ export default function TeamStack({ members }) {
                     View Advocate Profile ➔
                   </span>
                 ) : (
-                  <span style={{ fontSize: '0.7rem', color: '#10B981', marginTop: '0.2rem', display: 'block', fontWeight: 600 }}>
+                  <span style={{ fontSize: '0.7rem', color: '#6C2BD9', marginTop: '0.2rem', display: 'block', fontWeight: 600 }}>
                     ✦ Child Right Advocate
                   </span>
                 )}
