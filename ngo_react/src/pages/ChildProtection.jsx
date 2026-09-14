@@ -18,23 +18,30 @@ export default function ChildProtection() {
     },
     {
       id: 2,
-      name: 'Fatima Aliyu',
-      role: 'Child Right Advocate',
-      image: `${BASE}images/child_advocate_fatima.jpg`,
+      name: 'School WASH Club Advocates',
+      role: 'Child Right Advocates',
+      image: `${BASE}images/wash_commission/wash_students_assembly.jpg`,
       link: null,
     },
     {
       id: 3,
-      name: 'Emmanuel Okafor',
-      role: 'Child Right Advocate',
-      image: `${BASE}images/child_advocate_emmanuel.jpg`,
+      name: 'IDP & Community Child Cadre',
+      role: 'Child Right Advocates',
+      image: `${BASE}images/dignity_kits/dignity_child_mat_unicef.jpg`,
       link: null,
     },
     {
       id: 4,
-      name: 'Zainab Bello',
-      role: 'Child Right Advocate',
-      image: `${BASE}images/child_advocate_zainab.jpg`,
+      name: 'Child Nutrition & Health Champions',
+      role: 'Child Right Advocates',
+      image: `${BASE}images/maternal_child_nutrition_drive.jpg`,
+      link: null,
+    },
+    {
+      id: 5,
+      name: 'Adolescent & Student Ambassadors',
+      role: 'Child Right Advocates',
+      image: `${BASE}images/mnchw_gusau/mnchw_infant_immunization.jpg`,
       link: null,
     },
   ];
@@ -390,25 +397,6 @@ export default function ChildProtection() {
 
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '4rem' }}>
             <TeamStack members={childAdvocates} />
-          </div>
-
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <span style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.55rem',
-              background: '#fff',
-              padding: '0.6rem 1.4rem',
-              borderRadius: '999px',
-              border: '1px solid rgba(108, 43, 217, 0.2)',
-              fontSize: '0.88rem',
-              fontWeight: 600,
-              color: '#6C2BD9',
-              boxShadow: '0 4px 16px rgba(108, 43, 217, 0.08)'
-            }}>
-              <i className="fas fa-crown" style={{ color: '#6C2BD9' }}></i>
-              Hover over each advocate to view their profile · Arnold Nicholas Leading The Team
-            </span>
           </div>
         </div>
       </section>
