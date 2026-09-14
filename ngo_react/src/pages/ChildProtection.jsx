@@ -221,162 +221,322 @@ export default function ChildProtection() {
         </div>
       </section>
 
-      {/* ── Official Statement by Arnold Nicholas ── */}
+      {/* ── Official Statement & Manifesto by Arnold Nicholas ── */}
       <section id="statement" className="cp-statement-section section-padding">
         <div className="container">
-          <motion.div
-            className="cp-statement-card"
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
-            <div className="cp-quote-icon">
-              <i className="fas fa-quote-left"></i>
-            </div>
-
-            <span className="cp-statement-badge">Official Advocate Statement</span>
-            <h2 className="cp-statement-title">
+          {/* Header Banner */}
+          <div className="cp-section-badge-header">
+            <span className="cp-pill-badge">
+              <i className="fas fa-shield-alt"></i> Official Advocate Statement
+            </span>
+            <h2 className="cp-section-main-title">
               A Message from Arnold Nicholas: Standing for Children Across the Globe
             </h2>
+            <div className="cp-title-accent-line"></div>
+          </div>
 
-            <div className="cp-statement-body">
-              {/* Direct Words from Arnold */}
-              <div className="cp-spoken-quote-banner">
-                <p className="lead-paragraph">
-                  "Arnold Nicholas is a child advocate of <strong>Saferplace Initiative</strong>, standing to advocate for the rights of children across the globe.
-                </p>
-                <p className="lead-paragraph">
-                  Arnold believes in creating a safe space where children can thrive to become what they want to be.
-                </p>
-                <p className="lead-paragraph">
-                  Arnold stands to advocate for child rights, for child protection, for child access to basic life amenities such as:
-                </p>
-              </div>
-
-              {/* 4 Core Basic Life Amenities */}
-              <div className="cp-principles-grid">
-                <div className="cp-principle-item">
-                  <div className="cp-principle-icon" style={{ background: '#F5F3FF', color: '#6C2BD9' }}>
-                    <i className="fas fa-graduation-cap"></i>
-                  </div>
-                  <h4>1. Access to Education</h4>
-                  <p>
-                    Every child deserves quality schooling, learning materials, safe classrooms, and an uninterrupted academic journey to unlock their highest potential.
-                  </p>
-                </div>
-
-                <div className="cp-principle-item">
-                  <div className="cp-principle-icon" style={{ background: '#F5F3FF', color: '#6C2BD9' }}>
-                    <i className="fas fa-tint"></i>
-                  </div>
-                  <h4>2. Access to Safe &amp; Potable Drinking Water</h4>
-                  <p>
-                    Clean, potable water is an irreplaceable life right. We construct school WASH blocks and community water points so children never drink from contaminated sources.
-                  </p>
-                </div>
-
-                <div className="cp-principle-item">
-                  <div className="cp-principle-icon" style={{ background: '#F5F3FF', color: '#6C2BD9' }}>
-                    <i className="fas fa-apple-alt"></i>
-                  </div>
-                  <h4>3. Access to Nutritional-Based Food</h4>
-                  <p>
-                    Proper childhood growth requires nutrient-dense diets and therapeutic infant foods to permanently eradicate stunting, wasting, and severe malnutrition.
-                  </p>
-                </div>
-
-                <div className="cp-principle-item">
-                  <div className="cp-principle-icon" style={{ background: '#F5F3FF', color: '#6C2BD9' }}>
-                    <i className="fas fa-hospital"></i>
-                  </div>
-                  <h4>4. Access to a Good Hospital &amp; Healthcare</h4>
-                  <p>
-                    From routine childhood immunizations and pediatric clinics to emergency medication, no child should suffer or perish from preventable illnesses.
-                  </p>
-                </div>
-              </div>
-
-              {/* Personal Appeal */}
-              <blockquote className="cp-callout-quote">
-                "Join me, Arnold Nicholas, as I advocate for these things for children across the globe. Thank you."
-              </blockquote>
-
-              {/* Menaces Arnold Stands Firmly Against */}
-              <div className="cp-menaces-block">
-                <h3 className="cp-menaces-title">
-                  <i className="fas fa-shield-alt" style={{ color: '#6C2BD9', marginRight: '.6rem' }}></i>
-                  What Arnold Nicholas Stands Firmly Against
-                </h3>
-                <p style={{ color: '#475569', marginBottom: '1.25rem' }}>
-                  Arnold and Saferplace Initiative lead an uncompromising, zero-tolerance campaign against the systemic evils and dangers that rob children of their future:
-                </p>
-
-                <div className="cp-menaces-grid">
-                  <div className="cp-menace-card">
-                    <div className="cp-menace-icon"><i className="fas fa-ban"></i></div>
-                    <div>
-                      <strong>Child Labor</strong>
-                      <span>Ending harmful street hawking, quarry labor, and dangerous physical exploitation of minors.</span>
-                    </div>
-                  </div>
-
-                  <div className="cp-menace-card">
-                    <div className="cp-menace-icon"><i className="fas fa-handcuffs"></i></div>
-                    <div>
-                      <strong>Child Trafficking</strong>
-                      <span>Dismantling trafficking rings and illegal movement of vulnerable and displaced children.</span>
-                    </div>
-                  </div>
-
-                  <div className="cp-menace-card">
-                    <div className="cp-menace-icon"><i className="fas fa-bread-slice"></i></div>
-                    <div>
-                      <strong>Starvation &amp; Severe Hunger</strong>
-                      <span>Combating acute nutritional deprivation through immediate clinical intervention and therapeutic food supply.</span>
-                    </div>
-                  </div>
-
-                  <div className="cp-menace-card">
-                    <div className="cp-menace-icon"><i className="fas fa-user-slash"></i></div>
-                    <div>
-                      <strong>Deprivation &amp; Denial of Rights</strong>
-                      <span>Fighting against lack of birth certificates, denial of primary education, and abandonment.</span>
-                    </div>
-                  </div>
-
-                  <div className="cp-menace-card">
-                    <div className="cp-menace-icon"><i className="fas fa-heart-broken"></i></div>
-                    <div>
-                      <strong>Physical &amp; Sexual Abuse</strong>
-                      <span>Zero tolerance for violence against children, offering emergency rescue and psychosocial trauma care.</span>
-                    </div>
-                  </div>
-
-                  <div className="cp-menace-card">
-                    <div className="cp-menace-icon"><i className="fas fa-ring"></i></div>
-                    <div>
-                      <strong>Early Forced Child Marriage</strong>
-                      <span>Advocating for legal enforcement of the Child Rights Act to keep adolescent girls safe in school.</span>
-                    </div>
+          {/* Arnold's Spoken Manifesto Hero Card */}
+          <motion.div
+            className="cp-manifesto-hero-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="cp-manifesto-quote-watermark">
+              <i className="fas fa-quote-left"></i>
+            </div>
+            <div className="cp-manifesto-hero-inner">
+              <div className="cp-manifesto-avatar-col">
+                <div className="cp-manifesto-avatar-frame">
+                  <img
+                    src={`${BASE}images/arnold_nicholas.jpg`}
+                    alt="Arnold Nicholas"
+                    className="cp-manifesto-avatar-img"
+                  />
+                  <div className="cp-manifesto-avatar-badge">
+                    <i className="fas fa-check-circle"></i> Verified Lead
                   </div>
                 </div>
-              </div>
-
-              {/* Signoff Verification */}
-              <div className="cp-signoff-row">
-                <div className="cp-signoff-info">
-                  <strong>Arnold Nicholas</strong>
+                <div className="cp-manifesto-author-meta">
+                  <h4>Arnold Nicholas</h4>
                   <span>Child Protection Advocate</span>
-                  <span className="cp-org-tag">Saferplace Initiative for Women &amp; Child Health &amp; Good Governance</span>
-                  <span className="cp-cac-tag">Registered Non-Profit (CAC/IT/NO 7571193) · Sokoto State, Nigeria</span>
+                  <div className="cp-manifesto-org">Saferplace Initiative</div>
                 </div>
-                <div className="cp-seal-badge">
-                  <i className="fas fa-stamp"></i> Official Child Protection Manifesto
+              </div>
+
+              <div className="cp-manifesto-speech-col">
+                <blockquote className="cp-manifesto-lead-quote">
+                  "Arnold Nicholas is a child advocate of <strong className="text-purple-highlight">Saferplace Initiative</strong>, standing to advocate for the rights of children across the globe."
+                </blockquote>
+                <p className="cp-manifesto-sub-quote">
+                  "Arnold believes in creating a safe space where children can thrive to become what they want to be."
+                </p>
+                <div className="cp-manifesto-bridge-banner">
+                  <span className="cp-bridge-icon"><i className="fas fa-bullhorn"></i></span>
+                  <p>
+                    Arnold stands to advocate for child rights, for child protection, for child access to basic life amenities such as:
+                  </p>
                 </div>
               </div>
             </div>
           </motion.div>
+
+          {/* 4 Core Basic Life Amenities */}
+          <div className="cp-amenities-section-wrapper">
+            <div className="cp-amenities-header">
+              <span className="cp-amenities-badge">4 Fundamental Pillars</span>
+              <h3 className="cp-amenities-title">Essential Life Amenities Every Child Must Have</h3>
+            </div>
+
+            <div className="cp-amenities-grid">
+              {/* Amenity 1 */}
+              <motion.div
+                className="cp-amenity-card"
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <div className="cp-amenity-card-top">
+                  <span className="cp-amenity-index">01</span>
+                  <div className="cp-amenity-icon-box">
+                    <i className="fas fa-graduation-cap"></i>
+                  </div>
+                </div>
+                <h4>1. Access to Education</h4>
+                <p>
+                  Every child deserves quality schooling, learning materials, safe classrooms, and an uninterrupted academic journey to unlock their highest potential.
+                </p>
+                <div className="cp-amenity-card-footer">
+                  <span className="cp-amenity-tag"><i className="fas fa-check"></i> Safe Classrooms &amp; Quality Learning</span>
+                </div>
+              </motion.div>
+
+              {/* Amenity 2 */}
+              <motion.div
+                className="cp-amenity-card"
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.18 }}
+              >
+                <div className="cp-amenity-card-top">
+                  <span className="cp-amenity-index">02</span>
+                  <div className="cp-amenity-icon-box">
+                    <i className="fas fa-tint"></i>
+                  </div>
+                </div>
+                <h4>2. Access to Safe &amp; Potable Drinking Water</h4>
+                <p>
+                  Clean, potable water is an irreplaceable life right. We construct school WASH blocks and community water points so children never drink from contaminated sources.
+                </p>
+                <div className="cp-amenity-card-footer">
+                  <span className="cp-amenity-tag"><i className="fas fa-check"></i> School WASH &amp; Clean Water Points</span>
+                </div>
+              </motion.div>
+
+              {/* Amenity 3 */}
+              <motion.div
+                className="cp-amenity-card"
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.26 }}
+              >
+                <div className="cp-amenity-card-top">
+                  <span className="cp-amenity-index">03</span>
+                  <div className="cp-amenity-icon-box">
+                    <i className="fas fa-apple-alt"></i>
+                  </div>
+                </div>
+                <h4>3. Access to Nutritional-Based Food</h4>
+                <p>
+                  Proper childhood growth requires nutrient-dense diets and therapeutic infant foods to permanently eradicate stunting, wasting, and severe malnutrition.
+                </p>
+                <div className="cp-amenity-card-footer">
+                  <span className="cp-amenity-tag"><i className="fas fa-check"></i> Therapeutic Foods &amp; Zero Stunting</span>
+                </div>
+              </motion.div>
+
+              {/* Amenity 4 */}
+              <motion.div
+                className="cp-amenity-card"
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.34 }}
+              >
+                <div className="cp-amenity-card-top">
+                  <span className="cp-amenity-index">04</span>
+                  <div className="cp-amenity-icon-box">
+                    <i className="fas fa-hospital"></i>
+                  </div>
+                </div>
+                <h4>4. Access to a Good Hospital &amp; Healthcare</h4>
+                <p>
+                  From routine childhood immunizations and pediatric clinics to emergency medication, no child should suffer or perish from preventable illnesses.
+                </p>
+                <div className="cp-amenity-card-footer">
+                  <span className="cp-amenity-tag"><i className="fas fa-check"></i> Routine Immunizations &amp; Pediatric Care</span>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* High-Impact Midnight Appeal Callout */}
+          <motion.div
+            className="cp-pledge-callout"
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="cp-pledge-quote-mark">
+              <i className="fas fa-quote-left"></i>
+            </div>
+            <div className="cp-pledge-content">
+              <blockquote className="cp-pledge-statement">
+                "Join me, Arnold Nicholas, as I advocate for these things for children across the globe. Thank you."
+              </blockquote>
+              <div className="cp-pledge-author-line">
+                <span className="cp-pledge-name">— Arnold Nicholas</span>
+                <span className="cp-pledge-role">Child Protection Advocate · Saferplace Initiative</span>
+              </div>
+            </div>
+            <div className="cp-pledge-cta">
+              <a href="#advocates-team" className="btn-pledge-join">
+                <i className="fas fa-users"></i> Stand With Arnold
+              </a>
+            </div>
+          </motion.div>
+
+          {/* What Arnold Nicholas Stands Firmly Against */}
+          <div className="cp-menaces-wrapper">
+            <div className="cp-menaces-section-header">
+              <span className="cp-pill-badge-dark">
+                <i className="fas fa-shield-alt"></i> Zero-Tolerance Defense
+              </span>
+              <h3 className="cp-menaces-title">What Arnold Nicholas Stands Firmly Against</h3>
+              <p className="cp-menaces-subtitle">
+                Arnold and Saferplace Initiative lead an uncompromising, zero-tolerance campaign against the systemic evils and dangers that rob children of their future:
+              </p>
+            </div>
+
+            <div className="cp-menaces-grid">
+              {/* Menace 1 */}
+              <div className="cp-menace-card">
+                <div className="cp-menace-header">
+                  <div className="cp-menace-icon-badge">
+                    <i className="fas fa-ban"></i>
+                  </div>
+                  <span className="cp-menace-tag">Strict Prohibition</span>
+                </div>
+                <h4 className="cp-menace-name">Child Labor</h4>
+                <p className="cp-menace-desc">
+                  Ending harmful street hawking, quarry labor, and dangerous physical exploitation of minors.
+                </p>
+              </div>
+
+              {/* Menace 2 */}
+              <div className="cp-menace-card">
+                <div className="cp-menace-header">
+                  <div className="cp-menace-icon-badge">
+                    <i className="fas fa-handcuffs"></i>
+                  </div>
+                  <span className="cp-menace-tag">Rescue &amp; Justice</span>
+                </div>
+                <h4 className="cp-menace-name">Child Trafficking</h4>
+                <p className="cp-menace-desc">
+                  Dismantling trafficking rings and illegal movement of vulnerable and displaced children.
+                </p>
+              </div>
+
+              {/* Menace 3 */}
+              <div className="cp-menace-card">
+                <div className="cp-menace-header">
+                  <div className="cp-menace-icon-badge">
+                    <i className="fas fa-bread-slice"></i>
+                  </div>
+                  <span className="cp-menace-tag">Nutritional Defense</span>
+                </div>
+                <h4 className="cp-menace-name">Starvation &amp; Severe Hunger</h4>
+                <p className="cp-menace-desc">
+                  Combating acute nutritional deprivation through immediate clinical intervention and therapeutic food supply.
+                </p>
+              </div>
+
+              {/* Menace 4 */}
+              <div className="cp-menace-card">
+                <div className="cp-menace-header">
+                  <div className="cp-menace-icon-badge">
+                    <i className="fas fa-user-slash"></i>
+                  </div>
+                  <span className="cp-menace-tag">Legal Identity</span>
+                </div>
+                <h4 className="cp-menace-name">Deprivation &amp; Denial of Rights</h4>
+                <p className="cp-menace-desc">
+                  Fighting against lack of birth certificates, denial of primary education, and abandonment.
+                </p>
+              </div>
+
+              {/* Menace 5 */}
+              <div className="cp-menace-card">
+                <div className="cp-menace-header">
+                  <div className="cp-menace-icon-badge">
+                    <i className="fas fa-heart-broken"></i>
+                  </div>
+                  <span className="cp-menace-tag">Trauma Intervention</span>
+                </div>
+                <h4 className="cp-menace-name">Physical &amp; Sexual Abuse</h4>
+                <p className="cp-menace-desc">
+                  Zero tolerance for violence against children, offering emergency rescue and psychosocial trauma care.
+                </p>
+              </div>
+
+              {/* Menace 6 */}
+              <div className="cp-menace-card">
+                <div className="cp-menace-header">
+                  <div className="cp-menace-icon-badge">
+                    <i className="fas fa-ring"></i>
+                  </div>
+                  <span className="cp-menace-tag">Girls Protection</span>
+                </div>
+                <h4 className="cp-menace-name">Early Forced Child Marriage</h4>
+                <p className="cp-menace-desc">
+                  Advocating for legal enforcement of the Child Rights Act to keep adolescent girls safe in school.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Endorsement & Official Manifesto Seal Card */}
+          <div className="cp-official-endorsement-bar">
+            <div className="cp-endorsement-signatory">
+              <div className="cp-endorsement-avatar">
+                <img src={`${BASE}images/arnold_nicholas.jpg`} alt="Arnold Nicholas" />
+              </div>
+              <div className="cp-endorsement-text">
+                <span className="cp-endorsement-label">Executive Signatory</span>
+                <h4>Arnold Nicholas</h4>
+                <p className="cp-endorsement-title">Child Protection Advocate</p>
+                <span className="cp-endorsement-org">Saferplace Initiative for Women &amp; Child Health &amp; Good Governance</span>
+                <span className="cp-endorsement-legal">
+                  Registered Non-Profit (CAC/IT/NO 7571193) · Sokoto State, Nigeria
+                </span>
+              </div>
+            </div>
+
+            <div className="cp-endorsement-seal">
+              <div className="cp-seal-ring">
+                <i className="fas fa-stamp"></i>
+              </div>
+              <div className="cp-seal-caption">
+                <strong>Official Child Protection Manifesto</strong>
+                <span>Verified Non-Profit Endorsement</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

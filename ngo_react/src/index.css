@@ -4467,178 +4467,651 @@ main .faq-section {
   flex-wrap: wrap;
 }
 
-/* ── Statement & Manifesto Section ── */
+/* ── Statement & Manifesto Section (Redesigned) ── */
 .cp-statement-section {
-  background: var(--bg-light);
+  background: radial-gradient(ellipse at 50% 0%, rgba(108, 43, 217, 0.05) 0%, #ffffff 65%);
   padding: 6rem 0;
-}
-
-.cp-statement-card {
   position: relative;
-  background: #ffffff;
-  border-radius: 36px;
-  border: 1px solid rgba(108, 43, 217, 0.12);
-  padding: 4rem 4.5rem;
-  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.05);
 }
 
-.cp-quote-icon {
-  position: absolute;
-  top: 3.5rem;
-  right: 4rem;
-  font-size: 4.5rem;
-  color: rgba(108, 43, 217, 0.08);
-  pointer-events: none;
+.cp-section-badge-header {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 3.5rem auto;
 }
 
-.cp-statement-badge {
-  display: inline-block;
+.cp-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.8rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--primary);
-  background: rgba(108, 43, 217, 0.08);
-  padding: 0.35rem 0.95rem;
+  color: #6C2BD9;
+  background: #F5F3FF;
+  border: 1px solid rgba(108, 43, 217, 0.2);
+  padding: 0.45rem 1.15rem;
   border-radius: 100px;
+  margin-bottom: 1.25rem;
+}
+
+.cp-section-main-title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: #1E1B4B;
+  line-height: 1.22;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.cp-title-accent-line {
+  width: 64px;
+  height: 4px;
+  background: #6C2BD9;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+/* Arnold's Spoken Manifesto Hero Card */
+.cp-manifesto-hero-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 28px;
+  border: 1px solid rgba(108, 43, 217, 0.15);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.06);
+  padding: 3.5rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+}
+
+.cp-manifesto-quote-watermark {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  font-size: 7rem;
+  color: rgba(108, 43, 217, 0.05);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.cp-manifesto-hero-inner {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cp-manifesto-avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cp-manifesto-avatar-frame {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(108, 43, 217, 0.18);
+  border: 3px solid #6C2BD9;
   margin-bottom: 1.2rem;
 }
 
-.cp-statement-title {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  font-weight: 800;
-  color: var(--text-dark);
-  line-height: 1.25;
-  margin-bottom: 2rem;
-  max-width: 850px;
+.cp-manifesto-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.cp-statement-body .lead-paragraph {
-  font-size: 1.2rem;
-  line-height: 1.7;
-  color: #1E293B;
+.cp-manifesto-avatar-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(30, 27, 75, 0.92);
+  backdrop-filter: blur(6px);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.35rem 0.5rem;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.cp-manifesto-avatar-badge i {
+  color: #C4B5FD;
+  margin-right: 0.3rem;
+}
+
+.cp-manifesto-author-meta h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1E1B4B;
+  margin-bottom: 0.2rem;
+}
+
+.cp-manifesto-author-meta span {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #6C2BD9;
+  display: block;
+}
+
+.cp-manifesto-author-meta .cp-manifesto-org {
+  font-size: 0.76rem;
+  color: #64748B;
   font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.cp-manifesto-speech-col {
+  border-left: 2px solid rgba(108, 43, 217, 0.12);
+  padding-left: 3rem;
+}
+
+.cp-manifesto-lead-quote {
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.65;
+  color: #0F172A;
+  margin: 0 0 1.2rem 0;
+  font-family: inherit;
+}
+
+.text-purple-highlight {
+  color: #6C2BD9;
+  font-weight: 800;
+}
+
+.cp-manifesto-sub-quote {
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.cp-manifesto-bridge-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #F5F3FF;
+  border-radius: 16px;
+  padding: 1.15rem 1.4rem;
+  border-left: 4px solid #6C2BD9;
+}
+
+.cp-bridge-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #6C2BD9;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.cp-manifesto-bridge-banner p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1E1B4B;
+  line-height: 1.5;
+}
+
+/* ── 4 Core Basic Life Amenities ── */
+.cp-amenities-section-wrapper {
+  margin-bottom: 4.5rem;
+}
+
+.cp-amenities-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.cp-amenities-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6C2BD9;
+  background: #F5F3FF;
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  margin-bottom: 0.6rem;
+}
+
+.cp-amenities-title {
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+  font-weight: 800;
+  color: #1E1B4B;
+}
+
+.cp-amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+}
+
+.cp-amenity-card {
+  background: #ffffff;
+  border-radius: 22px;
+  border: 1px solid rgba(108, 43, 217, 0.12);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cp-amenity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #6C2BD9;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cp-amenity-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(108, 43, 217, 0.35);
+  box-shadow: 0 16px 36px rgba(108, 43, 217, 0.1);
+}
+
+.cp-amenity-card:hover::before {
+  opacity: 1;
+}
+
+.cp-amenity-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1.4rem;
 }
 
-.cp-statement-body p {
-  font-size: 1.02rem;
-  line-height: 1.75;
+.cp-amenity-index {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: rgba(108, 43, 217, 0.22);
+  letter-spacing: -0.04em;
+  font-family: var(--font-number, var(--font-display));
+}
+
+.cp-amenity-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #F5F3FF;
+  border: 1px solid rgba(108, 43, 217, 0.18);
+  color: #6C2BD9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cp-amenity-card:hover .cp-amenity-icon-box {
+  background: #6C2BD9;
+  color: #ffffff;
+}
+
+.cp-amenity-card h4 {
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: #1E1B4B;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.cp-amenity-card p {
+  font-size: 0.95rem;
   color: #475569;
-  margin-bottom: 1.5rem;
+  line-height: 1.65;
+  margin-bottom: 1.4rem;
+  flex-grow: 1;
 }
 
-.cp-principles-grid {
+.cp-amenity-card-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 1rem;
+}
+
+.cp-amenity-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #6C2BD9;
+  background: #FAF5FF;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+}
+
+/* ── High-Impact Midnight Appeal Callout ── */
+.cp-pledge-callout {
+  position: relative;
+  background: linear-gradient(135deg, #1E1B4B 0%, #161233 100%);
+  border-radius: 26px;
+  padding: 3rem 3.5rem;
+  margin-bottom: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
+  border: 1px solid rgba(108, 43, 217, 0.3);
+  overflow: hidden;
+}
+
+.cp-pledge-quote-mark {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.cp-pledge-content {
+  max-width: 720px;
+  position: relative;
+  z-index: 2;
+}
+
+.cp-pledge-statement {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  font-style: italic;
+}
+
+.cp-pledge-author-line {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cp-pledge-name {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #E9D5FF;
+}
+
+.cp-pledge-role {
+  font-size: 0.85rem;
+  color: #94A3B8;
+}
+
+.cp-pledge-cta {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.btn-pledge-join {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #6C2BD9;
+  color: #ffffff;
+  padding: 0.95rem 1.8rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(108, 43, 217, 0.4);
+}
+
+.btn-pledge-join:hover {
+  background: #581C87;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(108, 43, 217, 0.5);
+  color: #ffffff;
+}
+
+/* ── What Arnold Nicholas Stands Firmly Against ── */
+.cp-menaces-wrapper {
+  margin-bottom: 4rem;
+}
+
+.cp-menaces-section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.cp-pill-badge-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #ffffff;
+  background: #1E1B4B;
+  padding: 0.4rem 1.1rem;
+  border-radius: 100px;
+  margin-bottom: 0.9rem;
+}
+
+.cp-menaces-title {
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  font-weight: 800;
+  color: #1E1B4B;
+  margin-bottom: 0.8rem;
+}
+
+.cp-menaces-subtitle {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.cp-menaces-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.6rem;
-  margin: 2.5rem 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-.cp-principle-item {
-  background: #F8FAFC;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+.cp-menace-card {
+  background: #ffffff;
   border-radius: 20px;
-  padding: 1.8rem;
+  border: 1px solid rgba(108, 43, 217, 0.12);
+  padding: 1.8rem 1.6rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cp-principle-item:hover {
-  transform: translateY(-3px);
-  border-color: rgba(108, 43, 217, 0.3);
+.cp-menace-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(108, 43, 217, 0.4);
+  box-shadow: 0 12px 28px rgba(108, 43, 217, 0.09);
 }
 
-.cp-principle-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  background: #EDE9FE;
-  color: var(--primary);
+.cp-menace-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.cp-menace-icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #1E1B4B;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.cp-menace-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6C2BD9;
+  background: #F5F3FF;
+  padding: 0.28rem 0.65rem;
+  border-radius: 100px;
+}
+
+.cp-menace-name {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: #1E1B4B;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.cp-menace-desc {
+  font-size: 0.88rem;
+  color: #64748B;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Official Endorsement & Non-Profit Seal ── */
+.cp-official-endorsement-bar {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid rgba(108, 43, 217, 0.15);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  padding: 2rem 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.cp-endorsement-signatory {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.cp-endorsement-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #6C2BD9;
+  flex-shrink: 0;
+}
+
+.cp-endorsement-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cp-endorsement-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.cp-endorsement-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6C2BD9;
+  margin-bottom: 0.15rem;
+}
+
+.cp-endorsement-text h4 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #1E1B4B;
+  margin: 0 0 0.15rem 0;
+}
+
+.cp-endorsement-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #475569;
+  margin: 0 0 0.35rem 0;
+}
+
+.cp-endorsement-org {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #6C2BD9;
+  margin-bottom: 0.2rem;
+}
+
+.cp-endorsement-legal {
+  font-size: 0.75rem;
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.cp-endorsement-seal {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #F5F3FF;
+  border: 1px solid rgba(108, 43, 217, 0.22);
+  padding: 0.85rem 1.4rem;
+  border-radius: 18px;
+}
+
+.cp-seal-ring {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #6C2BD9;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  margin-bottom: 1rem;
 }
 
-.cp-principle-item h4 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-dark);
-  margin-bottom: 0.6rem;
-}
-
-.cp-principle-item p {
-  font-size: 0.9rem !important;
-  color: #64748B !important;
-  line-height: 1.6 !important;
-  margin: 0 !important;
-}
-
-.cp-callout-quote {
-  margin: 2.8rem 0;
-  padding: 2rem 2.4rem;
-  border-left: 4px solid var(--primary);
-  background: #F5F3FF;
-  border-radius: 0 20px 20px 0;
-  font-size: 1.18rem;
-  line-height: 1.65;
-  font-style: italic;
-  font-weight: 600;
-  color: #4C1D95;
-}
-
-.cp-signoff-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  padding-top: 2rem;
-  margin-top: 2.5rem;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-.cp-signoff-info {
+.cp-seal-caption {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
 }
 
-.cp-signoff-info strong {
-  font-size: 1.35rem;
-  color: var(--text-dark);
-  font-weight: 800;
-}
-
-.cp-signoff-info span {
+.cp-seal-caption strong {
   font-size: 0.88rem;
-  color: var(--text-muted);
+  font-weight: 800;
+  color: #1E1B4B;
 }
 
-.cp-org-tag {
-  color: var(--primary) !important;
-  font-weight: 600;
-}
-
-.cp-cac-tag {
-  font-size: 0.76rem !important;
-  color: #94A3B8 !important;
-}
-
-.cp-seal-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1.1rem;
-  border-radius: 100px;
-  background: #F5F3FF;
-  border: 1px solid rgba(108, 43, 217, 0.25);
+.cp-seal-caption span {
+  font-size: 0.74rem;
   color: #6C2BD9;
-  font-weight: 700;
-  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 /* ── Children Picture Gallery ── */
@@ -4935,11 +5408,47 @@ main .faq-section {
   .cp-stats-strip {
     grid-template-columns: repeat(2, 1fr);
   }
-  .cp-statement-card {
-    padding: 3rem 2.2rem;
+  .cp-manifesto-hero-card {
+    padding: 2.5rem 2rem;
   }
-  .cp-principles-grid {
+  .cp-manifesto-hero-inner {
     grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  .cp-manifesto-avatar-col {
+    margin: 0 auto;
+  }
+  .cp-manifesto-speech-col {
+    border-left: none;
+    border-top: 2px solid rgba(108, 43, 217, 0.12);
+    padding-left: 0;
+    padding-top: 1.8rem;
+    text-align: left;
+  }
+  .cp-amenities-grid {
+    grid-template-columns: 1fr;
+  }
+  .cp-pledge-callout {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.2rem 1.8rem;
+    gap: 1.5rem;
+  }
+  .cp-pledge-cta {
+    width: 100%;
+  }
+  .btn-pledge-join {
+    width: 100%;
+    justify-content: center;
+  }
+  .cp-menaces-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cp-official-endorsement-bar {
+    padding: 1.8rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .cp-children-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -4959,9 +5468,12 @@ main .faq-section {
   .cp-stats-strip {
     grid-template-columns: 1fr;
   }
-  .cp-statement-card {
-    padding: 2.2rem 1.4rem;
-    border-radius: 22px;
+  .cp-manifesto-hero-card {
+    padding: 2rem 1.25rem;
+    border-radius: 20px;
+  }
+  .cp-menaces-grid {
+    grid-template-columns: 1fr;
   }
   .cp-children-grid {
     grid-template-columns: 1fr;
