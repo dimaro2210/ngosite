@@ -40,9 +40,57 @@ export default function ChildProtection() {
       image: `${BASE}images/child_advocates/advocate_boy_glasses.jpg`,
       link: null,
     },
+    {
+      id: 5,
+      hideName: true,
+      title: 'Child Right Advocacy',
+      role: 'Girls Protection & Education Rights',
+      image: `${BASE}images/child_advocates/advocate_girl_sequin.jpg`,
+      link: null,
+    },
+    {
+      id: 6,
+      hideName: true,
+      title: 'Child Right Advocacy',
+      role: 'Early Childhood Nutrition & Care',
+      image: `${BASE}images/child_advocates/advocate_toddler_bows.jpg`,
+      link: null,
+    },
+    {
+      id: 7,
+      hideName: true,
+      title: 'Child Right Advocacy',
+      role: 'Youth Cadre & Safe Spaces',
+      image: `${BASE}images/child_advocates/advocate_children_group.jpg`,
+      link: null,
+    },
   ];
 
   const childrenGallery = [
+    {
+      id: 101,
+      src: `${BASE}images/child_advocates/advocate_children_group.jpg`,
+      title: 'Safe Spaces & Shared Joy for Children',
+      caption: 'Children gathered in a secure, nurturing environment where their laughter, education, and childhood rights are fiercely protected.',
+      badge: 'Safe Space & Joy',
+      amenity: 'Child Rights & Safe Spaces',
+    },
+    {
+      id: 102,
+      src: `${BASE}images/child_advocates/advocate_girl_sequin.jpg`,
+      title: 'Right to Education & Girl-Child Protection',
+      caption: 'Empowering young girls to smile, learn, and grow free from the fear of child labor, deprivation, or early marriage.',
+      badge: 'Girl-Child Safeguarding',
+      amenity: 'Quality Education & Dignity',
+    },
+    {
+      id: 103,
+      src: `${BASE}images/child_advocates/advocate_toddler_bows.jpg`,
+      title: 'Right to Infant Nutrition & Clinical Care',
+      caption: 'Guarding every infant and toddler with routine immunization, vital nutrient-dense feeding, and compassionate pediatric care.',
+      badge: 'Zero Malnutrition',
+      amenity: 'Pediatric Healthcare & Nutrition',
+    },
     {
       id: 1,
       src: `${BASE}images/dignity_kits/dignity_idp_women_queue.jpg`,

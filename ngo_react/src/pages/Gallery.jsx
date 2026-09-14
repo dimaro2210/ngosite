@@ -51,6 +51,10 @@ const mediaList = [
   { id: 39, category: 'Citizenship Training', src: `${import.meta.env.BASE_URL}images/yiaga_africa_training/yiaga_participants_training_hall.jpg`, alt: 'Youth, women, and community leaders participating in citizenship awareness training in Sokoto' },
   { id: 40, category: 'Citizenship Training', src: `${import.meta.env.BASE_URL}images/yiaga_africa_training/yiaga_budget_civic_presentation.jpg`, alt: 'Training presentation on public budget analysis and civic monitoring for governance accountability' },
   { id: 41, category: 'Citizenship Training', src: `${import.meta.env.BASE_URL}images/yiaga_africa_training/yiaga_facilitator_rights_session.jpg`, alt: 'Facilitator leading training module on fundamental citizen rights and democratic participation' },
+  // Children & Child Right Advocates
+  { id: 42, category: 'Children', src: `${import.meta.env.BASE_URL}images/child_advocates/advocate_children_group.jpg`, alt: 'Saferplace Initiative community children and youth champions gathered in a safe space' },
+  { id: 43, category: 'Children', src: `${import.meta.env.BASE_URL}images/child_advocates/advocate_girl_sequin.jpg`, alt: 'Young girl smiling in support of child rights and girl-child education' },
+  { id: 44, category: 'Children', src: `${import.meta.env.BASE_URL}images/child_advocates/advocate_toddler_bows.jpg`, alt: 'Toddler benefiting from infant healthcare, nutrition, and child protection' },
 ];
 
 // Image URLs passed to the 3-D hero
