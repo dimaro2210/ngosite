@@ -10,6 +10,7 @@ import Programs from './pages/Programs'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 import ChildProtection from './pages/ChildProtection'
+import DonateModal from './components/DonateModal'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -80,6 +81,7 @@ export default function App() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <DonateModal />
     </HashRouter>
   )
 }

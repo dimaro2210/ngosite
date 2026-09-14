@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
+import { openDonateModal } from './DonateModal'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -36,7 +37,14 @@ export default function Navbar() {
           </ul>
 
           <div className="nav-actions">
-            <Link to="/contact" className="btn-donate-nav" onClick={close} style={{ background: '#6C2BD9', borderColor: '#6C2BD9' }}>Partner with us</Link>
+            <button 
+              type="button" 
+              className="btn-donate-nav" 
+              onClick={() => { close(); openDonateModal('Saferplace General Support'); }} 
+              style={{ background: '#6C2BD9', borderColor: '#6C2BD9', cursor: 'pointer', border: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.45rem' }}
+            >
+              <i className="fas fa-heart"></i> Donate
+            </button>
             <button
               className="mobile-toggle"
               onClick={() => setOpen(o => !o)}
@@ -144,23 +152,50 @@ export default function Navbar() {
             <i className="fas fa-map-marker-alt"></i>
             <span>Active across 33 LGAs in Nigeria</span>
           </div>
-          <Link
-            to="/contact"
+          <button
+            type="button"
             className="btn-primary"
-            onClick={close}
+            onClick={() => { close(); openDonateModal('Saferplace General Support'); }}
             style={{
               width: '100%',
               textAlign: 'center',
               justifyContent: 'center',
               background: 'linear-gradient(135deg, #6C2BD9 0%, #4C1D95 100%)',
-              borderColor: '#6C2BD9',
+              border: 'none',
+              cursor: 'pointer',
               boxShadow: '0 4px 16px rgba(108, 43, 217, 0.35)',
               padding: '0.85rem 1.2rem',
               borderRadius: '12px',
               fontWeight: 700,
+              marginBottom: '0.6rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem'
             }}
           >
-            Partner with us <i className="fas fa-handshake" style={{ marginLeft: '.5rem' }}></i>
+            <i className="fas fa-heart"></i> Donate Now
+          </button>
+          <Link
+            to="/contact?subject=Government%20%26%20Institutional%20Partnership"
+            onClick={close}
+            style={{
+              width: '100%',
+              textAlign: 'center',
+              justifyContent: 'center',
+              padding: '0.75rem 1.2rem',
+              borderRadius: '12px',
+              fontWeight: 600,
+              fontSize: '0.88rem',
+              color: '#fff',
+              background: 'rgba(255, 255, 255, 0.1)',
+              border: '1px solid rgba(255, 255, 255, 0.15)',
+              display: 'flex',
+              alignItems: 'center',
+              textDecoration: 'none',
+              gap: '0.5rem'
+            }}
+          >
+            Partner with us <i className="fas fa-handshake"></i>
           </Link>
         </div>
       </aside>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { openDonateModal } from '../components/DonateModal'
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -12,6 +13,7 @@ const programs = [
     beneficiaries: '50,000+ residents targeted',
     states: 'Sokoto Metropolis (all 6 LGAs)',
     tag: '#sokoto10km',
+    image: null,
   },
   {
     id: 1,
@@ -22,6 +24,7 @@ const programs = [
     beneficiaries: '4,500+ women, youth & persons with disabilities',
     states: 'Sokoto Metropolis & Rural LGAs',
     tag: '#gesi',
+    image: `${BASE}images/capacity_building/workshop_presentation_female.jpg`,
   },
   {
     id: 2,
@@ -32,6 +35,7 @@ const programs = [
     beneficiaries: '6,000+ flood-affected residents',
     states: 'Dange Shuni, Wamakko, Gada & Tangaza',
     tag: '#disasterresponse',
+    image: `${BASE}images/dignity_kits/dignity_unicef_truck_offload.jpg`,
   },
   {
     id: 3,
@@ -42,6 +46,7 @@ const programs = [
     beneficiaries: '2,000+ residents daily',
     states: 'Sokoto North, South, Wamakko',
     tag: '#greensokoto',
+    image: `${BASE}images/capacity_building/workshop_group_banner.jpg`,
   },
   {
     id: 4,
@@ -52,6 +57,7 @@ const programs = [
     beneficiaries: '1,200+ survivors & families',
     states: 'Dange Shuni, Gada, Sokoto South',
     tag: '#protection',
+    image: `${BASE}images/dignity_kits/dignity_idp_women_carrying.jpg`,
   },
   {
     id: 5,
@@ -62,6 +68,7 @@ const programs = [
     beneficiaries: '8,500+ mothers & children',
     states: 'Sokoto State (6 LGAs)',
     tag: '#rmncah',
+    image: `${BASE}images/mnchw_gusau/mnchw_infant_immunization.jpg`,
   },
   {
     id: 6,
@@ -72,6 +79,7 @@ const programs = [
     beneficiaries: '500+ adolescents',
     states: 'Sokoto North & South LGAs',
     tag: '#safeschools',
+    image: `${BASE}images/yiaga_africa_training/yiaga_training_banner_hall.jpg`,
   },
   {
     id: 7,
@@ -82,6 +90,7 @@ const programs = [
     beneficiaries: '10,000+ residents',
     states: 'Gada, Wamakko, Dange Shuni',
     tag: '#wash',
+    image: `${BASE}images/wash_commission/wash_students_assembly.jpg`,
   },
   {
     id: 8,
@@ -92,6 +101,7 @@ const programs = [
     beneficiaries: '50+ trained champions',
     states: 'Sokoto Metropolis',
     tag: '#advocacy',
+    image: `${BASE}images/yiaga_africa_training/yiaga_keynote_podium_speech.jpg`,
   },
 ]
 
@@ -134,7 +144,7 @@ export default function Programs() {
         </div>
       </section>
 
-      {/* Programs Grid */}
+      {/* Programs Grid — new tall card UI */}
       <section className="section-padding" style={{ background: 'var(--bg-light)' }}>
         <div className="container">
           <div className="section-header" data-reveal="up">
@@ -142,37 +152,89 @@ export default function Programs() {
             <h2>Support Our Ongoing Programs</h2>
             <p>Every partnership directly powers field outreach, survivor protection, disaster relief, child health, and equality across Nigerian communities.</p>
           </div>
-          <div className="programs-grid">
+
+          <div className="prog-grid">
             {programs.map((prog, idx) => (
-              <div key={prog.id} className="program-card" data-reveal="up" data-reveal-delay={String((idx % 3 + 1) * 120)}>
-                {/* Clean Icon & Category Header */}
-                <div className="program-card-header">
-                  <div className="program-card-icon-wrap">
-                    <i className={prog.icon}></i>
-                  </div>
-                  <span className="program-card-badge">
-                    {prog.category}
-                  </span>
+              <div
+                key={prog.id}
+                className="prog-card"
+                data-reveal="up"
+                data-reveal-delay={String((idx % 3 + 1) * 120)}
+              >
+                {/* Full-bleed background image */}
+                <div className="prog-card-img">
+                  {prog.image ? (
+                    <img src={prog.image} alt={prog.title} />
+                  ) : (
+                    <div className="prog-card-img-blank">
+                      <i className={prog.icon}></i>
+                    </div>
+                  )}
                 </div>
 
-                <div className="program-info" style={{ padding: '0.5rem 0 0 0' }}>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-dark)', marginBottom: '0.75rem', lineHeight: '1.35' }}>{prog.title}</h3>
-                  <p style={{ color: 'var(--text-muted)', fontSize: '.92rem', lineHeight: '1.6', marginBottom: '1.25rem' }}>{prog.desc}</p>
+                {/* Dark gradient overlay */}
+                <div className="prog-card-overlay"></div>
 
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '.6rem 0', margin: '.6rem 0 1.1rem', borderTop: '1px solid #F1F5F9', borderBottom: '1px solid #F1F5F9', fontSize: '.84rem' }}>
-                    <span style={{ color: '#6C2BD9', fontWeight: 600 }}><i className="fas fa-check-circle" style={{ marginRight: '.35rem' }}></i>Active Program</span>
-                    <span style={{ color: 'var(--text-muted)' }}><i className="fas fa-tag" style={{ marginRight: '.35rem' }}></i>{prog.tag}</span>
+                {/* Floating badges */}
+                <span className="prog-cat-badge">
+                  <i className={prog.icon}></i>
+                  {prog.category}
+                </span>
+                <span className="prog-tag-badge">{prog.tag}</span>
+
+                {/* All text content — floats over overlay at bottom */}
+                <div className="prog-card-body">
+                  <h3 className="prog-card-title">
+                    {prog.title}
+                    <span className="prog-title-badge">
+                      <i className="fas fa-check"></i>
+                    </span>
+                  </h3>
+                  <p className="prog-card-desc">{prog.desc}</p>
+
+                  {/* 3-column stats with dividers */}
+                  <div className="prog-stats-row">
+                    <div className="prog-stat">
+                      <div className="prog-stat-value">
+                        <i className="fas fa-users"></i>
+                        {prog.beneficiaries.split(' ')[0]}
+                      </div>
+                      <div className="prog-stat-label">Reached</div>
+                    </div>
+                    <div className="prog-stat">
+                      <div className="prog-stat-value">
+                        <i className="fas fa-map-marker-alt"></i>
+                        {prog.states.split(',')[0]}
+                      </div>
+                      <div className="prog-stat-label">Location</div>
+                    </div>
+                    <div className="prog-stat">
+                      <div className="prog-stat-value">
+                        <i className="fas fa-check-circle"></i>
+                        Active
+                      </div>
+                      <div className="prog-stat-label">Status</div>
+                    </div>
                   </div>
 
-                  {/* Meta Tags */}
-                  <div style={{ display: 'flex', gap: '.6rem', flexWrap: 'wrap', marginBottom: '1.4rem', fontSize: '.82rem', color: 'var(--text-muted)' }}>
-                    <span><i className="fas fa-users" style={{ color: '#6C2BD9', marginRight: '.3rem' }}></i>{prog.beneficiaries}</span>
-                    <span><i className="fas fa-map-marker-alt" style={{ color: 'var(--secondary)', marginRight: '.3rem' }}></i>{prog.states}</span>
+                  {/* Buttons: wide white pill + dark round icon */}
+                  <div className="prog-btn-row">
+                    <button 
+                      type="button" 
+                      onClick={() => openDonateModal(prog.title)} 
+                      className="prog-card-btn"
+                    >
+                      <i className="fas fa-heart"></i>
+                      Support This Initiative
+                    </button>
+                    <Link 
+                      to="/contact?subject=Government%20%26%20Institutional%20Partnership" 
+                      className="prog-icon-btn" 
+                      title="Partner on this initiative"
+                    >
+                      <i className="fas fa-handshake"></i>
+                    </Link>
                   </div>
-
-                  <Link to="/contact" className="btn-primary" style={{ width: '100%', justifyContent: 'center', background: '#6C2BD9', borderColor: '#6C2BD9', borderRadius: '12px' }}>
-                    <i className="fas fa-heart" style={{ marginRight: '0.4rem' }}></i> Support This Initiative
-                  </Link>
                 </div>
               </div>
             ))}
@@ -180,23 +242,65 @@ export default function Programs() {
         </div>
       </section>
 
-      {/* Impact Stats */}
-      <section className="stats-section" style={{ background: 'linear-gradient(135deg, #4C1D95 0%, #1E1B4B 100%)' }}>
-        <div className="container">
-          <div className="stats-grid">
-            <div className="stat-card"><h3 style={{ color: '#fff' }}>9</h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Core Focus Areas</p></div>
-            <div className="stat-card"><h3 style={{ color: '#fff' }}>6 States</h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Across 33 LGAs</p></div>
-            <div className="stat-card"><h3 style={{ color: '#fff' }}>1,500<span>+</span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Adolescents, Women &amp; Children</p></div>
-            <div className="stat-card"><h3 style={{ color: '#fff' }}>500<span>+</span></h3><p style={{ color: 'rgba(255,255,255,.8)' }}>Trees in Green Drive</p></div>
-          </div>
-        </div>
-      </section>
+      {/* Redesigned Unified Impact & Action Showcase */}
+      <section className="impact-cta-showcase">
+        <div className="impact-cta-glow impact-cta-glow-1"></div>
+        <div className="impact-cta-glow impact-cta-glow-2"></div>
 
-      {/* CTA */}
-      <section className="cta-strip">
-        <div className="container cta-strip-container">
-          <h2>Creating safe spaces for every life, everywhere. <br />Partner with Saferplace Initiative today.</h2>
-          <Link to="/contact" className="btn-primary" style={{ background: '#6C2BD9', borderColor: '#6C2BD9' }}>Donate Now <i className="fas fa-heart"></i></Link>
+        <div className="container impact-cta-container">
+          
+          {/* Top Section Header */}
+          <div className="impact-cta-header" data-reveal="up">
+            <span className="impact-badge">
+              <i className="fas fa-chart-pie"></i> Verified Operational Scale
+            </span>
+            <h2>Proven Field Impact Across Northern Nigeria</h2>
+            <p>
+              Measurable grassroots change delivering frontline healthcare, dignified WASH infrastructure, child protection desks, and ecological safeguards.
+            </p>
+          </div>
+
+          {/* 4 Premium Glass Metric Cards */}
+          <div className="impact-stats-grid">
+            
+            <div className="impact-metric-card" data-reveal="up" data-reveal-delay="50">
+              <div className="impact-metric-icon">
+                <i className="fas fa-layer-group"></i>
+              </div>
+              <div className="impact-metric-num">9</div>
+              <div className="impact-metric-label">Core Focus Areas</div>
+              <div className="impact-metric-desc">Health, WASH, GESI, Climate &amp; Protection</div>
+            </div>
+
+            <div className="impact-metric-card" data-reveal="up" data-reveal-delay="100">
+              <div className="impact-metric-icon">
+                <i className="fas fa-map-location-dot"></i>
+              </div>
+              <div className="impact-metric-num">6 <span>States</span></div>
+              <div className="impact-metric-label">Operational Footprint</div>
+              <div className="impact-metric-desc">Across 33 Local Government Areas</div>
+            </div>
+
+            <div className="impact-metric-card" data-reveal="up" data-reveal-delay="150">
+              <div className="impact-metric-icon">
+                <i className="fas fa-hands-holding-child"></i>
+              </div>
+              <div className="impact-metric-num">1,500<span>+</span></div>
+              <div className="impact-metric-label">Direct Beneficiaries</div>
+              <div className="impact-metric-desc">Adolescents, vulnerable women &amp; infants</div>
+            </div>
+
+            <div className="impact-metric-card" data-reveal="up" data-reveal-delay="200">
+              <div className="impact-metric-icon">
+                <i className="fas fa-seedling"></i>
+              </div>
+              <div className="impact-metric-num">500<span>+</span></div>
+              <div className="impact-metric-label">Trees In Green Drive</div>
+              <div className="impact-metric-desc">Combating desertification in Sokoto</div>
+            </div>
+
+          </div>
+
         </div>
       </section>
     </>

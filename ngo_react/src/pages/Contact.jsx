@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 const WEB3FORMS_KEY = '073e0963-fd22-4886-8a40-5ccd11749be3';
 
@@ -22,10 +23,24 @@ const faqs = [
 ];
 
 export default function Contact() {
+  const [searchParams] = useSearchParams();
   const [form, setForm] = useState({ name: '', email: '', phone: '', subject: 'General Inquiry', message: '' });
   const [sending, setSending] = useState(false);
   const [success, setSuccess] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
+
+  useEffect(() => {
+    const subjectParam = searchParams.get('subject') || searchParams.get('type');
+    if (subjectParam) {
+      setForm(prev => ({ ...prev, subject: subjectParam }));
+    }
+    if (searchParams.get('donate') === 'true') {
+      setTimeout(() => {
+        const el = document.getElementById('bank-transfer-details');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+    }
+  }, [searchParams]);
 
   const handleChange = e => setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
 
@@ -127,7 +142,7 @@ export default function Contact() {
               </div>
 
               {/* Direct Bank Account Donation Card */}
-              <div className="cause-card" style={{ padding: '1.8rem', marginTop: '2rem', borderLeft: '5px solid #6C2BD9' }}>
+              <div id="bank-transfer-details" className="cause-card" style={{ padding: '1.8rem', marginTop: '2rem', borderLeft: '5px solid #6C2BD9' }}>
                 <h3 style={{ fontSize: '1.1rem', marginBottom: '0.8rem', color: 'var(--text-dark)' }}>
                   <i className="fas fa-university" style={{ color: '#6C2BD9', marginRight: '0.5rem' }}></i> 
                   Direct Bank Transfers (Nigeria)
@@ -201,10 +216,12 @@ export default function Contact() {
                     }}
                   >
                     <option value="General Inquiry">General Inquiry</option>
+                    <option value="Direct Donation & Project Support">Direct Donation & Project Support</option>
+                    <option value="Government & Institutional Partnership">Government & Institutional Partnership</option>
                     <option value="Green Sokoto Initiative Sponsorship">Green Sokoto Initiative Sponsorship</option>
                     <option value="Volunteer / Tree Guardian Application">Volunteer / Tree Guardian Application</option>
+                    <option value="Child Safeguarding & Protection Desk">Child Safeguarding & Protection Desk</option>
                     <option value="Survivor Support Referral">Survivor Support Referral</option>
-                    <option value="Government & Institutional Partnership">Government & Institutional Partnership</option>
                   </select>
                 </div>
                 <div className="form-group">

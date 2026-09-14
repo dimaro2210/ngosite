@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import CountUp from '../components/CountUp'
 import TeamStack from '../components/TeamStack'
+import { openDonateModal } from '../components/DonateModal'
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -333,14 +334,6 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="cta-strip">
-        <div className="container cta-strip-container">
-          <h2>Creating safe spaces for every life, everywhere.</h2>
-          <Link to="/contact" className="btn-primary" style={{ background: '#6C2BD9', borderColor: '#6C2BD9' }}>Join Us Today <i className="fas fa-arrow-right"></i></Link>
         </div>
       </section>
     </>
