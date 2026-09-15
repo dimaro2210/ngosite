@@ -37,14 +37,14 @@ export default function Navbar() {
           </ul>
 
           <div className="nav-actions">
-            <button 
-              type="button" 
+            <Link 
+              to="/contact?subject=Government%20%26%20Institutional%20Partnership" 
               className="btn-donate-nav" 
-              onClick={() => { close(); openDonateModal('Saferplace General Support'); }} 
+              onClick={close}
             >
-              <i className="fas fa-heart"></i>
-              <span>Donate</span>
-            </button>
+              <i className="fas fa-handshake"></i>
+              <span>Partner with us</span>
+            </Link>
             <button
               className="mobile-toggle"
               onClick={() => setOpen(o => !o)}
@@ -152,32 +152,34 @@ export default function Navbar() {
             <i className="fas fa-map-marker-alt"></i>
             <span>Active across 33 LGAs in Nigeria</span>
           </div>
-          <button
-            type="button"
+          <Link
+            to="/contact?subject=Government%20%26%20Institutional%20Partnership"
             className="btn-primary"
-            onClick={() => { close(); openDonateModal('Saferplace General Support'); }}
+            onClick={close}
             style={{
               width: '100%',
               textAlign: 'center',
               justifyContent: 'center',
               background: 'linear-gradient(135deg, #6C2BD9 0%, #4C1D95 100%)',
               border: 'none',
-              cursor: 'pointer',
               boxShadow: '0 4px 16px rgba(108, 43, 217, 0.35)',
               padding: '0.85rem 1.2rem',
               borderRadius: '12px',
               fontWeight: 700,
-              marginBottom: '0.6rem',
               display: 'flex',
               alignItems: 'center',
-              gap: '0.5rem'
+              gap: '0.5rem',
+              textDecoration: 'none',
+              color: '#fff',
+              marginBottom: '0.6rem'
             }}
           >
-            <i className="fas fa-heart"></i> Donate Now
-          </button>
-          <Link
-            to="/contact?subject=Government%20%26%20Institutional%20Partnership"
-            onClick={close}
+            <i className="fas fa-handshake"></i> Partner with us
+          </Link>
+          <button
+            type="button"
+            className="btn-secondary"
+            onClick={() => { close(); openDonateModal('Saferplace General Support'); }}
             style={{
               width: '100%',
               textAlign: 'center',
@@ -186,17 +188,17 @@ export default function Navbar() {
               borderRadius: '12px',
               fontWeight: 600,
               fontSize: '0.88rem',
-              color: '#fff',
-              background: 'rgba(255, 255, 255, 0.1)',
-              border: '1px solid rgba(255, 255, 255, 0.15)',
+              color: '#4C1D95',
+              background: 'rgba(108, 43, 217, 0.08)',
+              border: '1px solid rgba(108, 43, 217, 0.2)',
               display: 'flex',
               alignItems: 'center',
-              textDecoration: 'none',
-              gap: '0.5rem'
+              gap: '0.5rem',
+              cursor: 'pointer'
             }}
           >
-            Partner with us <i className="fas fa-handshake"></i>
-          </Link>
+            <i className="fas fa-heart" style={{ color: '#6C2BD9' }}></i> Support &amp; Donate
+          </button>
         </div>
       </aside>
     </>

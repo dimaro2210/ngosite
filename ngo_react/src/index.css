@@ -485,10 +485,13 @@ body { padding-top: 80px; }
   align-items: center;
   gap: 0.45rem;
   transition: all 0.2s ease;
-  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
 }
 .btn-donate-nav:hover { 
   background-color: #581C87; 
+  color: #fff;
+  text-decoration: none;
   transform: translateY(-1px);
 }
 .mobile-toggle { 
@@ -1346,6 +1349,7 @@ body { padding-top: 80px; }
   .nav-links { display: none !important; }
   .mobile-toggle { display: flex !important; }
   .logo-tagline { display: none !important; }
+  .btn-donate-nav { display: none !important; }
   .hero-grid, .about-grid, .contact-grid-content { grid-template-columns: 1fr; gap: 3rem; }
   .about-grid-content { grid-template-columns: 1fr; gap: 3rem; }
   .about-pill-gallery { transform: rotate(0deg); justify-content: center; }
@@ -1367,17 +1371,12 @@ body { padding-top: 80px; }
   .logo-title { font-size: 1.08rem; }
   .logo-tagline { display: none !important; }
   .nav-actions { gap: 0.55rem; }
-  .btn-donate-nav { 
-    display: inline-flex !important; 
-    padding: 0.42rem 0.85rem !important; 
-    font-size: 0.78rem !important; 
-    gap: 0.35rem !important; 
-  }
+  .btn-donate-nav { display: none !important; }
   .mobile-toggle { 
     display: flex !important; 
-    width: 38px; 
-    height: 38px; 
-    font-size: 1.35rem; 
+    width: 40px; 
+    height: 40px; 
+    font-size: 1.4rem; 
   }
   .hero { padding: 4rem 0; }
   .hero-grid { gap: 3rem; }
@@ -1404,14 +1403,10 @@ body { padding-top: 80px; }
   body { padding-top: 62px; }
   .logo { gap: 0.45rem; }
   .logo-img { width: 34px; height: 34px; }
-  .logo-title { font-size: 0.96rem; }
-  .nav-actions { gap: 0.42rem; }
-  .btn-donate-nav { 
-    padding: 0.36rem 0.68rem !important; 
-    font-size: 0.74rem !important; 
-  }
-  .btn-donate-nav i { font-size: 0.7rem; }
-  .mobile-toggle { font-size: 1.25rem; }
+  .logo-title { font-size: 0.98rem; }
+  .nav-actions { gap: 0.45rem; }
+  .btn-donate-nav { display: none !important; }
+  .mobile-toggle { font-size: 1.3rem; }
   .hero-content h1 { font-size: 1.9rem; }
   .hero-cta-buttons { flex-direction: column; width: 100%; align-items: stretch; gap: 0.8rem; }
   .hero-btn-white, .hero-btn-outline { justify-content: center; width: 100%; }
@@ -1429,9 +1424,8 @@ body { padding-top: 80px; }
   .about-call h4 { font-size: .9rem; }
 }
 @media (max-width: 360px) {
-  .logo-title { font-size: 0.86rem; }
-  .btn-donate-nav span { display: none; }
-  .btn-donate-nav { padding: 0.4rem 0.55rem !important; }
+  .logo-title { font-size: 0.88rem; }
+  .btn-donate-nav { display: none !important; }
 }
 
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
